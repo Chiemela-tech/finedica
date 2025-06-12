@@ -1,0 +1,43 @@
+*   Trying 104.18.34.224:443...
+* Connected to api.stability.ai (104.18.34.224) port 443
+* ALPN: curl offers h2,http/1.1
+*  CAfile: C:\xampp\apache\bin\curl-ca-bundle.crt
+*  CApath: none
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=api.stability.ai
+*  start date: Apr 16 07:27:01 2025 GMT
+*  expire date: Jul 15 07:27:00 2025 GMT
+*  subjectAltName: host "api.stability.ai" matched cert's "api.stability.ai"
+*  issuer: C=US; O=Let's Encrypt; CN=E5
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://api.stability.ai/v2beta/stable-image/generate/core
+* [HTTP/2] [1] [:method: POST]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: api.stability.ai]
+* [HTTP/2] [1] [:path: /v2beta/stable-image/generate/core]
+* [HTTP/2] [1] [accept: */*]
+* [HTTP/2] [1] [authorization: Bearer sk-hV3rJIrVaxzsLiq0FwEQ9RNCYBwvm1NcMXwkYhfpUuABSnds]
+* [HTTP/2] [1] [content-type: application/json]
+* [HTTP/2] [1] [content-length: 103]
+> POST /v2beta/stable-image/generate/core HTTP/2
+Host: api.stability.ai
+Accept: */*
+Authorization: Bearer sk-hV3rJIrVaxzsLiq0FwEQ9RNCYBwvm1NcMXwkYhfpUuABSnds
+Content-Type: application/json
+Content-Length: 103
+
+* old SSL session ID is stale, removing
+< HTTP/2 400 
+< date: Sat, 10 May 2025 23:18:45 GMT
+< content-type: application/json
+< content-length: 183
+< access-control-allow-origin: *
+< x-request-id: d8c03f31a52c2c11a6b4d1c61a000688
+< server: cloudflare
+< cf-ray: 93dd28573e2f93ec-LHR
+< alt-svc: h3=":443"; ma=86400
+< 
+* Connection #0 to host api.stability.ai left intact

@@ -1,0 +1,3702 @@
+Test log at 2025-05-12T11:26:14+02:00
+Script started at 2025-05-12T11:30:03+02:00
+Script started at 2025-05-12T11:30:15+02:00
+Script started at 2025-05-12T11:32:13+02:00
+Script started at 2025-05-12T11:33:55+02:00
+After session_start at 2025-05-12T11:33:55+02:00
+Script started at 2025-05-12T11:36:29+02:00
+After session_start at 2025-05-12T11:36:29+02:00
+Script started at 2025-05-12T11:37:26+02:00
+After session_start at 2025-05-12T11:37:26+02:00
+Script started at 2025-05-12T11:38:21+02:00
+After session_start at 2025-05-12T11:38:21+02:00
+Script started at 2025-05-12T11:44:15+02:00
+After session_start at 2025-05-12T11:44:15+02:00
+Script started at 2025-05-12T11:46:04+02:00
+After session_start at 2025-05-12T11:46:04+02:00
+Script started at 2025-05-12T11:47:27+02:00
+After session_start at 2025-05-12T11:47:27+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"j","2. What activities will you do to stay healthy?":"j"},"Finances":{"1. What will your financial situation look like?":"j","2. What steps will you take to achieve financial stability?":"j"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"j","2. What practices will you follow to stay emotionally balanced?":"j"},"LifeStyle":{"1. What will your daily lifestyle look like?":"j","2. What hobbies or interests will you pursue?":"j"},"Profession":{"1. What will your professional life look like?":"j","2. What goals will you set for your career?":"j"},"Relationships":{"1. What will your relationships with family and friends look like?":"j","2. How will you nurture these relationships?":"j"}}},"time":"2025-05-12T11:47:27+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => j
+                    [2. What activities will you do to stay healthy?] => j
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => j
+                    [2. What steps will you take to achieve financial stability?] => j
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => j
+                    [2. What practices will you follow to stay emotionally balanced?] => j
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => j
+                    [2. What hobbies or interests will you pursue?] => j
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => j
+                    [2. What goals will you set for your career?] => j
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => j
+                    [2. How will you nurture these relationships?] => j
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+DETAILS: Array
+(
+    [email] => ray@gmail.com
+    [stage] => Buying your first home
+    [prompt] => A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+    [http_code] => 400
+    [openai_response] => {
+  "error": {
+    "message": null,
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}
+    [curl_error] => 
+    [session] => Array
+        (
+            [user_id] => 32
+            [user_name] => Ray
+            [user_email] => ray@gmail.com
+            [submitted_stage] => Buying your first home
+            [submitted_responses] => Array
+                (
+                    [Physicality] => Array
+                        (
+                            [1. How do you imagine your physical health at this stage?] => j
+                            [2. What activities will you do to stay healthy?] => j
+                        )
+
+                    [Finances] => Array
+                        (
+                            [1. What will your financial situation look like?] => j
+                            [2. What steps will you take to achieve financial stability?] => j
+                        )
+
+                    [Emotional/ Spiritual] => Array
+                        (
+                            [1. How will you maintain emotional and spiritual well-being?] => j
+                            [2. What practices will you follow to stay emotionally balanced?] => j
+                        )
+
+                    [LifeStyle] => Array
+                        (
+                            [1. What will your daily lifestyle look like?] => j
+                            [2. What hobbies or interests will you pursue?] => j
+                        )
+
+                    [Profession] => Array
+                        (
+                            [1. What will your professional life look like?] => j
+                            [2. What goals will you set for your career?] => j
+                        )
+
+                    [Relationships] => Array
+                        (
+                            [1. What will your relationships with family and friends look like?] => j
+                            [2. How will you nurture these relationships?] => j
+                        )
+
+                )
+
+        )
+
+)
+
+Script started at 2025-05-12T11:48:36+02:00
+After session_start at 2025-05-12T11:48:36+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":[],"time":"2025-05-12T11:48:36+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+)
+
+Stage: 
+No stage in session
+Script started at 2025-05-12T11:49:52+02:00
+After session_start at 2025-05-12T11:49:52+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"b","2. What activities will you do to stay healthy?":"b"},"Finances":{"1. What will your financial situation look like?":"b","2. What steps will you take to achieve financial stability?":"b"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"b","2. What practices will you follow to stay emotionally balanced?":"b"},"LifeStyle":{"1. What will your daily lifestyle look like?":"b","2. What hobbies or interests will you pursue?":"b"},"Profession":{"1. What will your professional life look like?":"b","2. What goals will you set for your career?":"b"},"Relationships":{"1. What will your relationships with family and friends look like?":"b","2. How will you nurture these relationships?":"b"}}},"time":"2025-05-12T11:49:52+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => b
+                    [2. What activities will you do to stay healthy?] => b
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => b
+                    [2. What steps will you take to achieve financial stability?] => b
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => b
+                    [2. What practices will you follow to stay emotionally balanced?] => b
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => b
+                    [2. What hobbies or interests will you pursue?] => b
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => b
+                    [2. What goals will you set for your career?] => b
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => b
+                    [2. How will you nurture these relationships?] => b
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+DETAILS: Array
+(
+    [email] => ray@gmail.com
+    [stage] => Becoming a Parent
+    [prompt] => A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+    [http_code] => 400
+    [openai_response] => {
+  "error": {
+    "message": null,
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}
+    [curl_error] => 
+    [session] => Array
+        (
+            [user_id] => 32
+            [user_name] => Ray
+            [user_email] => ray@gmail.com
+            [submitted_stage] => Becoming a Parent
+            [submitted_responses] => Array
+                (
+                    [Physicality] => Array
+                        (
+                            [1. How do you imagine your physical health at this stage?] => b
+                            [2. What activities will you do to stay healthy?] => b
+                        )
+
+                    [Finances] => Array
+                        (
+                            [1. What will your financial situation look like?] => b
+                            [2. What steps will you take to achieve financial stability?] => b
+                        )
+
+                    [Emotional/ Spiritual] => Array
+                        (
+                            [1. How will you maintain emotional and spiritual well-being?] => b
+                            [2. What practices will you follow to stay emotionally balanced?] => b
+                        )
+
+                    [LifeStyle] => Array
+                        (
+                            [1. What will your daily lifestyle look like?] => b
+                            [2. What hobbies or interests will you pursue?] => b
+                        )
+
+                    [Profession] => Array
+                        (
+                            [1. What will your professional life look like?] => b
+                            [2. What goals will you set for your career?] => b
+                        )
+
+                    [Relationships] => Array
+                        (
+                            [1. What will your relationships with family and friends look like?] => b
+                            [2. How will you nurture these relationships?] => b
+                        )
+
+                )
+
+        )
+
+)
+
+Script started at 2025-05-12T11:50:33+02:00
+After session_start at 2025-05-12T11:50:33+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":[],"time":"2025-05-12T11:50:33+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+)
+
+Stage: 
+No stage in session
+Script started at 2025-05-12T11:53:35+02:00
+After session_start at 2025-05-12T11:53:35+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"b","2. What activities will you do to stay healthy?":"b"},"Finances":{"1. What will your financial situation look like?":"b","2. What steps will you take to achieve financial stability?":"b"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"b","2. What practices will you follow to stay emotionally balanced?":"b"},"LifeStyle":{"1. What will your daily lifestyle look like?":"b","2. What hobbies or interests will you pursue?":"b"},"Profession":{"1. What will your professional life look like?":"b","2. What goals will you set for your career?":"b"},"Relationships":{"1. What will your relationships with family and friends look like?":"b","2. How will you nurture these relationships?":"b"}}},"time":"2025-05-12T11:53:35+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => b
+                    [2. What activities will you do to stay healthy?] => b
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => b
+                    [2. What steps will you take to achieve financial stability?] => b
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => b
+                    [2. What practices will you follow to stay emotionally balanced?] => b
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => b
+                    [2. What hobbies or interests will you pursue?] => b
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => b
+                    [2. What goals will you set for your career?] => b
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => b
+                    [2. How will you nurture these relationships?] => b
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+DETAILS: Array
+(
+    [email] => ray@gmail.com
+    [stage] => Becoming a Parent
+    [prompt] => A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+    [http_code] => 400
+    [openai_response] => {
+  "error": {
+    "message": null,
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}
+    [curl_error] => 
+    [session] => Array
+        (
+            [user_id] => 32
+            [user_name] => Ray
+            [user_email] => ray@gmail.com
+            [submitted_stage] => Becoming a Parent
+            [submitted_responses] => Array
+                (
+                    [Physicality] => Array
+                        (
+                            [1. How do you imagine your physical health at this stage?] => b
+                            [2. What activities will you do to stay healthy?] => b
+                        )
+
+                    [Finances] => Array
+                        (
+                            [1. What will your financial situation look like?] => b
+                            [2. What steps will you take to achieve financial stability?] => b
+                        )
+
+                    [Emotional/ Spiritual] => Array
+                        (
+                            [1. How will you maintain emotional and spiritual well-being?] => b
+                            [2. What practices will you follow to stay emotionally balanced?] => b
+                        )
+
+                    [LifeStyle] => Array
+                        (
+                            [1. What will your daily lifestyle look like?] => b
+                            [2. What hobbies or interests will you pursue?] => b
+                        )
+
+                    [Profession] => Array
+                        (
+                            [1. What will your professional life look like?] => b
+                            [2. What goals will you set for your career?] => b
+                        )
+
+                    [Relationships] => Array
+                        (
+                            [1. What will your relationships with family and friends look like?] => b
+                            [2. How will you nurture these relationships?] => b
+                        )
+
+                )
+
+        )
+
+)
+
+Script started at 2025-05-12T11:53:55+02:00
+After session_start at 2025-05-12T11:53:55+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"b","2. What activities will you do to stay healthy?":"b"},"Finances":{"1. What will your financial situation look like?":"b","2. What steps will you take to achieve financial stability?":"b"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"b","2. What practices will you follow to stay emotionally balanced?":"b"},"LifeStyle":{"1. What will your daily lifestyle look like?":"b","2. What hobbies or interests will you pursue?":"b"},"Profession":{"1. What will your professional life look like?":"b","2. What goals will you set for your career?":"b"},"Relationships":{"1. What will your relationships with family and friends look like?":"b","2. How will you nurture these relationships?":"b"}}},"time":"2025-05-12T11:53:55+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => b
+                    [2. What activities will you do to stay healthy?] => b
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => b
+                    [2. What steps will you take to achieve financial stability?] => b
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => b
+                    [2. What practices will you follow to stay emotionally balanced?] => b
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => b
+                    [2. What hobbies or interests will you pursue?] => b
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => b
+                    [2. What goals will you set for your career?] => b
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => b
+                    [2. How will you nurture these relationships?] => b
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+DETAILS: Array
+(
+    [email] => ray@gmail.com
+    [stage] => Becoming a Parent
+    [prompt] => A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+    [http_code] => 400
+    [openai_response] => {
+  "error": {
+    "message": null,
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}
+    [curl_error] => 
+    [session] => Array
+        (
+            [user_id] => 32
+            [user_name] => Ray
+            [user_email] => ray@gmail.com
+            [submitted_stage] => Becoming a Parent
+            [submitted_responses] => Array
+                (
+                    [Physicality] => Array
+                        (
+                            [1. How do you imagine your physical health at this stage?] => b
+                            [2. What activities will you do to stay healthy?] => b
+                        )
+
+                    [Finances] => Array
+                        (
+                            [1. What will your financial situation look like?] => b
+                            [2. What steps will you take to achieve financial stability?] => b
+                        )
+
+                    [Emotional/ Spiritual] => Array
+                        (
+                            [1. How will you maintain emotional and spiritual well-being?] => b
+                            [2. What practices will you follow to stay emotionally balanced?] => b
+                        )
+
+                    [LifeStyle] => Array
+                        (
+                            [1. What will your daily lifestyle look like?] => b
+                            [2. What hobbies or interests will you pursue?] => b
+                        )
+
+                    [Profession] => Array
+                        (
+                            [1. What will your professional life look like?] => b
+                            [2. What goals will you set for your career?] => b
+                        )
+
+                    [Relationships] => Array
+                        (
+                            [1. What will your relationships with family and friends look like?] => b
+                            [2. How will you nurture these relationships?] => b
+                        )
+
+                )
+
+        )
+
+)
+
+Script started at 2025-05-12T11:54:36+02:00
+After session_start at 2025-05-12T11:54:36+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":[],"time":"2025-05-12T11:54:36+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+DETAILS: Array
+(
+    [email] => lara@gmail.com
+    [stage] => General Financial Coaching
+    [prompt] => A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+    [http_code] => 400
+    [openai_response] => {
+  "error": {
+    "message": null,
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}
+    [curl_error] => 
+    [session] => Array
+        (
+            [submitted_stage] => General Financial Coaching
+        )
+
+)
+
+Script started at 2025-05-12T11:58:57+02:00
+After session_start at 2025-05-12T11:58:57+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"b","2. What activities will you do to stay healthy?":"b"},"Finances":{"1. What will your financial situation look like?":"b","2. What steps will you take to achieve financial stability?":"b"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"b","2. What practices will you follow to stay emotionally balanced?":"b"},"LifeStyle":{"1. What will your daily lifestyle look like?":"b","2. What hobbies or interests will you pursue?":"b"},"Profession":{"1. What will your professional life look like?":"b","2. What goals will you set for your career?":"b"},"Relationships":{"1. What will your relationships with family and friends look like?":"b","2. How will you nurture these relationships?":"b"}}},"time":"2025-05-12T11:58:57+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => b
+                    [2. What activities will you do to stay healthy?] => b
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => b
+                    [2. What steps will you take to achieve financial stability?] => b
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => b
+                    [2. What practices will you follow to stay emotionally balanced?] => b
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => b
+                    [2. What hobbies or interests will you pursue?] => b
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => b
+                    [2. What goals will you set for your career?] => b
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => b
+                    [2. How will you nurture these relationships?] => b
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+DETAILS: Array
+(
+    [email] => ray@gmail.com
+    [stage] => Becoming a Parent
+    [prompt] => A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+    [http_code] => 400
+    [openai_response] => {
+  "error": {
+    "message": null,
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}
+    [curl_error] => 
+    [session] => Array
+        (
+            [user_id] => 32
+            [user_name] => Ray
+            [user_email] => ray@gmail.com
+            [submitted_stage] => Becoming a Parent
+            [submitted_responses] => Array
+                (
+                    [Physicality] => Array
+                        (
+                            [1. How do you imagine your physical health at this stage?] => b
+                            [2. What activities will you do to stay healthy?] => b
+                        )
+
+                    [Finances] => Array
+                        (
+                            [1. What will your financial situation look like?] => b
+                            [2. What steps will you take to achieve financial stability?] => b
+                        )
+
+                    [Emotional/ Spiritual] => Array
+                        (
+                            [1. How will you maintain emotional and spiritual well-being?] => b
+                            [2. What practices will you follow to stay emotionally balanced?] => b
+                        )
+
+                    [LifeStyle] => Array
+                        (
+                            [1. What will your daily lifestyle look like?] => b
+                            [2. What hobbies or interests will you pursue?] => b
+                        )
+
+                    [Profession] => Array
+                        (
+                            [1. What will your professional life look like?] => b
+                            [2. What goals will you set for your career?] => b
+                        )
+
+                    [Relationships] => Array
+                        (
+                            [1. What will your relationships with family and friends look like?] => b
+                            [2. How will you nurture these relationships?] => b
+                        )
+
+                )
+
+        )
+
+    [user] => ray@gmail.com
+)
+
+Script started at 2025-05-12T11:59:04+02:00
+After session_start at 2025-05-12T11:59:04+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":{"submitted_stage":"General Financial Coaching"},"time":"2025-05-12T11:59:04+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+DETAILS: Array
+(
+    [email] => lara@gmail.com
+    [stage] => General Financial Coaching
+    [prompt] => A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+    [http_code] => 400
+    [openai_response] => {
+  "error": {
+    "message": null,
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}
+    [curl_error] => 
+    [session] => Array
+        (
+            [submitted_stage] => General Financial Coaching
+        )
+
+    [user] => lara@gmail.com
+)
+
+Script started at 2025-05-12T11:59:42+02:00
+After session_start at 2025-05-12T11:59:42+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"g","2. What activities will you do to stay healthy?":"g"},"Finances":{"1. What will your financial situation look like?":"g","2. What steps will you take to achieve financial stability?":"g"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"g","2. What practices will you follow to stay emotionally balanced?":"g"},"LifeStyle":{"1. What will your daily lifestyle look like?":"g","2. What hobbies or interests will you pursue?":"g"},"Profession":{"1. What will your professional life look like?":"g","2. What goals will you set for your career?":"g"},"Relationships":{"1. What will your relationships with family and friends look like?":"g","2. How will you nurture these relationships?":"g"}}},"time":"2025-05-12T11:59:42+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => g
+                    [2. What activities will you do to stay healthy?] => g
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => g
+                    [2. What steps will you take to achieve financial stability?] => g
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => g
+                    [2. What practices will you follow to stay emotionally balanced?] => g
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => g
+                    [2. What hobbies or interests will you pursue?] => g
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => g
+                    [2. What goals will you set for your career?] => g
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => g
+                    [2. How will you nurture these relationships?] => g
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+DETAILS: Array
+(
+    [email] => ray@gmail.com
+    [stage] => Becoming a Parent
+    [prompt] => A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+    [http_code] => 400
+    [openai_response] => {
+  "error": {
+    "message": null,
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}
+    [curl_error] => 
+    [session] => Array
+        (
+            [user_id] => 32
+            [user_name] => Ray
+            [user_email] => ray@gmail.com
+            [submitted_stage] => Becoming a Parent
+            [submitted_responses] => Array
+                (
+                    [Physicality] => Array
+                        (
+                            [1. How do you imagine your physical health at this stage?] => g
+                            [2. What activities will you do to stay healthy?] => g
+                        )
+
+                    [Finances] => Array
+                        (
+                            [1. What will your financial situation look like?] => g
+                            [2. What steps will you take to achieve financial stability?] => g
+                        )
+
+                    [Emotional/ Spiritual] => Array
+                        (
+                            [1. How will you maintain emotional and spiritual well-being?] => g
+                            [2. What practices will you follow to stay emotionally balanced?] => g
+                        )
+
+                    [LifeStyle] => Array
+                        (
+                            [1. What will your daily lifestyle look like?] => g
+                            [2. What hobbies or interests will you pursue?] => g
+                        )
+
+                    [Profession] => Array
+                        (
+                            [1. What will your professional life look like?] => g
+                            [2. What goals will you set for your career?] => g
+                        )
+
+                    [Relationships] => Array
+                        (
+                            [1. What will your relationships with family and friends look like?] => g
+                            [2. How will you nurture these relationships?] => g
+                        )
+
+                )
+
+        )
+
+    [user] => ray@gmail.com
+)
+
+Script started at 2025-05-12T11:59:48+02:00
+After session_start at 2025-05-12T11:59:48+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":{"submitted_stage":"General Financial Coaching"},"time":"2025-05-12T11:59:48+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+DETAILS: Array
+(
+    [email] => lara@gmail.com
+    [stage] => General Financial Coaching
+    [prompt] => A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+    [http_code] => 400
+    [openai_response] => {
+  "error": {
+    "message": null,
+    "type": "invalid_request_error",
+    "param": null,
+    "code": null
+  }
+}
+    [curl_error] => 
+    [session] => Array
+        (
+            [submitted_stage] => General Financial Coaching
+        )
+
+    [user] => lara@gmail.com
+)
+
+Script started at 2025-05-12T12:10:14+02:00
+After session_start at 2025-05-12T12:10:14+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"g","2. What activities will you do to stay healthy?":"g"},"Finances":{"1. What will your financial situation look like?":"g","2. What steps will you take to achieve financial stability?":"g"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"g","2. What practices will you follow to stay emotionally balanced?":"g"},"LifeStyle":{"1. What will your daily lifestyle look like?":"g","2. What hobbies or interests will you pursue?":"g"},"Profession":{"1. What will your professional life look like?":"g","2. What goals will you set for your career?":"g"},"Relationships":{"1. What will your relationships with family and friends look like?":"g","2. How will you nurture these relationships?":"g"}}},"time":"2025-05-12T12:10:14+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => g
+                    [2. What activities will you do to stay healthy?] => g
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => g
+                    [2. What steps will you take to achieve financial stability?] => g
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => g
+                    [2. What practices will you follow to stay emotionally balanced?] => g
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => g
+                    [2. What hobbies or interests will you pursue?] => g
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => g
+                    [2. What goals will you set for your career?] => g
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => g
+                    [2. How will you nurture these relationships?] => g
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:10:32+02:00
+After session_start at 2025-05-12T12:10:32+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"g","2. What activities will you do to stay healthy?":"g"},"Finances":{"1. What will your financial situation look like?":"g","2. What steps will you take to achieve financial stability?":"g"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"g","2. What practices will you follow to stay emotionally balanced?":"g"},"LifeStyle":{"1. What will your daily lifestyle look like?":"g","2. What hobbies or interests will you pursue?":"g"},"Profession":{"1. What will your professional life look like?":"g","2. What goals will you set for your career?":"g"},"Relationships":{"1. What will your relationships with family and friends look like?":"g","2. How will you nurture these relationships?":"g"}}},"time":"2025-05-12T12:10:32+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => g
+                    [2. What activities will you do to stay healthy?] => g
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => g
+                    [2. What steps will you take to achieve financial stability?] => g
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => g
+                    [2. What practices will you follow to stay emotionally balanced?] => g
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => g
+                    [2. What hobbies or interests will you pursue?] => g
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => g
+                    [2. What goals will you set for your career?] => g
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => g
+                    [2. How will you nurture these relationships?] => g
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:10:40+02:00
+After session_start at 2025-05-12T12:10:40+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":{"submitted_stage":"General Financial Coaching"},"time":"2025-05-12T12:10:40+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Script started at 2025-05-12T12:12:43+02:00
+After session_start at 2025-05-12T12:12:43+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"g","2. What activities will you do to stay healthy?":"g"},"Finances":{"1. What will your financial situation look like?":"g","2. What steps will you take to achieve financial stability?":"g"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"g","2. What practices will you follow to stay emotionally balanced?":"g"},"LifeStyle":{"1. What will your daily lifestyle look like?":"g","2. What hobbies or interests will you pursue?":"g"},"Profession":{"1. What will your professional life look like?":"g","2. What goals will you set for your career?":"g"},"Relationships":{"1. What will your relationships with family and friends look like?":"g","2. How will you nurture these relationships?":"g"}}},"time":"2025-05-12T12:12:43+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => g
+                    [2. What activities will you do to stay healthy?] => g
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => g
+                    [2. What steps will you take to achieve financial stability?] => g
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => g
+                    [2. What practices will you follow to stay emotionally balanced?] => g
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => g
+                    [2. What hobbies or interests will you pursue?] => g
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => g
+                    [2. What goals will you set for your career?] => g
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => g
+                    [2. How will you nurture these relationships?] => g
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:12:59+02:00
+After session_start at 2025-05-12T12:12:59+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":{"submitted_stage":"General Financial Coaching"},"time":"2025-05-12T12:12:59+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Script started at 2025-05-12T12:22:03+02:00
+After session_start at 2025-05-12T12:22:03+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"g","2. What activities will you do to stay healthy?":"g"},"Finances":{"1. What will your financial situation look like?":"g","2. What steps will you take to achieve financial stability?":"g"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"g","2. What practices will you follow to stay emotionally balanced?":"g"},"LifeStyle":{"1. What will your daily lifestyle look like?":"g","2. What hobbies or interests will you pursue?":"g"},"Profession":{"1. What will your professional life look like?":"g","2. What goals will you set for your career?":"g"},"Relationships":{"1. What will your relationships with family and friends look like?":"g","2. How will you nurture these relationships?":"g"}}},"time":"2025-05-12T12:22:03+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => g
+                    [2. What activities will you do to stay healthy?] => g
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => g
+                    [2. What steps will you take to achieve financial stability?] => g
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => g
+                    [2. What practices will you follow to stay emotionally balanced?] => g
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => g
+                    [2. What hobbies or interests will you pursue?] => g
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => g
+                    [2. What goals will you set for your career?] => g
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => g
+                    [2. How will you nurture these relationships?] => g
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:22:22+02:00
+After session_start at 2025-05-12T12:22:22+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"g","2. What activities will you do to stay healthy?":"g"},"Finances":{"1. What will your financial situation look like?":"g","2. What steps will you take to achieve financial stability?":"g"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"g","2. What practices will you follow to stay emotionally balanced?":"g"},"LifeStyle":{"1. What will your daily lifestyle look like?":"g","2. What hobbies or interests will you pursue?":"g"},"Profession":{"1. What will your professional life look like?":"g","2. What goals will you set for your career?":"g"},"Relationships":{"1. What will your relationships with family and friends look like?":"g","2. How will you nurture these relationships?":"g"}}},"time":"2025-05-12T12:22:22+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => g
+                    [2. What activities will you do to stay healthy?] => g
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => g
+                    [2. What steps will you take to achieve financial stability?] => g
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => g
+                    [2. What practices will you follow to stay emotionally balanced?] => g
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => g
+                    [2. What hobbies or interests will you pursue?] => g
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => g
+                    [2. What goals will you set for your career?] => g
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => g
+                    [2. How will you nurture these relationships?] => g
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:23:13+02:00
+After session_start at 2025-05-12T12:23:13+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Planning Retirement","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"i","2. What activities will you do to stay healthy?":"i"},"Finances":{"1. What will your financial situation look like?":"i","2. What steps will you take to achieve financial stability?":"i"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"i","2. What practices will you follow to stay emotionally balanced?":"i"},"LifeStyle":{"1. What will your daily lifestyle look like?":"i","2. What hobbies or interests will you pursue?":"i"},"Profession":{"1. What will your professional life look like?":"i","2. What goals will you set for your career?":"i"},"Relationships":{"1. What will your relationships with family and friends look like?":"i","2. How will you nurture these relationships?":"i"}}},"time":"2025-05-12T12:23:13+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Planning Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => i
+                    [2. What activities will you do to stay healthy?] => i
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => i
+                    [2. What steps will you take to achieve financial stability?] => i
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => i
+                    [2. What practices will you follow to stay emotionally balanced?] => i
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => i
+                    [2. What hobbies or interests will you pursue?] => i
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => i
+                    [2. What goals will you set for your career?] => i
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => i
+                    [2. How will you nurture these relationships?] => i
+                )
+
+        )
+
+)
+
+Stage: Planning Retirement
+Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:25:21+02:00
+After session_start at 2025-05-12T12:25:21+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Planning Retirement","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"i","2. What activities will you do to stay healthy?":"i"},"Finances":{"1. What will your financial situation look like?":"i","2. What steps will you take to achieve financial stability?":"i"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"i","2. What practices will you follow to stay emotionally balanced?":"i"},"LifeStyle":{"1. What will your daily lifestyle look like?":"i","2. What hobbies or interests will you pursue?":"i"},"Profession":{"1. What will your professional life look like?":"i","2. What goals will you set for your career?":"i"},"Relationships":{"1. What will your relationships with family and friends look like?":"i","2. How will you nurture these relationships?":"i"}}},"time":"2025-05-12T12:25:21+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Planning Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => i
+                    [2. What activities will you do to stay healthy?] => i
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => i
+                    [2. What steps will you take to achieve financial stability?] => i
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => i
+                    [2. What practices will you follow to stay emotionally balanced?] => i
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => i
+                    [2. What hobbies or interests will you pursue?] => i
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => i
+                    [2. What goals will you set for your career?] => i
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => i
+                    [2. How will you nurture these relationships?] => i
+                )
+
+        )
+
+)
+
+Stage: Planning Retirement
+Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:25:56+02:00
+After session_start at 2025-05-12T12:25:56+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Planning Retirement","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"i","2. What activities will you do to stay healthy?":"i"},"Finances":{"1. What will your financial situation look like?":"i","2. What steps will you take to achieve financial stability?":"i"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"i","2. What practices will you follow to stay emotionally balanced?":"i"},"LifeStyle":{"1. What will your daily lifestyle look like?":"i","2. What hobbies or interests will you pursue?":"i"},"Profession":{"1. What will your professional life look like?":"i","2. What goals will you set for your career?":"i"},"Relationships":{"1. What will your relationships with family and friends look like?":"i","2. How will you nurture these relationships?":"i"}}},"time":"2025-05-12T12:25:56+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Planning Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => i
+                    [2. What activities will you do to stay healthy?] => i
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => i
+                    [2. What steps will you take to achieve financial stability?] => i
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => i
+                    [2. What practices will you follow to stay emotionally balanced?] => i
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => i
+                    [2. What hobbies or interests will you pursue?] => i
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => i
+                    [2. What goals will you set for your career?] => i
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => i
+                    [2. How will you nurture these relationships?] => i
+                )
+
+        )
+
+)
+
+Stage: Planning Retirement
+Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:48:45+02:00
+After session_start at 2025-05-12T12:48:45+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Planning Retirement","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"i","2. What activities will you do to stay healthy?":"i"},"Finances":{"1. What will your financial situation look like?":"i","2. What steps will you take to achieve financial stability?":"i"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"i","2. What practices will you follow to stay emotionally balanced?":"i"},"LifeStyle":{"1. What will your daily lifestyle look like?":"i","2. What hobbies or interests will you pursue?":"i"},"Profession":{"1. What will your professional life look like?":"i","2. What goals will you set for your career?":"i"},"Relationships":{"1. What will your relationships with family and friends look like?":"i","2. How will you nurture these relationships?":"i"}}},"time":"2025-05-12T12:48:45+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Planning Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => i
+                    [2. What activities will you do to stay healthy?] => i
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => i
+                    [2. What steps will you take to achieve financial stability?] => i
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => i
+                    [2. What practices will you follow to stay emotionally balanced?] => i
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => i
+                    [2. What hobbies or interests will you pursue?] => i
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => i
+                    [2. What goals will you set for your career?] => i
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => i
+                    [2. How will you nurture these relationships?] => i
+                )
+
+        )
+
+)
+
+Stage: Planning Retirement
+Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:49:01+02:00
+After session_start at 2025-05-12T12:49:01+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Planning Retirement","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"i","2. What activities will you do to stay healthy?":"i"},"Finances":{"1. What will your financial situation look like?":"i","2. What steps will you take to achieve financial stability?":"i"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"i","2. What practices will you follow to stay emotionally balanced?":"i"},"LifeStyle":{"1. What will your daily lifestyle look like?":"i","2. What hobbies or interests will you pursue?":"i"},"Profession":{"1. What will your professional life look like?":"i","2. What goals will you set for your career?":"i"},"Relationships":{"1. What will your relationships with family and friends look like?":"i","2. How will you nurture these relationships?":"i"}}},"time":"2025-05-12T12:49:01+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Planning Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => i
+                    [2. What activities will you do to stay healthy?] => i
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => i
+                    [2. What steps will you take to achieve financial stability?] => i
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => i
+                    [2. What practices will you follow to stay emotionally balanced?] => i
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => i
+                    [2. What hobbies or interests will you pursue?] => i
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => i
+                    [2. What goals will you set for your career?] => i
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => i
+                    [2. How will you nurture these relationships?] => i
+                )
+
+        )
+
+)
+
+Stage: Planning Retirement
+Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:49:11+02:00
+After session_start at 2025-05-12T12:49:11+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":{"submitted_stage":"General Financial Coaching"},"time":"2025-05-12T12:49:11+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Script started at 2025-05-12T12:50:05+02:00
+After session_start at 2025-05-12T12:50:05+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"o","2. What activities will you do to stay healthy?":"o"},"Finances":{"1. What will your financial situation look like?":"o","2. What steps will you take to achieve financial stability?":"o"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"o","2. What practices will you follow to stay emotionally balanced?":"o"},"LifeStyle":{"1. What will your daily lifestyle look like?":"o","2. What hobbies or interests will you pursue?":"o"},"Profession":{"1. What will your professional life look like?":"o","2. What goals will you set for your career?":"o"},"Relationships":{"1. What will your relationships with family and friends look like?":"o","2. How will you nurture these relationships?":"o"}}},"time":"2025-05-12T12:50:05+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => o
+                    [2. What activities will you do to stay healthy?] => o
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => o
+                    [2. What steps will you take to achieve financial stability?] => o
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => o
+                    [2. What practices will you follow to stay emotionally balanced?] => o
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => o
+                    [2. What hobbies or interests will you pursue?] => o
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => o
+                    [2. What goals will you set for your career?] => o
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => o
+                    [2. How will you nurture these relationships?] => o
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:50:24+02:00
+After session_start at 2025-05-12T12:50:24+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"o","2. What activities will you do to stay healthy?":"o"},"Finances":{"1. What will your financial situation look like?":"o","2. What steps will you take to achieve financial stability?":"o"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"o","2. What practices will you follow to stay emotionally balanced?":"o"},"LifeStyle":{"1. What will your daily lifestyle look like?":"o","2. What hobbies or interests will you pursue?":"o"},"Profession":{"1. What will your professional life look like?":"o","2. What goals will you set for your career?":"o"},"Relationships":{"1. What will your relationships with family and friends look like?":"o","2. How will you nurture these relationships?":"o"}}},"time":"2025-05-12T12:50:24+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => o
+                    [2. What activities will you do to stay healthy?] => o
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => o
+                    [2. What steps will you take to achieve financial stability?] => o
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => o
+                    [2. What practices will you follow to stay emotionally balanced?] => o
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => o
+                    [2. What hobbies or interests will you pursue?] => o
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => o
+                    [2. What goals will you set for your career?] => o
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => o
+                    [2. How will you nurture these relationships?] => o
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T12:50:30+02:00
+After session_start at 2025-05-12T12:50:30+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":{"submitted_stage":"General Financial Coaching"},"time":"2025-05-12T12:50:30+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Script started at 2025-05-12T12:54:32+02:00
+After session_start at 2025-05-12T12:54:32+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"o","2. What activities will you do to stay healthy?":"o"},"Finances":{"1. What will your financial situation look like?":"o","2. What steps will you take to achieve financial stability?":"o"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"o","2. What practices will you follow to stay emotionally balanced?":"o"},"LifeStyle":{"1. What will your daily lifestyle look like?":"o","2. What hobbies or interests will you pursue?":"o"},"Profession":{"1. What will your professional life look like?":"o","2. What goals will you set for your career?":"o"},"Relationships":{"1. What will your relationships with family and friends look like?":"o","2. How will you nurture these relationships?":"o"}}},"time":"2025-05-12T12:54:32+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => o
+                    [2. What activities will you do to stay healthy?] => o
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => o
+                    [2. What steps will you take to achieve financial stability?] => o
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => o
+                    [2. What practices will you follow to stay emotionally balanced?] => o
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => o
+                    [2. What hobbies or interests will you pursue?] => o
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => o
+                    [2. What goals will you set for your career?] => o
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => o
+                    [2. How will you nurture these relationships?] => o
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T13:03:13+02:00
+After session_start at 2025-05-12T13:03:13+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"o","2. What activities will you do to stay healthy?":"o"},"Finances":{"1. What will your financial situation look like?":"o","2. What steps will you take to achieve financial stability?":"o"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"o","2. What practices will you follow to stay emotionally balanced?":"o"},"LifeStyle":{"1. What will your daily lifestyle look like?":"o","2. What hobbies or interests will you pursue?":"o"},"Profession":{"1. What will your professional life look like?":"o","2. What goals will you set for your career?":"o"},"Relationships":{"1. What will your relationships with family and friends look like?":"o","2. How will you nurture these relationships?":"o"}}},"time":"2025-05-12T13:03:13+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => o
+                    [2. What activities will you do to stay healthy?] => o
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => o
+                    [2. What steps will you take to achieve financial stability?] => o
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => o
+                    [2. What practices will you follow to stay emotionally balanced?] => o
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => o
+                    [2. What hobbies or interests will you pursue?] => o
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => o
+                    [2. What goals will you set for your career?] => o
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => o
+                    [2. How will you nurture these relationships?] => o
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T13:07:57+02:00
+After session_start at 2025-05-12T13:07:57+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"o","2. What activities will you do to stay healthy?":"o"},"Finances":{"1. What will your financial situation look like?":"o","2. What steps will you take to achieve financial stability?":"o"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"o","2. What practices will you follow to stay emotionally balanced?":"o"},"LifeStyle":{"1. What will your daily lifestyle look like?":"o","2. What hobbies or interests will you pursue?":"o"},"Profession":{"1. What will your professional life look like?":"o","2. What goals will you set for your career?":"o"},"Relationships":{"1. What will your relationships with family and friends look like?":"o","2. How will you nurture these relationships?":"o"}}},"time":"2025-05-12T13:07:57+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => o
+                    [2. What activities will you do to stay healthy?] => o
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => o
+                    [2. What steps will you take to achieve financial stability?] => o
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => o
+                    [2. What practices will you follow to stay emotionally balanced?] => o
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => o
+                    [2. What hobbies or interests will you pursue?] => o
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => o
+                    [2. What goals will you set for your career?] => o
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => o
+                    [2. How will you nurture these relationships?] => o
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T13:08:07+02:00
+After session_start at 2025-05-12T13:08:07+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":{"submitted_stage":"General Financial Coaching"},"time":"2025-05-12T13:08:07+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Script started at 2025-05-12T13:16:35+02:00
+After session_start at 2025-05-12T13:16:35+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"o","2. What activities will you do to stay healthy?":"o"},"Finances":{"1. What will your financial situation look like?":"o","2. What steps will you take to achieve financial stability?":"o"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"o","2. What practices will you follow to stay emotionally balanced?":"o"},"LifeStyle":{"1. What will your daily lifestyle look like?":"o","2. What hobbies or interests will you pursue?":"o"},"Profession":{"1. What will your professional life look like?":"o","2. What goals will you set for your career?":"o"},"Relationships":{"1. What will your relationships with family and friends look like?":"o","2. How will you nurture these relationships?":"o"}}},"time":"2025-05-12T13:16:35+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => o
+                    [2. What activities will you do to stay healthy?] => o
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => o
+                    [2. What steps will you take to achieve financial stability?] => o
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => o
+                    [2. What practices will you follow to stay emotionally balanced?] => o
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => o
+                    [2. What hobbies or interests will you pursue?] => o
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => o
+                    [2. What goals will you set for your career?] => o
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => o
+                    [2. How will you nurture these relationships?] => o
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T13:17:47+02:00
+After session_start at 2025-05-12T13:17:47+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":{"submitted_stage":"General Financial Coaching"},"time":"2025-05-12T13:17:47+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Script started at 2025-05-12T13:26:39+02:00
+After session_start at 2025-05-12T13:26:40+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"o","2. What activities will you do to stay healthy?":"o"},"Finances":{"1. What will your financial situation look like?":"o","2. What steps will you take to achieve financial stability?":"o"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"o","2. What practices will you follow to stay emotionally balanced?":"o"},"LifeStyle":{"1. What will your daily lifestyle look like?":"o","2. What hobbies or interests will you pursue?":"o"},"Profession":{"1. What will your professional life look like?":"o","2. What goals will you set for your career?":"o"},"Relationships":{"1. What will your relationships with family and friends look like?":"o","2. How will you nurture these relationships?":"o"}}},"time":"2025-05-12T13:26:40+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => o
+                    [2. What activities will you do to stay healthy?] => o
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => o
+                    [2. What steps will you take to achieve financial stability?] => o
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => o
+                    [2. What practices will you follow to stay emotionally balanced?] => o
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => o
+                    [2. What hobbies or interests will you pursue?] => o
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => o
+                    [2. What goals will you set for your career?] => o
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => o
+                    [2. How will you nurture these relationships?] => o
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T13:26:49+02:00
+After session_start at 2025-05-12T13:26:49+02:00
+{"post":[],"input":"{\r\n  \"email\": \"lara@gmail.com\"\r\n}","session":{"submitted_stage":"General Financial Coaching"},"time":"2025-05-12T13:26:49+02:00"}
+Request method: POST
+POST request received
+Raw input: {
+  "email": "lara@gmail.com"
+}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Script started at 2025-05-12T14:44:15+02:00
+After session_start at 2025-05-12T14:44:15+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Becoming a Parent","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"o","2. What activities will you do to stay healthy?":"o"},"Finances":{"1. What will your financial situation look like?":"o","2. What steps will you take to achieve financial stability?":"o"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"o","2. What practices will you follow to stay emotionally balanced?":"o"},"LifeStyle":{"1. What will your daily lifestyle look like?":"o","2. What hobbies or interests will you pursue?":"o"},"Profession":{"1. What will your professional life look like?":"o","2. What goals will you set for your career?":"o"},"Relationships":{"1. What will your relationships with family and friends look like?":"o","2. How will you nurture these relationships?":"o"}}},"time":"2025-05-12T14:44:15+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Becoming a Parent
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => o
+                    [2. What activities will you do to stay healthy?] => o
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => o
+                    [2. What steps will you take to achieve financial stability?] => o
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => o
+                    [2. What practices will you follow to stay emotionally balanced?] => o
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => o
+                    [2. What hobbies or interests will you pursue?] => o
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => o
+                    [2. What goals will you set for your career?] => o
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => o
+                    [2. How will you nurture these relationships?] => o
+                )
+
+        )
+
+)
+
+Stage: Becoming a Parent
+Prompt: A caring adult, soon to be a parent, gentle smile, warm background, professional avatar, photorealistic
+Script started at 2025-05-12T15:48:59+02:00
+After session_start at 2025-05-12T15:48:59+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Retirement","submitted_responses":{"Physicality":{"1. How do you imagine your physical health at this stage?":"h","2. What activities will you do to stay healthy?":"h"},"Finances":{"1. What will your financial situation look like?":"h","2. What steps will you take to achieve financial stability?":"h"},"Emotional\/ Spiritual":{"1. How will you maintain emotional and spiritual well-being?":"h","2. What practices will you follow to stay emotionally balanced?":"h"},"LifeStyle":{"1. What will your daily lifestyle look like?":"h","2. What hobbies or interests will you pursue?":"h"},"Profession":{"1. What will your professional life look like?":"h","2. What goals will you set for your career?":"h"},"Relationships":{"1. What will your relationships with family and friends look like?":"h","2. How will you nurture these relationships?":"h"}}},"time":"2025-05-12T15:48:59+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How do you imagine your physical health at this stage?] => h
+                    [2. What activities will you do to stay healthy?] => h
+                )
+
+            [Finances] => Array
+                (
+                    [1. What will your financial situation look like?] => h
+                    [2. What steps will you take to achieve financial stability?] => h
+                )
+
+            [Emotional/ Spiritual] => Array
+                (
+                    [1. How will you maintain emotional and spiritual well-being?] => h
+                    [2. What practices will you follow to stay emotionally balanced?] => h
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1. What will your daily lifestyle look like?] => h
+                    [2. What hobbies or interests will you pursue?] => h
+                )
+
+            [Profession] => Array
+                (
+                    [1. What will your professional life look like?] => h
+                    [2. What goals will you set for your career?] => h
+                )
+
+            [Relationships] => Array
+                (
+                    [1. What will your relationships with family and friends look like?] => h
+                    [2. How will you nurture these relationships?] => h
+                )
+
+        )
+
+)
+
+Stage: Retirement
+Prompt: A happy retiree, relaxed and content, peaceful background, professional avatar, photorealistic
+Script started at 2025-05-12T16:14:56+02:00
+After session_start at 2025-05-12T16:14:56+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"y","2. What colour will your hair be?":"y","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"y","4.\tHow will you dress?":"y","5.\tWhat standard of clothes will you buy?":"y","6.\tDo you exercise?":"y"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"y","2.\tWhat is your most valuable financial asset (house, etc)?":"y","3.\tWill you have a mortgage?":"y","4.\tWhat investments will you have?":"y","5.\tHow will you have saved?":"y","6.\tHow much disposable income will you have at this time?":"y"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"y","2.\tWhat are your core values?":"y","3.\tHow will you keep yourself emotionally balanced and healthy?":"y","4.\tHow do your core values relate to your financial goal?":"y"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"y","2.\tHow many holidays a year will you go on?":"y","3.\tWhat will you have to sacrifice to achieve your financial goals?":"y","4.\tHow can you reframe these sacrifices? ":"y","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"y"},"Profession":{"1.\tWhat do you do for work?":"y","2.\tHow much do you earn?":"y","3.\tHave you gained a promotion to achieve your financial goals?":"y","4.\tWhat has your career trajectory been?":"y","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"y","6.\tHow did you maintain a good work-life balance?":"y"},"Relationships":{"1.\tDo you have family?":"y","2.\tWho are your friends?":"y","3.\tWhat do you do with your friends?":"y","4.\tDo your relationships support you in achieving your financial goals?":"y","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"y","6.\tWhat type of people do you associate with?":"y"}}},"time":"2025-05-12T16:14:56+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => y
+                    [2. What colour will your hair be?] => y
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => y
+                    [4.	How will you dress?] => y
+                    [5.	What standard of clothes will you buy?] => y
+                    [6.	Do you exercise?] => y
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => y
+                    [2.	What is your most valuable financial asset (house, etc)?] => y
+                    [3.	Will you have a mortgage?] => y
+                    [4.	What investments will you have?] => y
+                    [5.	How will you have saved?] => y
+                    [6.	How much disposable income will you have at this time?] => y
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => y
+                    [2.	What are your core values?] => y
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => y
+                    [4.	How do your core values relate to your financial goal?] => y
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => y
+                    [2.	How many holidays a year will you go on?] => y
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => y
+                    [4.	How can you reframe these sacrifices? ] => y
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => y
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => y
+                    [2.	How much do you earn?] => y
+                    [3.	Have you gained a promotion to achieve your financial goals?] => y
+                    [4.	What has your career trajectory been?] => y
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => y
+                    [6.	How did you maintain a good work-life balance?] => y
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => y
+                    [2.	Who are your friends?] => y
+                    [3.	What do you do with your friends?] => y
+                    [4.	Do your relationships support you in achieving your financial goals?] => y
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => y
+                    [6.	What type of people do you associate with?] => y
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Script started at 2025-05-12T16:21:32+02:00
+After session_start at 2025-05-12T16:21:32+02:00
+{"post":[],"input":"{\"email\":\"ravindra@gmail.com\"}","session":{"user_id":27,"user_name":"Ravi","user_email":"ravindra@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"w","2. What colour will your hair be?":"w","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"w","4.\tHow will you dress?":"w","5.\tWhat standard of clothes will you buy?":"w","6.\tDo you exercise?":"w"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"w","2.\tWhat is your most valuable financial asset (house, etc)?":"w","3.\tWill you have a mortgage?":"w","4.\tWhat investments will you have?":"w","5.\tHow will you have saved?":"w","6.\tHow much disposable income will you have at this time?":"w"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"w","2.\tWhat are your core values?":"w","3.\tHow will you keep yourself emotionally balanced and healthy?":"w","4.\tHow do your core values relate to your financial goal?":"w"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"w","2.\tHow many holidays a year will you go on?":"w","3.\tWhat will you have to sacrifice to achieve your financial goals?":"w","4.\tHow can you reframe these sacrifices? ":"w","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"w"},"Profession":{"1.\tWhat do you do for work?":"w","2.\tHow much do you earn?":"w","3.\tHave you gained a promotion to achieve your financial goals?":"w","4.\tWhat has your career trajectory been?":"w","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"w","6.\tHow did you maintain a good work-life balance?":"w"},"Relationships":{"1.\tDo you have family?":"w","2.\tWho are your friends?":"w","3.\tWhat do you do with your friends?":"w","4.\tDo your relationships support you in achieving your financial goals?":"w","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"ww","6.\tWhat type of people do you associate with?":"w"}}},"time":"2025-05-12T16:21:32+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ravindra@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ravindra@gmail.com',
+)
+Email after POST: ravindra@gmail.com
+Email: ravindra@gmail.com
+Session: Array
+(
+    [user_id] => 27
+    [user_name] => Ravi
+    [user_email] => ravindra@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => w
+                    [2. What colour will your hair be?] => w
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => w
+                    [4.	How will you dress?] => w
+                    [5.	What standard of clothes will you buy?] => w
+                    [6.	Do you exercise?] => w
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => w
+                    [2.	What is your most valuable financial asset (house, etc)?] => w
+                    [3.	Will you have a mortgage?] => w
+                    [4.	What investments will you have?] => w
+                    [5.	How will you have saved?] => w
+                    [6.	How much disposable income will you have at this time?] => w
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => w
+                    [2.	What are your core values?] => w
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => w
+                    [4.	How do your core values relate to your financial goal?] => w
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => w
+                    [2.	How many holidays a year will you go on?] => w
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => w
+                    [4.	How can you reframe these sacrifices? ] => w
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => w
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => w
+                    [2.	How much do you earn?] => w
+                    [3.	Have you gained a promotion to achieve your financial goals?] => w
+                    [4.	What has your career trajectory been?] => w
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => w
+                    [6.	How did you maintain a good work-life balance?] => w
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => w
+                    [2.	Who are your friends?] => w
+                    [3.	What do you do with your friends?] => w
+                    [4.	Do your relationships support you in achieving your financial goals?] => w
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => ww
+                    [6.	What type of people do you associate with?] => w
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Script started at 2025-05-12T16:36:27+02:00
+After session_start at 2025-05-12T16:36:27+02:00
+{"post":[],"input":"{\"email\":\"ravindra@gmail.com\"}","session":{"user_id":27,"user_name":"Ravi","user_email":"ravindra@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"35 years","2. What colour will your hair be?":"slightly gray","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"simple smile","4.\tHow will you dress?":"a professional attaire","5.\tWhat standard of clothes will you buy?":"semi-branded","6.\tDo you exercise?":"yes, regularly"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"r","2.\tWhat is your most valuable financial asset (house, etc)?":"r","3.\tWill you have a mortgage?":"r","4.\tWhat investments will you have?":"r","5.\tHow will you have saved?":"r","6.\tHow much disposable income will you have at this time?":"r"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"r","2.\tWhat are your core values?":"r","3.\tHow will you keep yourself emotionally balanced and healthy?":"r","4.\tHow do your core values relate to your financial goal?":"r"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"r","2.\tHow many holidays a year will you go on?":"r","3.\tWhat will you have to sacrifice to achieve your financial goals?":"r","4.\tHow can you reframe these sacrifices? ":"r","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"r"},"Profession":{"1.\tWhat do you do for work?":"r","2.\tHow much do you earn?":"r","3.\tHave you gained a promotion to achieve your financial goals?":"r","4.\tWhat has your career trajectory been?":"r","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"r","6.\tHow did you maintain a good work-life balance?":"r"},"Relationships":{"1.\tDo you have family?":"r","2.\tWho are your friends?":"r","3.\tWhat do you do with your friends?":"r","4.\tDo your relationships support you in achieving your financial goals?":"r","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"r","6.\tWhat type of people do you associate with?":"r"}}},"time":"2025-05-12T16:36:27+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ravindra@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ravindra@gmail.com',
+)
+Email after POST: ravindra@gmail.com
+Email: ravindra@gmail.com
+Session: Array
+(
+    [user_id] => 27
+    [user_name] => Ravi
+    [user_email] => ravindra@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 35 years
+                    [2. What colour will your hair be?] => slightly gray
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => simple smile
+                    [4.	How will you dress?] => a professional attaire
+                    [5.	What standard of clothes will you buy?] => semi-branded
+                    [6.	Do you exercise?] => yes, regularly
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => r
+                    [2.	What is your most valuable financial asset (house, etc)?] => r
+                    [3.	Will you have a mortgage?] => r
+                    [4.	What investments will you have?] => r
+                    [5.	How will you have saved?] => r
+                    [6.	How much disposable income will you have at this time?] => r
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => r
+                    [2.	What are your core values?] => r
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => r
+                    [4.	How do your core values relate to your financial goal?] => r
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => r
+                    [2.	How many holidays a year will you go on?] => r
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => r
+                    [4.	How can you reframe these sacrifices? ] => r
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => r
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => r
+                    [2.	How much do you earn?] => r
+                    [3.	Have you gained a promotion to achieve your financial goals?] => r
+                    [4.	What has your career trajectory been?] => r
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => r
+                    [6.	How did you maintain a good work-life balance?] => r
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => r
+                    [2.	Who are your friends?] => r
+                    [3.	What do you do with your friends?] => r
+                    [4.	Do your relationships support you in achieving your financial goals?] => r
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => r
+                    [6.	What type of people do you associate with?] => r
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Final Prompt: A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic 35 years. slightly gray. simple smile. a professional attaire. semi-branded. yes, regularly.
+Script started at 2025-05-12T16:44:53+02:00
+After session_start at 2025-05-12T16:44:53+02:00
+{"post":[],"input":"{\"email\":\"ravindra@gmail.com\"}","session":{"user_id":27,"user_name":"Ravi","user_email":"ravindra@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"35 years","2. What colour will your hair be?":"slightly gray","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"simple smile","4.\tHow will you dress?":"a professional attaire","5.\tWhat standard of clothes will you buy?":"semi-branded","6.\tDo you exercise?":"yes, regularly"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"r","2.\tWhat is your most valuable financial asset (house, etc)?":"r","3.\tWill you have a mortgage?":"r","4.\tWhat investments will you have?":"r","5.\tHow will you have saved?":"r","6.\tHow much disposable income will you have at this time?":"r"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"r","2.\tWhat are your core values?":"r","3.\tHow will you keep yourself emotionally balanced and healthy?":"r","4.\tHow do your core values relate to your financial goal?":"r"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"r","2.\tHow many holidays a year will you go on?":"r","3.\tWhat will you have to sacrifice to achieve your financial goals?":"r","4.\tHow can you reframe these sacrifices? ":"r","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"r"},"Profession":{"1.\tWhat do you do for work?":"r","2.\tHow much do you earn?":"r","3.\tHave you gained a promotion to achieve your financial goals?":"r","4.\tWhat has your career trajectory been?":"r","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"r","6.\tHow did you maintain a good work-life balance?":"r"},"Relationships":{"1.\tDo you have family?":"r","2.\tWho are your friends?":"r","3.\tWhat do you do with your friends?":"r","4.\tDo your relationships support you in achieving your financial goals?":"r","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"r","6.\tWhat type of people do you associate with?":"r"}}},"time":"2025-05-12T16:44:53+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ravindra@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ravindra@gmail.com',
+)
+Email after POST: ravindra@gmail.com
+Email: ravindra@gmail.com
+Session: Array
+(
+    [user_id] => 27
+    [user_name] => Ravi
+    [user_email] => ravindra@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 35 years
+                    [2. What colour will your hair be?] => slightly gray
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => simple smile
+                    [4.	How will you dress?] => a professional attaire
+                    [5.	What standard of clothes will you buy?] => semi-branded
+                    [6.	Do you exercise?] => yes, regularly
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => r
+                    [2.	What is your most valuable financial asset (house, etc)?] => r
+                    [3.	Will you have a mortgage?] => r
+                    [4.	What investments will you have?] => r
+                    [5.	How will you have saved?] => r
+                    [6.	How much disposable income will you have at this time?] => r
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => r
+                    [2.	What are your core values?] => r
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => r
+                    [4.	How do your core values relate to your financial goal?] => r
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => r
+                    [2.	How many holidays a year will you go on?] => r
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => r
+                    [4.	How can you reframe these sacrifices? ] => r
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => r
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => r
+                    [2.	How much do you earn?] => r
+                    [3.	Have you gained a promotion to achieve your financial goals?] => r
+                    [4.	What has your career trajectory been?] => r
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => r
+                    [6.	How did you maintain a good work-life balance?] => r
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => r
+                    [2.	Who are your friends?] => r
+                    [3.	What do you do with your friends?] => r
+                    [4.	Do your relationships support you in achieving your financial goals?] => r
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => r
+                    [6.	What type of people do you associate with?] => r
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Final Prompt: A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic 35 years. slightly gray. simple smile. a professional attaire. semi-branded. yes, regularly.
+Script started at 2025-05-12T18:43:46+02:00
+Script started at 2025-05-12T18:43:46+02:00
+After session_start at 2025-05-12T18:43:46+02:00
+{"post":[],"input":"{\"email\":\"ravindra@gmail.com\"}","session":{"user_id":27,"user_name":"Ravi","user_email":"ravindra@gmail.com","submitted_stage":"Planning Retirement","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"42","2. What colour will your hair be?":"red","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"smile","4.\tHow will you dress?":"suit","5.\tWhat standard of clothes will you buy?":"branded","6.\tDo you exercise?":"yes"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"g","2.\tWhat is your most valuable financial asset (house, etc)?":"g","3.\tWill you have a mortgage?":"g","4.\tWhat investments will you have?":"g","5.\tHow will you have saved?":"g","6.\tHow much disposable income will you have at this time?":"g"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"g","2.\tWhat are your core values?":"g","3.\tHow will you keep yourself emotionally balanced and healthy?":"g","4.\tHow do your core values relate to your financial goal?":"g"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"g","2.\tHow many holidays a year will you go on?":"g","3.\tWhat will you have to sacrifice to achieve your financial goals?":"g","4.\tHow can you reframe these sacrifices? ":"g","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"g"},"Profession":{"1.\tWhat do you do for work?":"g","2.\tHow much do you earn?":"g","3.\tHave you gained a promotion to achieve your financial goals?":"g","4.\tWhat has your career trajectory been?":"g","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"g","6.\tHow did you maintain a good work-life balance?":"g"},"Relationships":{"1.\tDo you have family?":"g","2.\tWho are your friends?":"g","3.\tWhat do you do with your friends?":"g","4.\tDo your relationships support you in achieving your financial goals?":"g","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"g","6.\tWhat type of people do you associate with?":"g"}}},"time":"2025-05-12T18:43:46+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ravindra@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ravindra@gmail.com',
+)
+Email after POST: ravindra@gmail.com
+Email: ravindra@gmail.com
+Session: Array
+(
+    [user_id] => 27
+    [user_name] => Ravi
+    [user_email] => ravindra@gmail.com
+    [submitted_stage] => Planning Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 42
+                    [2. What colour will your hair be?] => red
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => smile
+                    [4.	How will you dress?] => suit
+                    [5.	What standard of clothes will you buy?] => branded
+                    [6.	Do you exercise?] => yes
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => g
+                    [2.	What is your most valuable financial asset (house, etc)?] => g
+                    [3.	Will you have a mortgage?] => g
+                    [4.	What investments will you have?] => g
+                    [5.	How will you have saved?] => g
+                    [6.	How much disposable income will you have at this time?] => g
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => g
+                    [2.	What are your core values?] => g
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => g
+                    [4.	How do your core values relate to your financial goal?] => g
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => g
+                    [2.	How many holidays a year will you go on?] => g
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => g
+                    [4.	How can you reframe these sacrifices? ] => g
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => g
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => g
+                    [2.	How much do you earn?] => g
+                    [3.	Have you gained a promotion to achieve your financial goals?] => g
+                    [4.	What has your career trajectory been?] => g
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => g
+                    [6.	How did you maintain a good work-life balance?] => g
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => g
+                    [2.	Who are your friends?] => g
+                    [3.	What do you do with your friends?] => g
+                    [4.	Do your relationships support you in achieving your financial goals?] => g
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => g
+                    [6.	What type of people do you associate with?] => g
+                )
+
+        )
+
+)
+
+Stage: Planning Retirement
+Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic
+Final Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic 42. red. smile. suit. branded. yes.
+After session_start at 2025-05-12T18:43:56+02:00
+{"post":[],"input":"{\"email\":\"ravindra@gmail.com\"}","session":{"user_id":27,"user_name":"Ravi","user_email":"ravindra@gmail.com","submitted_stage":"Planning Retirement","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"42","2. What colour will your hair be?":"red","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"smile","4.\tHow will you dress?":"suit","5.\tWhat standard of clothes will you buy?":"branded","6.\tDo you exercise?":"yes"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"g","2.\tWhat is your most valuable financial asset (house, etc)?":"g","3.\tWill you have a mortgage?":"g","4.\tWhat investments will you have?":"g","5.\tHow will you have saved?":"g","6.\tHow much disposable income will you have at this time?":"g"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"g","2.\tWhat are your core values?":"g","3.\tHow will you keep yourself emotionally balanced and healthy?":"g","4.\tHow do your core values relate to your financial goal?":"g"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"g","2.\tHow many holidays a year will you go on?":"g","3.\tWhat will you have to sacrifice to achieve your financial goals?":"g","4.\tHow can you reframe these sacrifices? ":"g","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"g"},"Profession":{"1.\tWhat do you do for work?":"g","2.\tHow much do you earn?":"g","3.\tHave you gained a promotion to achieve your financial goals?":"g","4.\tWhat has your career trajectory been?":"g","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"g","6.\tHow did you maintain a good work-life balance?":"g"},"Relationships":{"1.\tDo you have family?":"g","2.\tWho are your friends?":"g","3.\tWhat do you do with your friends?":"g","4.\tDo your relationships support you in achieving your financial goals?":"g","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"g","6.\tWhat type of people do you associate with?":"g"}}},"time":"2025-05-12T18:43:56+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ravindra@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ravindra@gmail.com',
+)
+Email after POST: ravindra@gmail.com
+Email: ravindra@gmail.com
+Session: Array
+(
+    [user_id] => 27
+    [user_name] => Ravi
+    [user_email] => ravindra@gmail.com
+    [submitted_stage] => Planning Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 42
+                    [2. What colour will your hair be?] => red
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => smile
+                    [4.	How will you dress?] => suit
+                    [5.	What standard of clothes will you buy?] => branded
+                    [6.	Do you exercise?] => yes
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => g
+                    [2.	What is your most valuable financial asset (house, etc)?] => g
+                    [3.	Will you have a mortgage?] => g
+                    [4.	What investments will you have?] => g
+                    [5.	How will you have saved?] => g
+                    [6.	How much disposable income will you have at this time?] => g
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => g
+                    [2.	What are your core values?] => g
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => g
+                    [4.	How do your core values relate to your financial goal?] => g
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => g
+                    [2.	How many holidays a year will you go on?] => g
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => g
+                    [4.	How can you reframe these sacrifices? ] => g
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => g
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => g
+                    [2.	How much do you earn?] => g
+                    [3.	Have you gained a promotion to achieve your financial goals?] => g
+                    [4.	What has your career trajectory been?] => g
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => g
+                    [6.	How did you maintain a good work-life balance?] => g
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => g
+                    [2.	Who are your friends?] => g
+                    [3.	What do you do with your friends?] => g
+                    [4.	Do your relationships support you in achieving your financial goals?] => g
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => g
+                    [6.	What type of people do you associate with?] => g
+                )
+
+        )
+
+)
+
+Stage: Planning Retirement
+Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic
+Final Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic 42. red. smile. suit. branded. yes.
+Script started at 2025-05-12T22:24:58+02:00
+After session_start at 2025-05-12T22:24:58+02:00
+{"post":[],"input":"{\"email\":\"lara@gmail.com\"}","session":{"user_id":33,"user_name":"Brian","user_email":"lara@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"38","2. What colour will your hair be?":"black and white","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"calm smile","4.\tHow will you dress?":"white t-shirt with a collar, wear a sunglass","5.\tWhat standard of clothes will you buy?":"casual, branded NIKE ","6.\tDo you exercise?":"yes"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"n","2.\tWhat is your most valuable financial asset (house, etc)?":"n","3.\tWill you have a mortgage?":"n","4.\tWhat investments will you have?":"n","5.\tHow will you have saved?":"n","6.\tHow much disposable income will you have at this time?":"n"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"n","2.\tWhat are your core values?":"n","3.\tHow will you keep yourself emotionally balanced and healthy?":"n","4.\tHow do your core values relate to your financial goal?":"n"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"n","2.\tHow many holidays a year will you go on?":"n","3.\tWhat will you have to sacrifice to achieve your financial goals?":"n","4.\tHow can you reframe these sacrifices? ":"n","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"n"},"Profession":{"1.\tWhat do you do for work?":"n","2.\tHow much do you earn?":"n","3.\tHave you gained a promotion to achieve your financial goals?":"n","4.\tWhat has your career trajectory been?":"n","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"n","6.\tHow did you maintain a good work-life balance?":"n"},"Relationships":{"1.\tDo you have family?":"n","2.\tWho are your friends?":"n","3.\tWhat do you do with your friends?":"n","4.\tDo your relationships support you in achieving your financial goals?":"n","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"n","6.\tWhat type of people do you associate with?":"n"}}},"time":"2025-05-12T22:24:58+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"lara@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [user_id] => 33
+    [user_name] => Brian
+    [user_email] => lara@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 38
+                    [2. What colour will your hair be?] => black and white
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => calm smile
+                    [4.	How will you dress?] => white t-shirt with a collar, wear a sunglass
+                    [5.	What standard of clothes will you buy?] => casual, branded NIKE 
+                    [6.	Do you exercise?] => yes
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => n
+                    [2.	What is your most valuable financial asset (house, etc)?] => n
+                    [3.	Will you have a mortgage?] => n
+                    [4.	What investments will you have?] => n
+                    [5.	How will you have saved?] => n
+                    [6.	How much disposable income will you have at this time?] => n
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => n
+                    [2.	What are your core values?] => n
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => n
+                    [4.	How do your core values relate to your financial goal?] => n
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => n
+                    [2.	How many holidays a year will you go on?] => n
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => n
+                    [4.	How can you reframe these sacrifices? ] => n
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => n
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => n
+                    [2.	How much do you earn?] => n
+                    [3.	Have you gained a promotion to achieve your financial goals?] => n
+                    [4.	What has your career trajectory been?] => n
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => n
+                    [6.	How did you maintain a good work-life balance?] => n
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => n
+                    [2.	Who are your friends?] => n
+                    [3.	What do you do with your friends?] => n
+                    [4.	Do your relationships support you in achieving your financial goals?] => n
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => n
+                    [6.	What type of people do you associate with?] => n
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Final Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic 38. black and white. calm smile. white t-shirt with a collar, wear a sunglass. casual, branded NIKE . yes.
+Script started at 2025-05-12T22:24:58+02:00
+After session_start at 2025-05-12T22:25:09+02:00
+{"post":[],"input":"{\"email\":\"lara@gmail.com\"}","session":{"user_id":33,"user_name":"Brian","user_email":"lara@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"38","2. What colour will your hair be?":"black and white","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"calm smile","4.\tHow will you dress?":"white t-shirt with a collar, wear a sunglass","5.\tWhat standard of clothes will you buy?":"casual, branded NIKE ","6.\tDo you exercise?":"yes"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"n","2.\tWhat is your most valuable financial asset (house, etc)?":"n","3.\tWill you have a mortgage?":"n","4.\tWhat investments will you have?":"n","5.\tHow will you have saved?":"n","6.\tHow much disposable income will you have at this time?":"n"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"n","2.\tWhat are your core values?":"n","3.\tHow will you keep yourself emotionally balanced and healthy?":"n","4.\tHow do your core values relate to your financial goal?":"n"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"n","2.\tHow many holidays a year will you go on?":"n","3.\tWhat will you have to sacrifice to achieve your financial goals?":"n","4.\tHow can you reframe these sacrifices? ":"n","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"n"},"Profession":{"1.\tWhat do you do for work?":"n","2.\tHow much do you earn?":"n","3.\tHave you gained a promotion to achieve your financial goals?":"n","4.\tWhat has your career trajectory been?":"n","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"n","6.\tHow did you maintain a good work-life balance?":"n"},"Relationships":{"1.\tDo you have family?":"n","2.\tWho are your friends?":"n","3.\tWhat do you do with your friends?":"n","4.\tDo your relationships support you in achieving your financial goals?":"n","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"n","6.\tWhat type of people do you associate with?":"n"}}},"time":"2025-05-12T22:25:09+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"lara@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'lara@gmail.com',
+)
+Email after POST: lara@gmail.com
+Email: lara@gmail.com
+Session: Array
+(
+    [user_id] => 33
+    [user_name] => Brian
+    [user_email] => lara@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 38
+                    [2. What colour will your hair be?] => black and white
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => calm smile
+                    [4.	How will you dress?] => white t-shirt with a collar, wear a sunglass
+                    [5.	What standard of clothes will you buy?] => casual, branded NIKE 
+                    [6.	Do you exercise?] => yes
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => n
+                    [2.	What is your most valuable financial asset (house, etc)?] => n
+                    [3.	Will you have a mortgage?] => n
+                    [4.	What investments will you have?] => n
+                    [5.	How will you have saved?] => n
+                    [6.	How much disposable income will you have at this time?] => n
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => n
+                    [2.	What are your core values?] => n
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => n
+                    [4.	How do your core values relate to your financial goal?] => n
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => n
+                    [2.	How many holidays a year will you go on?] => n
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => n
+                    [4.	How can you reframe these sacrifices? ] => n
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => n
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => n
+                    [2.	How much do you earn?] => n
+                    [3.	Have you gained a promotion to achieve your financial goals?] => n
+                    [4.	What has your career trajectory been?] => n
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => n
+                    [6.	How did you maintain a good work-life balance?] => n
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => n
+                    [2.	Who are your friends?] => n
+                    [3.	What do you do with your friends?] => n
+                    [4.	Do your relationships support you in achieving your financial goals?] => n
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => n
+                    [6.	What type of people do you associate with?] => n
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Final Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic 38. black and white. calm smile. white t-shirt with a collar, wear a sunglass. casual, branded NIKE . yes.
+Script started at 2025-05-13T01:35:36+02:00
+After session_start at 2025-05-13T01:35:36+02:00
+{"post":[],"input":"{\"email\":\"neil@gmail.com\"}","session":{"user_id":35,"user_name":"Neil","user_email":"neil@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"29","2. What colour will your hair be?":"black","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"finger crossed and smiling","4.\tHow will you dress?":"casual light blue shirt, sunglass on the forehead, wear an apple watch","5.\tWhat standard of clothes will you buy?":"branded under-armour","6.\tDo you exercise?":"no"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"m","2.\tWhat is your most valuable financial asset (house, etc)?":"m","3.\tWill you have a mortgage?":"m","4.\tWhat investments will you have?":"m","5.\tHow will you have saved?":"m","6.\tHow much disposable income will you have at this time?":"m"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"m","2.\tWhat are your core values?":"m","3.\tHow will you keep yourself emotionally balanced and healthy?":"m","4.\tHow do your core values relate to your financial goal?":"m"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"m","2.\tHow many holidays a year will you go on?":"m","3.\tWhat will you have to sacrifice to achieve your financial goals?":"m","4.\tHow can you reframe these sacrifices? ":"m","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"m"},"Profession":{"1.\tWhat do you do for work?":"m","2.\tHow much do you earn?":"m","3.\tHave you gained a promotion to achieve your financial goals?":"m","4.\tWhat has your career trajectory been?":"m","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"m","6.\tHow did you maintain a good work-life balance?":"m"},"Relationships":{"1.\tDo you have family?":"mm","2.\tWho are your friends?":"m","3.\tWhat do you do with your friends?":"m","4.\tDo your relationships support you in achieving your financial goals?":"m","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"m","6.\tWhat type of people do you associate with?":"m"}}},"time":"2025-05-13T01:35:36+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"neil@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'neil@gmail.com',
+)
+Email after POST: neil@gmail.com
+Email: neil@gmail.com
+Session: Array
+(
+    [user_id] => 35
+    [user_name] => Neil
+    [user_email] => neil@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 29
+                    [2. What colour will your hair be?] => black
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => finger crossed and smiling
+                    [4.	How will you dress?] => casual light blue shirt, sunglass on the forehead, wear an apple watch
+                    [5.	What standard of clothes will you buy?] => branded under-armour
+                    [6.	Do you exercise?] => no
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => m
+                    [2.	What is your most valuable financial asset (house, etc)?] => m
+                    [3.	Will you have a mortgage?] => m
+                    [4.	What investments will you have?] => m
+                    [5.	How will you have saved?] => m
+                    [6.	How much disposable income will you have at this time?] => m
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => m
+                    [2.	What are your core values?] => m
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => m
+                    [4.	How do your core values relate to your financial goal?] => m
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => m
+                    [2.	How many holidays a year will you go on?] => m
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => m
+                    [4.	How can you reframe these sacrifices? ] => m
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => m
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => m
+                    [2.	How much do you earn?] => m
+                    [3.	Have you gained a promotion to achieve your financial goals?] => m
+                    [4.	What has your career trajectory been?] => m
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => m
+                    [6.	How did you maintain a good work-life balance?] => m
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => mm
+                    [2.	Who are your friends?] => m
+                    [3.	What do you do with your friends?] => m
+                    [4.	Do your relationships support you in achieving your financial goals?] => m
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => m
+                    [6.	What type of people do you associate with?] => m
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Final Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic 29. black. finger crossed and smiling. casual light blue shirt, sunglass on the forehead, wear an apple watch. branded under-armour. no.
+After session_start at 2025-05-13T01:35:48+02:00
+{"post":[],"input":"{\"email\":\"neil@gmail.com\"}","session":{"user_id":35,"user_name":"Neil","user_email":"neil@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"29","2. What colour will your hair be?":"black","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"finger crossed and smiling","4.\tHow will you dress?":"casual light blue shirt, sunglass on the forehead, wear an apple watch","5.\tWhat standard of clothes will you buy?":"branded under-armour","6.\tDo you exercise?":"no"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"m","2.\tWhat is your most valuable financial asset (house, etc)?":"m","3.\tWill you have a mortgage?":"m","4.\tWhat investments will you have?":"m","5.\tHow will you have saved?":"m","6.\tHow much disposable income will you have at this time?":"m"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"m","2.\tWhat are your core values?":"m","3.\tHow will you keep yourself emotionally balanced and healthy?":"m","4.\tHow do your core values relate to your financial goal?":"m"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"m","2.\tHow many holidays a year will you go on?":"m","3.\tWhat will you have to sacrifice to achieve your financial goals?":"m","4.\tHow can you reframe these sacrifices? ":"m","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"m"},"Profession":{"1.\tWhat do you do for work?":"m","2.\tHow much do you earn?":"m","3.\tHave you gained a promotion to achieve your financial goals?":"m","4.\tWhat has your career trajectory been?":"m","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"m","6.\tHow did you maintain a good work-life balance?":"m"},"Relationships":{"1.\tDo you have family?":"mm","2.\tWho are your friends?":"m","3.\tWhat do you do with your friends?":"m","4.\tDo your relationships support you in achieving your financial goals?":"m","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"m","6.\tWhat type of people do you associate with?":"m"}}},"time":"2025-05-13T01:35:48+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"neil@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'neil@gmail.com',
+)
+Email after POST: neil@gmail.com
+Email: neil@gmail.com
+Session: Array
+(
+    [user_id] => 35
+    [user_name] => Neil
+    [user_email] => neil@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 29
+                    [2. What colour will your hair be?] => black
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => finger crossed and smiling
+                    [4.	How will you dress?] => casual light blue shirt, sunglass on the forehead, wear an apple watch
+                    [5.	What standard of clothes will you buy?] => branded under-armour
+                    [6.	Do you exercise?] => no
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => m
+                    [2.	What is your most valuable financial asset (house, etc)?] => m
+                    [3.	Will you have a mortgage?] => m
+                    [4.	What investments will you have?] => m
+                    [5.	How will you have saved?] => m
+                    [6.	How much disposable income will you have at this time?] => m
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => m
+                    [2.	What are your core values?] => m
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => m
+                    [4.	How do your core values relate to your financial goal?] => m
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => m
+                    [2.	How many holidays a year will you go on?] => m
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => m
+                    [4.	How can you reframe these sacrifices? ] => m
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => m
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => m
+                    [2.	How much do you earn?] => m
+                    [3.	Have you gained a promotion to achieve your financial goals?] => m
+                    [4.	What has your career trajectory been?] => m
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => m
+                    [6.	How did you maintain a good work-life balance?] => m
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => mm
+                    [2.	Who are your friends?] => m
+                    [3.	What do you do with your friends?] => m
+                    [4.	Do your relationships support you in achieving your financial goals?] => m
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => m
+                    [6.	What type of people do you associate with?] => m
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Final Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic 29. black. finger crossed and smiling. casual light blue shirt, sunglass on the forehead, wear an apple watch. branded under-armour. no.
+Script started at 2025-05-13T13:12:22+02:00
+Script started at 2025-05-13T13:12:22+02:00
+After session_start at 2025-05-13T13:12:22+02:00
+{"post":[],"input":"{\"email\":\"neil@gmail.com\"}","session":{"user_id":35,"user_name":"Neil","user_email":"neil@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"30","2. What colour will your hair be?":"black","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"slightly smile, and forward looking","4.\tHow will you dress?":"yellow t shirt, wear spectacles, wear apple watch and cross hands","5.\tWhat standard of clothes will you buy?":"branded, tommy hilfiger","6.\tDo you exercise?":"yes"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"i","2.\tWhat is your most valuable financial asset (house, etc)?":"i","3.\tWill you have a mortgage?":"i","4.\tWhat investments will you have?":"i","5.\tHow will you have saved?":"i","6.\tHow much disposable income will you have at this time?":"i"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"i","2.\tWhat are your core values?":"i","3.\tHow will you keep yourself emotionally balanced and healthy?":"i","4.\tHow do your core values relate to your financial goal?":"i"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"i","2.\tHow many holidays a year will you go on?":"i","3.\tWhat will you have to sacrifice to achieve your financial goals?":"i","4.\tHow can you reframe these sacrifices? ":"i","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"i"},"Profession":{"1.\tWhat do you do for work?":"i","2.\tHow much do you earn?":"i","3.\tHave you gained a promotion to achieve your financial goals?":"i","4.\tWhat has your career trajectory been?":"i","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"i","6.\tHow did you maintain a good work-life balance?":"i"},"Relationships":{"1.\tDo you have family?":"i","2.\tWho are your friends?":"i","3.\tWhat do you do with your friends?":"i","4.\tDo your relationships support you in achieving your financial goals?":"i","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"i","6.\tWhat type of people do you associate with?":"i"}}},"time":"2025-05-13T13:12:22+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"neil@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'neil@gmail.com',
+)
+Email after POST: neil@gmail.com
+Email: neil@gmail.com
+Session: Array
+(
+    [user_id] => 35
+    [user_name] => Neil
+    [user_email] => neil@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 30
+                    [2. What colour will your hair be?] => black
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => slightly smile, and forward looking
+                    [4.	How will you dress?] => yellow t shirt, wear spectacles, wear apple watch and cross hands
+                    [5.	What standard of clothes will you buy?] => branded, tommy hilfiger
+                    [6.	Do you exercise?] => yes
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => i
+                    [2.	What is your most valuable financial asset (house, etc)?] => i
+                    [3.	Will you have a mortgage?] => i
+                    [4.	What investments will you have?] => i
+                    [5.	How will you have saved?] => i
+                    [6.	How much disposable income will you have at this time?] => i
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => i
+                    [2.	What are your core values?] => i
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => i
+                    [4.	How do your core values relate to your financial goal?] => i
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => i
+                    [2.	How many holidays a year will you go on?] => i
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => i
+                    [4.	How can you reframe these sacrifices? ] => i
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => i
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => i
+                    [2.	How much do you earn?] => i
+                    [3.	Have you gained a promotion to achieve your financial goals?] => i
+                    [4.	What has your career trajectory been?] => i
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => i
+                    [6.	How did you maintain a good work-life balance?] => i
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => i
+                    [2.	Who are your friends?] => i
+                    [3.	What do you do with your friends?] => i
+                    [4.	Do your relationships support you in achieving your financial goals?] => i
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => i
+                    [6.	What type of people do you associate with?] => i
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Final Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic 30. black. slightly smile, and forward looking. yellow t shirt, wear spectacles, wear apple watch and cross hands. branded, tommy hilfiger. yes.
+After session_start at 2025-05-13T13:12:33+02:00
+{"post":[],"input":"{\"email\":\"neil@gmail.com\"}","session":{"user_id":35,"user_name":"Neil","user_email":"neil@gmail.com","submitted_stage":"Buying your first home","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"30","2. What colour will your hair be?":"black","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"slightly smile, and forward looking","4.\tHow will you dress?":"yellow t shirt, wear spectacles, wear apple watch and cross hands","5.\tWhat standard of clothes will you buy?":"branded, tommy hilfiger","6.\tDo you exercise?":"yes"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"i","2.\tWhat is your most valuable financial asset (house, etc)?":"i","3.\tWill you have a mortgage?":"i","4.\tWhat investments will you have?":"i","5.\tHow will you have saved?":"i","6.\tHow much disposable income will you have at this time?":"i"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"i","2.\tWhat are your core values?":"i","3.\tHow will you keep yourself emotionally balanced and healthy?":"i","4.\tHow do your core values relate to your financial goal?":"i"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"i","2.\tHow many holidays a year will you go on?":"i","3.\tWhat will you have to sacrifice to achieve your financial goals?":"i","4.\tHow can you reframe these sacrifices? ":"i","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"i"},"Profession":{"1.\tWhat do you do for work?":"i","2.\tHow much do you earn?":"i","3.\tHave you gained a promotion to achieve your financial goals?":"i","4.\tWhat has your career trajectory been?":"i","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"i","6.\tHow did you maintain a good work-life balance?":"i"},"Relationships":{"1.\tDo you have family?":"i","2.\tWho are your friends?":"i","3.\tWhat do you do with your friends?":"i","4.\tDo your relationships support you in achieving your financial goals?":"i","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"i","6.\tWhat type of people do you associate with?":"i"}}},"time":"2025-05-13T13:12:33+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"neil@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'neil@gmail.com',
+)
+Email after POST: neil@gmail.com
+Email: neil@gmail.com
+Session: Array
+(
+    [user_id] => 35
+    [user_name] => Neil
+    [user_email] => neil@gmail.com
+    [submitted_stage] => Buying your first home
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 30
+                    [2. What colour will your hair be?] => black
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => slightly smile, and forward looking
+                    [4.	How will you dress?] => yellow t shirt, wear spectacles, wear apple watch and cross hands
+                    [5.	What standard of clothes will you buy?] => branded, tommy hilfiger
+                    [6.	Do you exercise?] => yes
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => i
+                    [2.	What is your most valuable financial asset (house, etc)?] => i
+                    [3.	Will you have a mortgage?] => i
+                    [4.	What investments will you have?] => i
+                    [5.	How will you have saved?] => i
+                    [6.	How much disposable income will you have at this time?] => i
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => i
+                    [2.	What are your core values?] => i
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => i
+                    [4.	How do your core values relate to your financial goal?] => i
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => i
+                    [2.	How many holidays a year will you go on?] => i
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => i
+                    [4.	How can you reframe these sacrifices? ] => i
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => i
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => i
+                    [2.	How much do you earn?] => i
+                    [3.	Have you gained a promotion to achieve your financial goals?] => i
+                    [4.	What has your career trajectory been?] => i
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => i
+                    [6.	How did you maintain a good work-life balance?] => i
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => i
+                    [2.	Who are your friends?] => i
+                    [3.	What do you do with your friends?] => i
+                    [4.	Do your relationships support you in achieving your financial goals?] => i
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => i
+                    [6.	What type of people do you associate with?] => i
+                )
+
+        )
+
+)
+
+Stage: Buying your first home
+Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic
+Final Prompt: A man. A confident young adult, ready to buy their first home, smiling, modern background, professional avatar, photorealistic 30. black. slightly smile, and forward looking. yellow t shirt, wear spectacles, wear apple watch and cross hands. branded, tommy hilfiger. yes.
+Script started at 2025-05-15T00:23:37+02:00
+After session_start at 2025-05-15T00:23:37+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com"},"time":"2025-05-15T00:23:37+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Script started at 2025-05-15T00:23:37+02:00
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Final Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+After session_start at 2025-05-15T00:23:47+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"General Financial Coaching"},"time":"2025-05-15T00:23:47+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Final Prompt: A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Script started at 2025-05-15T02:19:30+02:00
+After session_start at 2025-05-15T02:19:30+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Planning Retirement","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"55","2. What colour will your hair be?":"gray","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"tired but satisfied","4.\tHow will you dress?":"casual typical european dress","5.\tWhat standard of clothes will you buy?":"mid-luxury","6.\tDo you exercise?":"no"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"60000","2.\tWhat is your most valuable financial asset (house, etc)?":"y","3.\tWill you have a mortgage?":"y","4.\tWhat investments will you have?":"y","5.\tHow will you have saved?":"y","6.\tHow much disposable income will you have at this time?":"y"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"y","2.\tWhat are your core values?":"y","3.\tHow will you keep yourself emotionally balanced and healthy?":"y","4.\tHow do your core values relate to your financial goal?":"y"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"y","2.\tHow many holidays a year will you go on?":"y","3.\tWhat will you have to sacrifice to achieve your financial goals?":"y","4.\tHow can you reframe these sacrifices? ":"y","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"y"},"Profession":{"1.\tWhat do you do for work?":"y","2.\tHow much do you earn?":"y","3.\tHave you gained a promotion to achieve your financial goals?":"y","4.\tWhat has your career trajectory been?":"y","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"y","6.\tHow did you maintain a good work-life balance?":"y"},"Relationships":{"1.\tDo you have family?":"y","2.\tWho are your friends?":"y","3.\tWhat do you do with your friends?":"y","4.\tDo your relationships support you in achieving your financial goals?":"y","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"y","6.\tWhat type of people do you associate with?":"y"}}},"time":"2025-05-15T02:19:30+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Planning Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 55
+                    [2. What colour will your hair be?] => gray
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => tired but satisfied
+                    [4.	How will you dress?] => casual typical european dress
+                    [5.	What standard of clothes will you buy?] => mid-luxury
+                    [6.	Do you exercise?] => no
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => 60000
+                    [2.	What is your most valuable financial asset (house, etc)?] => y
+                    [3.	Will you have a mortgage?] => y
+                    [4.	What investments will you have?] => y
+                    [5.	How will you have saved?] => y
+                    [6.	How much disposable income will you have at this time?] => y
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => y
+                    [2.	What are your core values?] => y
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => y
+                    [4.	How do your core values relate to your financial goal?] => y
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => y
+                    [2.	How many holidays a year will you go on?] => y
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => y
+                    [4.	How can you reframe these sacrifices? ] => y
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => y
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => y
+                    [2.	How much do you earn?] => y
+                    [3.	Have you gained a promotion to achieve your financial goals?] => y
+                    [4.	What has your career trajectory been?] => y
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => y
+                    [6.	How did you maintain a good work-life balance?] => y
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => y
+                    [2.	Who are your friends?] => y
+                    [3.	What do you do with your friends?] => y
+                    [4.	Do your relationships support you in achieving your financial goals?] => y
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => y
+                    [6.	What type of people do you associate with?] => y
+                )
+
+        )
+
+)
+
+Stage: Planning Retirement
+Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic
+Final Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic 55. gray. tired but satisfied. casual typical european dress. mid-luxury. no.
+After session_start at 2025-05-15T02:19:42+02:00
+{"post":[],"input":"{\"email\":\"ray@gmail.com\"}","session":{"user_id":32,"user_name":"Ray","user_email":"ray@gmail.com","submitted_stage":"Planning Retirement","submitted_responses":{"Physicality":{"1. How old will you be when you achieve your financial goal?":"55","2. What colour will your hair be?":"gray","3.\tHow will your posture exude confidence and satisfaction in achieving a major financial milestone?":"tired but satisfied","4.\tHow will you dress?":"casual typical european dress","5.\tWhat standard of clothes will you buy?":"mid-luxury","6.\tDo you exercise?":"no"},"Income and Personal Finances":{"1.\tHow much money will you earn?":"60000","2.\tWhat is your most valuable financial asset (house, etc)?":"y","3.\tWill you have a mortgage?":"y","4.\tWhat investments will you have?":"y","5.\tHow will you have saved?":"y","6.\tHow much disposable income will you have at this time?":"y"},"Emotional\/ Spiritual Values":{"1.\tWhat will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?":"y","2.\tWhat are your core values?":"y","3.\tHow will you keep yourself emotionally balanced and healthy?":"y","4.\tHow do your core values relate to your financial goal?":"y"},"LifeStyle":{"1.\tWhat will your hobbies and interests be?":"y","2.\tHow many holidays a year will you go on?":"y","3.\tWhat will you have to sacrifice to achieve your financial goals?":"y","4.\tHow can you reframe these sacrifices? ":"y","5.\tHow do you balance your lifestyle against achieving and maintaining your financial goals?":"y"},"Profession":{"1.\tWhat do you do for work?":"y","2.\tHow much do you earn?":"y","3.\tHave you gained a promotion to achieve your financial goals?":"y","4.\tWhat has your career trajectory been?":"y","5.\tHow did you motivate yourself to stay the course to achieve your financial goals?":"y","6.\tHow did you maintain a good work-life balance?":"y"},"Relationships":{"1.\tDo you have family?":"y","2.\tWho are your friends?":"y","3.\tWhat do you do with your friends?":"y","4.\tDo your relationships support you in achieving your financial goals?":"y","5.\tWhat financial boundaries will you need to set and maintain to achieve your financial goals?":"y","6.\tWhat type of people do you associate with?":"y"}}},"time":"2025-05-15T02:19:42+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"ray@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'ray@gmail.com',
+)
+Email after POST: ray@gmail.com
+Email: ray@gmail.com
+Session: Array
+(
+    [user_id] => 32
+    [user_name] => Ray
+    [user_email] => ray@gmail.com
+    [submitted_stage] => Planning Retirement
+    [submitted_responses] => Array
+        (
+            [Physicality] => Array
+                (
+                    [1. How old will you be when you achieve your financial goal?] => 55
+                    [2. What colour will your hair be?] => gray
+                    [3.	How will your posture exude confidence and satisfaction in achieving a major financial milestone?] => tired but satisfied
+                    [4.	How will you dress?] => casual typical european dress
+                    [5.	What standard of clothes will you buy?] => mid-luxury
+                    [6.	Do you exercise?] => no
+                )
+
+            [Income and Personal Finances] => Array
+                (
+                    [1.	How much money will you earn?] => 60000
+                    [2.	What is your most valuable financial asset (house, etc)?] => y
+                    [3.	Will you have a mortgage?] => y
+                    [4.	What investments will you have?] => y
+                    [5.	How will you have saved?] => y
+                    [6.	How much disposable income will you have at this time?] => y
+                )
+
+            [Emotional/ Spiritual Values] => Array
+                (
+                    [1.	What will achieving this goal do for you as a person? For instance, if you sacrifice to get on the property ladder, will you have a sense of pride and achievement?] => y
+                    [2.	What are your core values?] => y
+                    [3.	How will you keep yourself emotionally balanced and healthy?] => y
+                    [4.	How do your core values relate to your financial goal?] => y
+                )
+
+            [LifeStyle] => Array
+                (
+                    [1.	What will your hobbies and interests be?] => y
+                    [2.	How many holidays a year will you go on?] => y
+                    [3.	What will you have to sacrifice to achieve your financial goals?] => y
+                    [4.	How can you reframe these sacrifices? ] => y
+                    [5.	How do you balance your lifestyle against achieving and maintaining your financial goals?] => y
+                )
+
+            [Profession] => Array
+                (
+                    [1.	What do you do for work?] => y
+                    [2.	How much do you earn?] => y
+                    [3.	Have you gained a promotion to achieve your financial goals?] => y
+                    [4.	What has your career trajectory been?] => y
+                    [5.	How did you motivate yourself to stay the course to achieve your financial goals?] => y
+                    [6.	How did you maintain a good work-life balance?] => y
+                )
+
+            [Relationships] => Array
+                (
+                    [1.	Do you have family?] => y
+                    [2.	Who are your friends?] => y
+                    [3.	What do you do with your friends?] => y
+                    [4.	Do your relationships support you in achieving your financial goals?] => y
+                    [5.	What financial boundaries will you need to set and maintain to achieve your financial goals?] => y
+                    [6.	What type of people do you associate with?] => y
+                )
+
+        )
+
+)
+
+Stage: Planning Retirement
+Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic
+Final Prompt: A wise adult planning for retirement, thoughtful expression, calm background, professional avatar, photorealistic 55. gray. tired but satisfied. casual typical european dress. mid-luxury. no.
+Script started at 2025-05-15T02:28:51+02:00
+After session_start at 2025-05-15T02:28:51+02:00
+Script started at 2025-05-15T02:28:51+02:00
+{"post":[],"input":"{\"email\":\"mike@gmail.com\"}","session":{"user_id":36,"user_name":"Mike","user_email":"mike@gmail.com"},"time":"2025-05-15T02:28:51+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"mike@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'mike@gmail.com',
+)
+Email after POST: mike@gmail.com
+Email: mike@gmail.com
+Session: Array
+(
+    [user_id] => 36
+    [user_name] => Mike
+    [user_email] => mike@gmail.com
+)
+
+Stage: General Financial Coaching
+Prompt: A man. A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Final Prompt: A man. A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+After session_start at 2025-05-15T02:28:51+02:00
+{"post":[],"input":"{\"email\":\"mike@gmail.com\"}","session":{"user_id":36,"user_name":"Mike","user_email":"mike@gmail.com","submitted_stage":"General Financial Coaching"},"time":"2025-05-15T02:28:51+02:00"}
+Request method: POST
+POST request received
+Raw input: {"email":"mike@gmail.com"}
+_POST: Array
+(
+)
+
+POST data: array (
+  'email' => 'mike@gmail.com',
+)
+Email after POST: mike@gmail.com
+Email: mike@gmail.com
+Session: Array
+(
+    [user_id] => 36
+    [user_name] => Mike
+    [user_email] => mike@gmail.com
+    [submitted_stage] => General Financial Coaching
+)
+
+Stage: General Financial Coaching
+Prompt: A man. A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic
+Final Prompt: A man. A professional, approachable person, ready for financial coaching, neutral background, professional avatar, photorealistic

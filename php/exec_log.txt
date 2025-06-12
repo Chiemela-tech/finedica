@@ -1,0 +1,4 @@
+CMD: "C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps\python.exe" "C:\xampp\htdocs\2020FC\src\python\generate_avatar.py" "C:\xampp\htdocs\2020FC\src\uploads\silva@hotmail.com.png" "C:\xampp\htdocs\2020FC\src\avatars\avatar_silva@hotmail.com.png"
+OUTPUT:
+Avatar saved to C:\xampp\htdocs\2020FC\src\avatars\avatar_silva@hotmail.com.png
+RETURN: 0

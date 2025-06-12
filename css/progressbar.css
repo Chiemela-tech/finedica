@@ -1,0 +1,30 @@
+/* Progress Bar Styles */
+.progress-bar-container {
+    margin: 32px auto 18px auto;
+    max-width: 700px;
+    position: relative;
+}
+.progress-bar {
+    height: 12px;
+    background: linear-gradient(90deg, #21f336 0%, #2196f3 100%);
+    border-radius: 6px;
+    transition: width 0.4s;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+}
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.progress-label {
+    font-size: 1em;
+    color: #888;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+.progress-label.active {
+    color: #2196f3;
+    font-weight: bold;
+    opacity: 1;
+}

@@ -1,0 +1,283 @@
+/* Styles moved from inline <style> blocks in face_image.php and face_image_responses.php */
+
+/* --- Shared/General Styles --- */
+body {
+    background: linear-gradient(120deg, #e0f7fa 0%, #f1f8e9 100%);
+}
+
+.progress-bar-container {
+    margin: 24px auto 18px auto;
+    max-width: 700px;
+    position: relative;
+}
+.progress-bar {
+    height: 10px;
+    background: linear-gradient(90deg, #21f336 0%, #2196f3 100%);
+    border-radius: 5px;
+    transition: width 0.4s;
+}
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.progress-label {
+    font-size: 0.95em;
+    color: #888;
+    font-weight: 500;
+}
+.progress-label.active {
+    color: #2196f3;
+    font-weight: bold;
+}
+
+/* --- Banner Styles --- */
+.banner {
+    max-width: 700px;
+    margin: 0 auto 18px auto;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+}
+.success-banner {
+    background: #e8f5e9;
+    color: #388e3c;
+    border: 1px solid #a5d6a7;
+}
+.error-banner {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+/* --- Card/Container Styles --- */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(33,150,243,0.08);
+    padding: 24px 18px;
+    margin: 0 auto 32px auto;
+    max-width: 500px;
+}
+.review-container.card {
+    max-width: 700px;
+    padding: 32px 24px;
+}
+.review-container h3 {
+    color: #2196f3;
+    margin-bottom: 18px;
+}
+.category-container {
+    background: #f1f8e9;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.04);
+}
+.stage-selected {
+    font-size: 1.1em;
+    margin-bottom: 18px;
+    color: #2196f3;
+    font-weight: bold;
+}
+.qa-list {
+    list-style: none;
+    padding-left: 0;
+}
+.qa-list li {
+    margin-bottom: 14px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 10px 16px;
+    box-shadow: 0 1px 4px rgba(33,150,243,0.04);
+    display: flex;
+    flex-direction: column;
+}
+.question-text {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+.answer-text {
+    color: #388e3c;
+    font-size: 1.08em;
+    margin-left: 8px;
+}
+.category-title {
+    color: #2196f3;
+    font-size: 1.15em;
+    margin-bottom: 10px;
+    margin-top: 18px;
+    border-left: 4px solid #21f336;
+    padding-left: 10px;
+}
+
+/* --- Upload/Preview Styles --- */
+.upload-area {
+    margin-bottom: 18px;
+}
+.submit-btn {
+    background: linear-gradient(90deg, #21f336 0%, #2196f3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 10px;
+}
+.submit-btn:hover {
+    background: linear-gradient(90deg, #2196f3 0%, #21f336 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+}
+.preview-area.card img {
+    max-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(33,150,243,0.12);
+}
+
+/* --- Navigation Buttons --- */
+.nav-buttons-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.nav-btn {
+    padding: 12px 32px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #21f336 0%, #2196f3 100%);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+.nav-btn-left {
+    margin-right: auto;
+    
+}
+.nav-btn-right {
+    margin-left: auto;
+}
+.nav-btn:hover {
+    background: linear-gradient(90deg, #2196f3 0%, #21f336 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Horizontal layout and preview for face image upload */
+.face-image-horizontal-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto 32px auto;
+  max-width: 900px;
+}
+.face-image-upload-section, .face-image-preview-section {
+  flex: 1 1 340px;
+  min-width: 320px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(33,150,243,0.10);
+  padding: 32px 24px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  box-sizing: border-box;
+}
+.face-image-upload-section {
+  justify-content: flex-start;
+}
+.face-image-preview-section {
+  justify-content: flex-start;
+}
+.face-image-upload-section h2, .face-image-preview-section h2 {
+  color: #2196f3;
+  margin-bottom: 18px;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+}
+.face-image-upload-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+}
+.face-image-upload-section input[type="file"] {
+  margin-bottom: 10px;
+  width: 90%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #b2dfdb;
+  background: #f9fbe7;
+}
+.face-image-upload-section button {
+  background: linear-gradient(90deg, #21f336 0%, #2196f3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+.face-image-upload-section button:hover {
+  background: linear-gradient(90deg, #2196f3 0%, #21f336 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+.face-image-preview-section .preview-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 220px;
+  box-sizing: border-box;
+}
+.face-image-preview-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(33,150,243,0.13);
+  background: #f8f8f8;
+  display: block;
+  margin: 0 auto 10px auto;
+  border: 2px solid #2196f3;
+}
+.avatar-info-text {
+  color: #888;
+  font-size: 1.08em;
+  margin: 12px 0;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .face-image-horizontal-container {
+    flex-direction: column;
+    gap: 18px;
+    max-width: 98vw;
+  }
+  .face-image-upload-section, .face-image-preview-section {
+    min-width: unset;
+    width: 100%;
+    height: auto;
+  }
+}

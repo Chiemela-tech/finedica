@@ -1,0 +1,293 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b6f8fd;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #228bfb;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header .logo p {
+    margin: 0;
+    font-size: 14px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Success and Error Messages */
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Review Container */
+.review-container {
+    background-color: #c6f198;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.review-container h3 {
+    color: #004085;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.review-container h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-container p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+form legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #004085;
+    margin-bottom: 10px;
+}
+
+form label {
+    font-size: 14px;
+    color: #333;
+}
+
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+form button {
+    background-color: #004085;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+main h1 {
+    color: #004085;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.category-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 4px solid #004085;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.category-container h4 {
+    color: #004085;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.category-container p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Next button styling */
+.next-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.next-button {
+    background-color: #004085;
+    color: rgb(38, 235, 24);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: #4397eb;
+}
+
+.fieldset {
+    border: 1px solid #faceed;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+fieldset legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: #004085;
+    margin-bottom: 10px;
+}
+
+/* Preview Area Styling */
+.preview-area {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.preview-area img {
+    max-width: 100%; /* Ensures the image does not exceed the container width */
+    max-height: 300px; /* Limits the height of the image */
+    width: auto; /* Maintains the aspect ratio */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border: 1px solid #ddd; /* Adds a border around the image */
+}
+
+.preview-area {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.preview-area img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #004085;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+/* Preview Area Styling */
+.review-container {
+    text-align: left;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.review-container img {
+    max-width: 100%; /* Ensures the image does not exceed the container width */
+    max-height: 300px; /* Limits the height of the image */
+    width: auto; /* Maintains the aspect ratio */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border: 1px solid #ddd; /* Adds a border around the image */
+    margin-bottom: 20px; /* Adds space below the image */
+}
+
+.image-preview {
+    text-align: left;
+    margin: 10px 0;
+}
+.image-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}

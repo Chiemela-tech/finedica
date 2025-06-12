@@ -1,0 +1,169 @@
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Array
+(
+)
+Signup called
+POST request received
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: Neil, Das, 2007-05-25, Engineer, das@gmail.com, Male
+User registered successfully
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: Brian, Lara, 2000-09-29, Data Analyst, lara@gmail.com, Male
+User registered successfully
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: lalith, jayaweera, 1990-01-02, teacher, jaya@123.gmail.com, Male
+Validation failed: password too short
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: lalith, jayaweera, 1990-01-02, teacher, jaya@123.gmail.com, Male
+User registered successfully
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: Neil, Das, 1990-06-12, Doctor, neil@gmail.com, Male
+User registered successfully
+getDatabaseConnection called
+DB connection established
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: dinesha, kumari, 1980-03-14, administrator, dinesha1kumari@gmail.xom, Female
+User registered successfully
+getDatabaseConnection called
+DB connection established
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: Najinder, Devgun, 1985-06-09, Present, devgun.najinder3@googlemail.com, Male
+User registered successfully
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: Sam, Curren, 2009-06-05, Cricketer, sam@micr.ac.uk, Male
+User registered successfully
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
