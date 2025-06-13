@@ -12,10 +12,10 @@ $userEmail = $_SESSION['user_email'];
 $host = 'localhost';
 $dbname = 'user_reg_db';
 $username = 'root';
-$password = '';
+$password = 'finedica';
 
 try {
-    $pdo = new PDO("mysql:host=$host;port=3307;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', 'finedica');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Fetch the avatar path for the logged-in user
     $stmt = $pdo->prepare("SELECT image_path FROM avatars WHERE email = :email LIMIT 1");
@@ -27,7 +27,7 @@ try {
 }
 
 try {
-    $pdo = new PDO("mysql:host=$host;port=3307;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', 'finedica');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $pdo->prepare("SELECT face_image_url FROM face_image_responses WHERE email = :email ORDER BY id DESC LIMIT 1");
     $stmt->bindParam(':email', $userEmail);

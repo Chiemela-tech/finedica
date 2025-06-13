@@ -52,7 +52,7 @@ if (!$data || !isset($data['scores'])) {
 $host = 'localhost';
 $dbname = 'user_reg_db';
 $username = 'root';
-$password = '';
+$password = 'finedica';
 
 try {
     $pdo = new PDO("mysql:host=$host;port=3307;dbname=$dbname;charset=utf8", $username, $password);

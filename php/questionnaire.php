@@ -11,7 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 $userName = $_SESSION['user_name'];
 
 // Check if user has completed psychometric test
-$pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', '');
+$pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', 'finedica');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $userEmail = $_SESSION['user_email'];
 $psychometric = $pdo->prepare("SELECT 1 FROM psychometric_test_responses WHERE email = :email LIMIT 1");

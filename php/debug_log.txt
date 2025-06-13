@@ -167,3 +167,50 @@ getDatabaseConnection called
 DB connection established
 getDatabaseConnection called
 DB connection established
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+Signup called
+POST request received
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+Signup called
+POST request received
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+Signup called
+POST request received
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+getDatabaseConnection called
+Exception: Access denied for user 'root'@'localhost' (using password: YES)
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: John, Bas, 2009-02-23, Driver, bas@gmail.com, Male
+User registered successfully
+getDatabaseConnection called
+DB connection established

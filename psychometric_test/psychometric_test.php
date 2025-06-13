@@ -17,10 +17,10 @@ ini_set('display_errors', 1);
 $host = 'localhost';
 $dbname = 'user_reg_db'; // Use the user registration database
 $username = 'root';
-$password = '';
+$password = 'finedica';
 
 try {
-    $pdo = new PDO("mysql:host=$host;port=3307;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', 'finedica');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
@@ -174,7 +174,7 @@ $existing = $stmt->fetch(PDO::FETCH_ASSOC);
         };
         const descriptions = {
             "Money Resentment": "Money Resenters believe that money causes more problems in the world than it solves. This belief may be formed from some financial trauma in their past or family/social conditioning. They may believe that corporations control much of the world's economic power, and that ordinary people are exploited by capitalists. This manifests in behaviours that undermine their financial security. This could include giving away too much money, not investing, not educating themselves on financial products, never buying a house and not attempting to improve their earning capacity.that they do not deserve money. They may believe that wealthy people are greedy or corrupt. They often believe that there is virtue in living with less money.",
-            "Financial Fantasists": "Financial Fantasists believe that money, and having more money, is the key to all life’s problems. Financial fantasists are never happy with what they have and always strive for more. If they have a problem, they look for something to buy or a service that may solve the issue. So, they will look for a coaching service instead of being introspective; they will think that they need a bigger house if someone they know has a bigger house. They are often jealous of people who have more money than they do and feel uncomfortable in their presence. Their dream is to be known for their wealth, and they would prefer their friends to have less money than they do.",
+            "Financial Fantasists": "Financial Fantasists believe that money, and having more money, is the key to all life’s problems. Financial fantasists are never happy with what they have and always strive for more. If they have a problem, they look for something to buy or a service that may solve the issue. So, they will look for a coaching service instead of being introspective; they will think that they need a bigger house if someone they knows has a bigger house. They are often jealous of people who have more money than they do and feel uncomfortable in their presence. Their dream is to be known for their wealth, and they would prefer their friends to have less money than they do.",
             "Money Prestige": "Money Status seekers believe that displays of wealth equate to their social standing. They are concerned with external validation, that someone notices the new car they are driving, the bag they have, or the watch they are wearing. These displays often come at the expense of their financial well-being and usually result in large amounts of debt and the mental health problems associated with toxic debt.",
             "Money Anxiety": "The Money Anxious are always fearful that they do not have enough money. They constantly worry about spending money on anything nice, struggle to treat themselves, and would prefer to buy second-hand items rather than invest in quality items that will last. This is usually the result of growing up in poverty. Even if they have money, they do not spend it. They are known as 'tight' or 'cheap.' They do not pay for professional services and often spend many hours and energy doing things themselves when they could afford to have someone else do it professionally."
         };

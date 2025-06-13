@@ -11,13 +11,8 @@ if (!$email) {
     exit;
 }
 
-$host = 'localhost';
-$dbname = 'user_reg_db';
-$username = 'root';
-$password = 'finedica';
-
 try {
-    $pdo = new PDO("mysql:host=$host;port=3307;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', 'finedica');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Delete avatar record and file

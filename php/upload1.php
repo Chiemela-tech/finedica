@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_email'])) {
 $userEmail = $_SESSION['user_email']; // Use email as the user identifier
 
 // Database connection
-$conn = new mysqli('localhost', 'root', '', 'users'); // Update with your DB credentials
+$conn = new mysqli('localhost', 'root', 'finedica', 'users'); // Update with your DB credentials
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

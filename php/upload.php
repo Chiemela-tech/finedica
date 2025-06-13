@@ -33,7 +33,7 @@ if (!in_array($fileType, $allowedTypes)) {
 if (move_uploaded_file($file['tmp_name'], $uploadPath)) {
     // Save the file path to the database
     $userEmail = $_SESSION['user_email'];
-    $db = new PDO('mysql:host=localhost;port=3307;dbname=user_reg_db', 'root', '');
+    $db = new PDO('mysql:host=localhost;port=3307;dbname=user_reg_db', 'root', 'finedica');
     $stmt = $db->prepare("INSERT INTO face_image_responses (user_email, image_path) VALUES (:email, :path)");
     $stmt->bindParam(':email', $userEmail);
     $stmt->bindParam(':path', $uploadPath);

@@ -64,7 +64,7 @@ if (!$stage) {
 $user_gender = null;
 try {
     // Use correct MySQL port 3307 (not 3306)
-    $pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', '');
+    $pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', 'finedica');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $pdo->prepare("SELECT gender FROM users WHERE email = :email LIMIT 1");
     $stmt->bindParam(':email', $email);
@@ -111,7 +111,7 @@ $stability_url = 'https://api.stability.ai/v2beta/stable-image/generate/core';
 // Get the uploaded face image path for the user
 $face_image_path = null;
 try {
-    $pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', '');
+    $pdo = new PDO("mysql:host=localhost;port=3307;dbname=user_reg_db", 'root', 'finedica');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $pdo->prepare("SELECT face_image_url FROM face_image_responses WHERE email = :email ORDER BY id DESC LIMIT 1");
     $stmt->bindParam(':email', $email);
