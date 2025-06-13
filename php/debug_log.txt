@@ -10,3 +10,5 @@ getDatabaseConnection called
 DB connection established
 getDatabaseConnection called
 DB connection established
+getDatabaseConnection called
+DB connection established

@@ -86,7 +86,7 @@ try {
          
                 <div id="avatarContainer">
                     <?php if ($avatarPath): ?>
-                        <img src="/2020FC/src/avatars/<?php echo htmlspecialchars($avatarPath); ?>" alt="Generated Avatar">
+                        <img src="../avatars/<?php echo htmlspecialchars($avatarPath); ?>" alt="Generated Avatar">
                     <?php else: ?>
                         <p>No avatar generated yet.</p>
                     <?php endif; ?>
