@@ -7,6 +7,70 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $userName = $_SESSION['user_name'];
+require_once '../php/db_connect.php'; // Use the central db_connect.php for DB connection
+
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $userId = $_POST['user_id'];
+    $salary = $_POST['salary'];
+    $dividends = $_POST['dividends'];
+    $statePension = $_POST['statePension'];
+    $pension = $_POST['pension'];
+    $benefits = $_POST['benefits'];
+    $otherIncome = $_POST['otherIncome'];
+    $gas = $_POST['gas'];
+    $electric = $_POST['electric'];
+    $water = $_POST['water'];
+    $councilTax = $_POST['councilTax'];
+    $phone = $_POST['phone'];
+    $internet = $_POST['internet'];
+    $mobilePhone = $_POST['mobilePhone'];
+    $food = $_POST['food'];
+    $otherHome = $_POST['otherHome'];
+    $petrol = $_POST['petrol'];
+    $carTax = $_POST['carTax'];
+    $carInsurance = $_POST['carInsurance'];
+    $maintenance = $_POST['maintenance'];
+    $publicTransport = $_POST['publicTransport'];
+    $otherTravel = $_POST['otherTravel'];
+    $social = $_POST['social'];
+    $holidays = $_POST['holidays'];
+    $gym = $_POST['gym'];
+    $clothing = $_POST['clothing'];
+    $otherMisc = $_POST['otherMisc'];
+    $nursery = $_POST['nursery'];
+    $childcare = $_POST['childcare'];
+    $schoolFees = $_POST['schoolFees'];
+    $uniCosts = $_POST['uniCosts'];
+    $childMaintenance = $_POST['childMaintenance'];
+    $otherChildren = $_POST['otherChildren'];
+    $life = $_POST['life'];
+    $criticalIllness = $_POST['criticalIllness'];
+    $incomeProtection = $_POST['incomeProtection'];
+    $buildings = $_POST['buildings'];
+    $contents = $_POST['contents'];
+    $otherInsurance = $_POST['otherInsurance'];
+    $pensionDed = $_POST['pensionDed'];
+    $studentLoan = $_POST['studentLoan'];
+    $childcareDed = $_POST['childcareDed'];
+    $travelDed = $_POST['travelDed'];
+    $sharesave = $_POST['sharesave'];
+    $otherDeductions = $_POST['otherDeductions'];
+
+    // Insert or update expenditure data in the database
+    $stmt = $conn->prepare("REPLACE INTO expenditure (user_id, salary, dividends, state_pension, pension, benefits, other_income, gas, electric, water, council_tax, phone, internet, mobile_phone, food, other_home, petrol, car_tax, car_insurance, maintenance, public_transport, other_travel, social, holidays, gym, clothing, other_misc, nursery, childcare, school_fees, uni_costs, child_maintenance, other_children, life, critical_illness, income_protection, buildings, contents, other_insurance, pension_ded, student_loan, childcare_ded, travel_ded, sharesave, other_deductions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("iddddddddddddddddddddddddddddddddddddddddddddddddd", $userId, $salary, $dividends, $statePension, $pension, $benefits, $otherIncome, $gas, $electric, $water, $councilTax, $phone, $internet, $mobilePhone, $food, $otherHome, $petrol, $carTax, $carInsurance, $maintenance, $publicTransport, $otherTravel, $social, $holidays, $gym, $clothing, $otherMisc, $nursery, $childcare, $schoolFees, $uniCosts, $childMaintenance, $otherChildren, $life, $criticalIllness, $incomeProtection, $buildings, $contents, $otherInsurance, $pensionDed, $studentLoan, $childcareDed, $travelDed, $sharesave, $otherDeductions);
+
+    if ($stmt->execute()) {
+        echo "Expenditure data saved successfully.";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
 ?>
 
 
@@ -44,7 +108,8 @@ $userName = $_SESSION['user_name'];
             <p class="expenditure-subtitle">Easily track, visualize, and optimize your monthly budget. Enter your details below and get instant insights!</p>
         </section>
         <div class="expenditure-flex-container">
-            <form id="budgetForm" class="expenditure-form card">
+            <form id="budgetForm" class="expenditure-form card" action="../php/save_expenditure.php" method="post">
+                <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
                 <h2>Income</h2>
                 <div class="section">
                     <label>Salary: <input type="number" name="salary" placeholder="Net Monthly Salary" /></label>
@@ -75,8 +140,46 @@ $userName = $_SESSION['user_name'];
                     <label>Public Transport: <input type="number" name="publicTransport" /></label>
                     <label>Others: <input type="number" name="otherTravel" /></label>
                 </div>
-                <!-- Add similar sections for Miscellaneous, Children, Insurance, Pay Slip Deductions -->
-                <button type="submit" class="expenditure-submit-btn">Calculate</button>
+                <!-- Miscellaneous -->
+                <h2>Miscellaneous</h2>
+                <div class="section">
+                    <label>Social: <input type="number" name="social" /></label>
+                    <label>Holidays: <input type="number" name="holidays" /></label>
+                    <label>Gym: <input type="number" name="gym" /></label>
+                    <label>Clothing: <input type="number" name="clothing" /></label>
+                    <label>Other: <input type="number" name="otherMisc" /></label>
+                </div>
+                <!-- Children -->
+                <h2>Children</h2>
+                <div class="section">
+                    <label>Nursery: <input type="number" name="nursery" /></label>
+                    <label>Childcare: <input type="number" name="childcare" /></label>
+                    <label>School Fees: <input type="number" name="schoolFees" /></label>
+                    <label>University Costs: <input type="number" name="uniCosts" /></label>
+                    <label>Child Maintenance: <input type="number" name="childMaintenance" /></label>
+                    <label>Other: <input type="number" name="otherChildren" /></label>
+                </div>
+                <!-- Insurance -->
+                <h2>Insurance</h2>
+                <div class="section">
+                    <label>Life: <input type="number" name="life" /></label>
+                    <label>Critical Illness: <input type="number" name="criticalIllness" /></label>
+                    <label>Income Protection: <input type="number" name="incomeProtection" /></label>
+                    <label>Buildings: <input type="number" name="buildings" /></label>
+                    <label>Contents: <input type="number" name="contents" /></label>
+                    <label>Other: <input type="number" name="otherInsurance" /></label>
+                </div>
+                <!-- Pay Slip Deductions -->
+                <h2>Pay Slip Deductions</h2>
+                <div class="section">
+                    <label>Pension: <input type="number" name="pensionDed" /></label>
+                    <label>Student Loan: <input type="number" name="studentLoan" /></label>
+                    <label>Childcare: <input type="number" name="childcareDed" /></label>
+                    <label>Travel: <input type="number" name="travelDed" /></label>
+                    <label>Sharesave: <input type="number" name="sharesave" /></label>
+                    <label>Other: <input type="number" name="otherDeductions" /></label>
+                </div>
+                <button type="submit" class="expenditure-submit-btn">Save</button>
             </form>
             <div class="expenditure-results-panel card">
                 <div id="results"></div>
