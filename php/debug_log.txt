@@ -8,3 +8,5 @@ getDatabaseConnection called
 Exception: Access denied for user 'root'@'localhost' (using password: YES)
 getDatabaseConnection called
 DB connection established
+getDatabaseConnection called
+DB connection established

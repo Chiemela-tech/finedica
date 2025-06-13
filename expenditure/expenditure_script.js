@@ -52,4 +52,32 @@ document.getElementById('budgetForm').addEventListener('submit', function(e) {
     });
   });
   
-  
+  document.getElementById('reviewBtn').onclick = function() {
+    const form = document.getElementById('expenditureForm');
+    const data = new FormData(form);
+    let html = '';
+    for (let [key, value] of data.entries()) {
+        html += `<p><b>${key}:</b> ${value}</p>`;
+    }
+    document.getElementById('reviewList').innerHTML = html;
+    form.style.display = 'none';
+    document.getElementById('reviewPanel').style.display = '';
+};
+document.getElementById('editBtn').onclick = function() {
+    document.getElementById('reviewPanel').style.display = 'none';
+    document.getElementById('expenditureForm').style.display = '';
+};
+document.getElementById('submitBtn').onclick = function() {
+    const form = document.getElementById('expenditureForm');
+    const data = new FormData(form);
+    fetch('save_expenditure.php', {
+        method: 'POST',
+        body: data
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('reviewPanel').style.display = 'none';
+        document.getElementById('resultMsg').innerText = data.success ? "Saved!" : ("Error: " + data.error);
+    });
+};
+

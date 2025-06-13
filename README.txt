@@ -3,26 +3,33 @@ FINEDICA PROJECT STRUCTURE AND DEPLOYMENT INSTRUCTIONS
 
 Project Structure
 -----------------
-1. avatars/: Stores user avatar images generated or uploaded by users.
-2. chatbot/: Chatbot backend (Python and PHP), model files, requirements.txt for dependencies.
-3. css/: Stylesheets for the web app.
-4. data/: Data files used by the chatbot RAG.
-5. deploy_to_gcp.ps1: PowerShell script to zip the finedica folder for deployment (Windows only).
-6. expenditure/: Expenditure tracking app (Python, PHP, static files).
-7. future_self/: Future self feature (PHP).
-8. generate_avatar/: Avatar generation scripts and logs.
-9. js/: JavaScript files for frontend logic.
-10. php/: Main PHP backend, including authentication, database config, and upload scripts.
-11. psychometric_test/: Psychometric test feature.
-12. python/: Additional Python scripts.
-13. requirements.txt: Python dependencies for the whole project.
-14. start_services.bat / start_services.sh: Scripts to start all Python services.
-15. uploads/: Stores user-uploaded files. Must be writable by the web server.
+1. .git/: Git version control folder (not needed for deployment).
+2. avatars/: Stores user avatar images generated or uploaded by users.
+3. chatbot/: Chatbot backend (Python and PHP), model files, requirements.txt for dependencies.
+4. css/: Stylesheets for the web app.
+5. data/: Data files used by the chatbot RAG.
+6. debug_test.txt: For debugging or test output (not required in production).
+7. deploy_to_gcp.ps1: PowerShell script to zip the finedica folder for deployment (Windows only).
+8. expenditure/: Expenditure tracking app (Python, PHP, static files).
+   - expenditure_venv/: Python virtual environment for local development (do NOT deploy this folder).
+   - expenditure_static/: Static assets (images, JS, CSS) for the expenditure app.
+   - expenditure_templates/: HTML or template files for the expenditure app.
+9. future_self/: Future self feature (PHP).
+10. generate_avatar/: Avatar generation scripts and logs.
+11. js/: JavaScript files for frontend logic.
+12. php/: Main PHP backend, including authentication, database config, and upload scripts.
+13. psychometric_test/: Psychometric test feature.
+14. python/: Additional Python scripts.
+15. README.txt: This file.
+16. requirements.txt: Python dependencies for the whole project.
+17. start_services.bat / start_services.sh: Scripts to start all Python services.
+18. uploads/: Stores user-uploaded files. Must be writable by the web server.
 
 I. Preparing for Deployment
 --------------------------
 1. Ensure all your main project folders (php, chatbot, css, js, data, generate_avatar, expenditure, future_self, avatars, uploads, etc.) are inside a folder named 'finedica'.
 2. Do NOT move or change your local files. This folder is for deployment packaging only.
+3. Do NOT include any local virtual environment folders (e.g., expenditure_venv) in your deployment package.
 
 II. Packaging for Google Cloud VM
 ---------------------------------

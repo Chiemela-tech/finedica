@@ -108,7 +108,7 @@ $conn->close();
             <p class="expenditure-subtitle">Easily track, visualize, and optimize your monthly budget. Enter your details below and get instant insights!</p>
         </section>
         <div class="expenditure-flex-container">
-            <form id="budgetForm" class="expenditure-form card" action="../php/save_expenditure.php" method="post">
+            <form id="expenditureForm" class="expenditure-form card" action="../php/expenditure.php" method="post">
                 <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
                 <h2>Income</h2>
                 <div class="section">
@@ -179,8 +179,61 @@ $conn->close();
                     <label>Sharesave: <input type="number" name="sharesave" /></label>
                     <label>Other: <input type="number" name="otherDeductions" /></label>
                 </div>
-                <button type="submit" class="expenditure-submit-btn">Save</button>
+                <button type="button" id="reviewBtn" class="expenditure-submit-btn">Review</button>
             </form>
+            <div id="reviewPanel" style="display:none;" class="card">
+                <h3>Review Your Answers</h3>
+                <div id="reviewList"></div>
+                <button id="editBtn" type="button">Edit</button>
+                <form id="finalSubmitForm" action="../php/save_expenditure.php" method="post">
+                    <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
+                    <input type="hidden" name="salary" id="finalSalary">
+                    <input type="hidden" name="dividends" id="finalDividends">
+                    <input type="hidden" name="statePension" id="finalStatePension">
+                    <input type="hidden" name="pension" id="finalPension">
+                    <input type="hidden" name="benefits" id="finalBenefits">
+                    <input type="hidden" name="otherIncome" id="finalOtherIncome">
+                    <input type="hidden" name="gas" id="finalGas">
+                    <input type="hidden" name="electric" id="finalElectric">
+                    <input type="hidden" name="water" id="finalWater">
+                    <input type="hidden" name="councilTax" id="finalCouncilTax">
+                    <input type="hidden" name="phone" id="finalPhone">
+                    <input type="hidden" name="internet" id="finalInternet">
+                    <input type="hidden" name="mobilePhone" id="finalMobilePhone">
+                    <input type="hidden" name="food" id="finalFood">
+                    <input type="hidden" name="otherHome" id="finalOtherHome">
+                    <input type="hidden" name="petrol" id="finalPetrol">
+                    <input type="hidden" name="carTax" id="finalCarTax">
+                    <input type="hidden" name="carInsurance" id="finalCarInsurance">
+                    <input type="hidden" name="maintenance" id="finalMaintenance">
+                    <input type="hidden" name="publicTransport" id="finalPublicTransport">
+                    <input type="hidden" name="otherTravel" id="finalOtherTravel">
+                    <input type="hidden" name="social" id="finalSocial">
+                    <input type="hidden" name="holidays" id="finalHolidays">
+                    <input type="hidden" name="gym" id="finalGym">
+                    <input type="hidden" name="clothing" id="finalClothing">
+                    <input type="hidden" name="otherMisc" id="finalOtherMisc">
+                    <input type="hidden" name="nursery" id="finalNursery">
+                    <input type="hidden" name="childcare" id="finalChildcare">
+                    <input type="hidden" name="schoolFees" id="finalSchoolFees">
+                    <input type="hidden" name="uniCosts" id="finalUniCosts">
+                    <input type="hidden" name="childMaintenance" id="finalChildMaintenance">
+                    <input type="hidden" name="otherChildren" id="finalOtherChildren">
+                    <input type="hidden" name="life" id="finalLife">
+                    <input type="hidden" name="criticalIllness" id="finalCriticalIllness">
+                    <input type="hidden" name="incomeProtection" id="finalIncomeProtection">
+                    <input type="hidden" name="buildings" id="finalBuildings">
+                    <input type="hidden" name="contents" id="finalContents">
+                    <input type="hidden" name="otherInsurance" id="finalOtherInsurance">
+                    <input type="hidden" name="pensionDed" id="finalPensionDed">
+                    <input type="hidden" name="studentLoan" id="finalStudentLoan">
+                    <input type="hidden" name="childcareDed" id="finalChildcareDed">
+                    <input type="hidden" name="travelDed" id="finalTravelDed">
+                    <input type="hidden" name="sharesave" id="finalSharesave">
+                    <input type="hidden" name="otherDeductions" id="finalOtherDeductions">
+                    <button type="submit" class="expenditure-submit-btn">Submit</button>
+                </form>
+            </div>
             <div class="expenditure-results-panel card">
                 <div id="results"></div>
                 <canvas id="expenseChart" width="340" height="340" style="max-width:340px; margin: 0 auto; display: block;"></canvas>
