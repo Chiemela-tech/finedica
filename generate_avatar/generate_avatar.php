@@ -204,7 +204,7 @@ if ($http_code === 200 && $response) {
     }
     $stmt->close();
     $conn->close();
-    $web_path = "/2020FC/src/avatars/" . $avatar_filename;
+    $web_path = "/../avatars/" . $avatar_filename;
     echo json_encode(['status' => 'ok', 'avatar_path' => $web_path]);
     exit;
 } else {

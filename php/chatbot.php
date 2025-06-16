@@ -58,9 +58,9 @@ try {
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="questionnaire.php">Questionnaire</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="avatar.php">Avatar</a></li>
-                <li><a href="chatbot.php">Chatbot</a></li>
+                <li><a href="ethics_policy.php">AI Ethics Policy</a></li>
+                <li><a href="..generate_avatar/avatar_frontpage.php">Avatar</a></li>
+                <li><a href="../chatbot/chatbot.php">Chatbot</a></li>
                 <li><a href="logout.php">Logout <?php echo htmlspecialchars($userName); ?></a></li>
             </ul>
         </nav>

@@ -57,7 +57,7 @@ if (!$data || !isset($data['scores'])) {
 }
 
 try {
-    $pdo = new PDO('mysql:host=localhost;port=3307;dbname=user_reg_db;charset=utf8', 'root', 'finedica');
+    $pdo = new PDO('mysql:host=localhost;port=3306;dbname=user_reg_db;charset=utf8', 'root', 'finedica');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     foreach ($data['scores'] as $cat => $score) {
