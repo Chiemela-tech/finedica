@@ -37,12 +37,12 @@ $expenditure = $stmt->fetch(PDO::FETCH_ASSOC);
                 <p>Expert Financial Coaching</p>
             </div>
             <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="questionnaire.php">Questionnaire</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="avatar.php">Avatar</a></li>
-                <li><a href="chatbot.php">Chatbot</a></li>
-                <li><a href="logout.php" style="font-size: 14px; color:rgb(7, 249, 168)">Logout <?php echo htmlspecialchars($userName);?></a></li>
+                <li><a href="../php/home.php">Home</a></li>
+                <li><a href="../php/questionnaire.php">Questionnaire</a></li>
+                <li><a href="../php/ethics_policy.php">AI Ethics Policy</a></li>
+                <li><a href="../generate_avatar/avatar_frontpage.php">Avatar</a></li>
+                <li><a href="../chatbot/chatbot.php">Chatbot</a></li>
+                <li><a href="../php/logout.php" style="font-size: 14px; color:rgb(7, 249, 168)">Logout <?php echo htmlspecialchars($userName);?></a></li>
             </ul>
         </nav>  
     </header>

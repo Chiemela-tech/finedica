@@ -79,8 +79,8 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="questionnaire.php">Questionnaire</a></li>
                 <li><a href="expenditure.php">Expenditure</a></li>
-                <li><a href="avatar_frontpage.php">Avatar</a></li>
-                <li><a href="chatbot.php">Chatbot</a></li>
+                <li><a href="../generate_avatar/avatar_frontpage.php">Avatar</a></li>
+                <li><a href="..chatbot/chatbot.php">Chatbot</a></li>
                 <li><a href="ethics_policy.php">Ethics Policy</a></li>
                 <li><a href="logout.php" style="font-size: 18px; color: yellow">Logout</a></li>
             </ul>

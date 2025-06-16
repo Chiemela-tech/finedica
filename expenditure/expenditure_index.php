@@ -95,7 +95,7 @@ $conn->close();
             <ul>
                 <li><a href="../php/home.php">Home</a></li>
                 <li><a href="../php/questionnaire.php">Questionnaire</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="../php/ethics_policy.php">AI Ethics Policy</a></li>
                 <li><a href="../php/avatar_frontpage.php">Avatar</a></li>
                 <li><a href="../php/chatbot.php">Chatbot</a></li>
                 <li><a href="../php/logout.php" style="font-size: 14px; color:rgb(7, 249, 168)">Logout <?php echo htmlspecialchars($userName);?></a></li>

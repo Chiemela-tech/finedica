@@ -15,7 +15,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Database connection
-$host = 'localhost';
+$host = '127.0.0.1';
 $dbname = 'user_reg_db'; // Use the user registration database
 $username = 'root';
 $password = 'finedica';

@@ -35,3 +35,9 @@ Exception: No connection could be made because the target machine actively refus
 getDatabaseConnection called
 Exception: No connection could be made because the target machine actively refused it
 Exception: No connection could be made because the target machine actively refused it
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
