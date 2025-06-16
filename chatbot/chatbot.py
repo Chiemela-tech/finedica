@@ -110,11 +110,7 @@ def chat():
                     user='root',
                     password='finedica',
                     database='user_reg_db',
-HEAD
-                    port=3306,  # Make sure this is the correct port
-=======
                     port=3306,
-c6cf37bde46442307552f8e06a1a3ca30ff5e80f
                     auth_plugin='mysql_native_password'
                 )
                 cursor = conn.cursor(dictionary=True)
