@@ -162,7 +162,6 @@ body {
     padding: 10px 15px;
     border-radius: 8px;
     margin-bottom: 10px;
-    text-spacing-trim: normal;
     word-wrap: break-word;
     max-width: 100%;
 }
