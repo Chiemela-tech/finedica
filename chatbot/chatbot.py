@@ -4,7 +4,7 @@ import random
 import string
 import torch
 import nltk
-nltk.download('punkt')  # Fixed: use 'punkt' instead of 'punkt_tab'
+nltk.download('punkt_tab')  # Fixed: use 'punkt' instead of 'punkt_tab' if any error occurs regarding nltk 'punkt'/'punkt_tab'
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from nltk.corpus import stopwords
@@ -110,7 +110,7 @@ def chat():
                     user='root',
                     password='finedica',
                     database='user_reg_db',
-                    port=3307,
+                    port=3306,
                     auth_plugin='mysql_native_password'
                 )
                 cursor = conn.cursor(dictionary=True)

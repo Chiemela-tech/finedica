@@ -21,3 +21,9 @@ Received: John, WIje, 2010-03-31, Digital, jwije@gmail.com, Male
 User registered successfully
 getDatabaseConnection called
 DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established
+getDatabaseConnection called
+DB connection established

@@ -15,7 +15,7 @@ $username = 'root';
 $password = 'finedica';
 
 try {
-    $pdo = new PDO("mysql:host=$host;port=3307;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=$host;port=3306;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Fetch the avatar path for the logged-in user
     $stmt = $pdo->prepare("SELECT image_path FROM avatars WHERE email = :email LIMIT 1");
@@ -27,7 +27,7 @@ try {
 }
 
 try {
-    $pdo = new PDO("mysql:host=$host;port=3307;dbname=$dbname", $username, $password);
+    $pdo = new PDO("mysql:host=$host;port=3306;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $pdo->prepare("SELECT face_image_url FROM face_image_responses WHERE email = :email ORDER BY id DESC LIMIT 1");
     $stmt->bindParam(':email', $userEmail);
@@ -151,7 +151,7 @@ try {
             chatHistory.innerHTML += userMessage;
 
             // Send the message to the Flask API, including gender and email
-            fetch('http://localhost:5002/chat', { 
+            fetch('http://35.232.121.220:5002/chat', { 
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
