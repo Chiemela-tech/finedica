@@ -8,7 +8,7 @@ define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'finedica');
 define('DB_NAME', 'user_reg_db');
-define('DB_PORT', 3307); // Change this to 3307 if your MySQL runs on 3307
+define('DB_PORT', 3306); // Change this to 3307 if your MySQL runs on 3307
 
 // Function to establish a database connection
 function getDatabaseConnection() {
