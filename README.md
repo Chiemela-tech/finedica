@@ -113,6 +113,155 @@ V. Database Tables Structure (MySQL)
    );
 - Add or modify tables as required by your application.
 
+
+# Finedica Deployment Guide (GitHub + Google Cloud VM)
+
+## 1. Prerequisites
+- A Google Cloud account and a running VM (Ubuntu recommended).
+- Your code pushed to a GitHub repository.
+- Your MySQL database export (from XAMPP/phpMyAdmin).
+- Your VM’s external IP address.
+
+## 2. Step-by-Step Deployment
+
+### A. Prepare Your Google Cloud VM
+1. **SSH into your VM**  
+   Use the Google Cloud Console or your SSH client.
+2. **Update and install required packages**  
+   ```sh
+   sudo apt update
+   sudo apt upgrade -y
+   sudo apt install apache2 php libapache2-mod-php python3 python3-pip git mysql-server unzip -y
+   ```
+3. **(Optional) Install phpMyAdmin**  
+   ```sh
+   sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
+   sudo phpenmod mbstring
+   sudo systemctl restart apache2
+   sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+   ```
+   Access at: `http://YOUR_VM_EXTERNAL_IP/phpmyadmin`
+
+### B. Clone Your GitHub Repository
+```sh
+cd /var/www/
+sudo git clone https://github.com/yourusername/finedica.git
+sudo chown -R www-data:www-data finedica
+```
+If you see a "dubious ownership" error, run:
+```sh
+sudo git config --global --add safe.directory /var/www/finedica
+```
+
+### C. Set Up Apache
+1. **Set DocumentRoot**  
+   Edit `/etc/apache2/sites-available/000-default.conf` and set:
+   ```
+   DocumentRoot /var/www/finedica
+   ```
+2. **Restart Apache**  
+   ```sh
+   sudo systemctl restart apache2
+   ```
+
+### D. Set Up MySQL Database
+1. **Log in to MySQL**  
+   ```sh
+   sudo mysql -u root -p
+   ```
+2. **Create database and user**  
+   ```sql
+   CREATE DATABASE user_reg_db;
+   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'finedica';
+   FLUSH PRIVILEGES;
+   ```
+3. **Import your .sql file**  
+   - Upload your SQL file to the VM (use the Google Cloud Console SSH window, click the three-dot menu, and "Upload file").
+   - Import:
+     ```sh
+     mysql -u root -p user_reg_db < ~/user_reg_db.sql
+     ```
+
+### E. Update PHP Config
+Edit `/var/www/finedica/php/config.php`:
+```php
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASSWORD', 'finedica');
+define('DB_NAME', 'user_reg_db');
+define('DB_PORT', 3306);
+```
+
+### F. Install Python Dependencies
+```sh
+cd /var/www/finedica
+pip3 install -r requirements.txt
+pip3 install -r chatbot/requirements.txt
+pip3 install sentence-transformers
+```
+
+### G. Set Up and Run the Chatbot
+1. **Open port 5002 in Google Cloud firewall**  
+   - Go to VPC network > Firewall > Create rule.
+   - Allow TCP:5002 from 0.0.0.0/0.
+2. **Start the chatbot**  
+   ```sh
+   cd /var/www/finedica/chatbot
+   python3 chatbot.py
+   ```
+   (For production, use systemd or another process manager.)
+
+### H. Set Permissions
+```sh
+sudo chown -R www-data:www-data /var/www/finedica
+sudo chmod -R 755 /var/www/finedica
+```
+
+### I. Access Your Site
+- Main site: `http://YOUR_VM_EXTERNAL_IP/`
+- Chatbot: Ensure your frontend fetches from `http://YOUR_VM_EXTERNAL_IP:5002/chat`
+
+## 3. Important Notes from Previous Queries
+- **MySQL port:** Always use 3306 on the VM.
+- **Chatbot backend:** Must use the VM’s public IP and port 5002 in frontend fetch calls.
+- **LangChain/Ollama:** Ensure Ollama is installed and running, and the phi3 model is pulled.
+- **Chroma vector store:** Fix permissions for `langchain_chroma_db` if you see "readonly database" errors.
+- **Psychometric test results:** Are stored in the MySQL table `psychometric_test_responses`, not in SQLite.
+- **Firewall:** Open ports 80 (HTTP), 443 (HTTPS), and 5002 (chatbot).
+- **phpMyAdmin:** Install and access at `/phpmyadmin` for database management.
+
+## 4. Updating the Website from GitHub
+To update your deployed website with the latest changes from your GitHub repository:
+
+```sh
+cd /var/www/finedica
+# Pull latest changes from GitHub to your VM
+git pull origin main
+# Push your local changes from VM to GitHub (if any)
+git push origin main
+# If you updated dependencies:
+sudo pip3 install -r requirements.txt
+sudo pip3 install -r chatbot/requirements.txt
+# Restart services if needed:
+sudo systemctl restart apache2
+sudo systemctl restart finedica_chatbot  # if using systemd
+```
+
+**Explanation:**
+- Use `git pull origin main` to update your VM with the latest code from GitHub.
+- Use `git push origin main` to push any local changes you made on the VM back to GitHub.
+- Only use `sudo` with git if you have permission issues (ideally, fix permissions so you don’t need sudo).
+- Always update dependencies and restart services after pulling new code.
+
+## 5. Troubleshooting
+- **Database errors:** Check config.php and MySQL port.
+- **Chatbot fallback responses:** Ensure Ollama and all Python dependencies are installed and running.
+- **Permission errors:** Fix with `sudo chown` and `sudo chmod` as above.
+- **Deprecation warnings:** Update LangChain classes as needed in the future.
+
+---
+
+
 VI. Python Services and Dependencies
 ------------------------------------
 1. Install Python 3.x if not already installed.
@@ -174,3 +323,33 @@ XII. General Recommendations
 1. Always use absolute paths in production scripts for reliability.
 2. Ensure all environment variables (if any) are set in your process manager or service configuration.
 3. For persistent logs, redirect output to log files (e.g., python chatbot.py > chatbot.log 2>&1).
+
+## Project Structure (Windows/XAMPP Example)
+
+```
+finedica/
+├── avatars/
+├── chatbot/
+│   ├── chatbot_model.pth
+│   ├── chatbot.php
+│   ├── chatbot.py
+│   ├── ...
+├── css/
+├── data/
+├── expenditure/
+├── future_self/
+├── generate_avatar/
+├── js/
+├── php/
+├── psychometric_test/
+├── python/
+├── uploads/
+├── README.md
+├── requirements.txt
+├── start_services.bat
+├── start_services.sh
+├── deploy_to_gcp.ps1
+```
+
+- All main features (PHP, Python, chatbot, etc.) are organized in subfolders.
+- Place your project root (finedica) in your web server directory (e.g., c:\xampp\htdocs\finedica on Windows or /var/www/finedica on Linux/VM).

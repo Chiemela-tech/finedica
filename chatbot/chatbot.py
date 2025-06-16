@@ -16,8 +16,8 @@ from data_loader import load_intents
 from pathlib import Path
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.llms import Ollama
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_ollama import OllamaLLM
 from langchain.chains import RetrievalQA
 
 nltk.download('stopwords')
@@ -77,7 +77,7 @@ try:
     retriever = vectordb.as_retriever(search_kwargs={"k": 3})
 
     # Use Ollama as the LLM
-    llm = Ollama(model="phi3", base_url="http://localhost:11434")
+    llm = OllamaLLM(model="phi3", base_url="http://localhost:11434")
     qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
         retriever=retriever,
@@ -110,7 +110,7 @@ def chat():
                     user='root',
                     password='finedica',
                     database='user_reg_db',
-                    port=3307,
+                    port=3306,  # Make sure this is the correct port
                     auth_plugin='mysql_native_password'
                 )
                 cursor = conn.cursor(dictionary=True)
@@ -120,23 +120,15 @@ def chat():
                 expenditure_data = cursor.fetchone() or {}
                 cursor.execute('SELECT * FROM future_self_responses WHERE email=%s ORDER BY id DESC LIMIT 1', (user_email,))
                 futureself_results = cursor.fetchone() or {}
+                # Fetch psychometric test results from MySQL, not SQLite
+                cursor.execute('SELECT * FROM psychometric_test_responses WHERE email=%s ORDER BY id DESC LIMIT 1', (user_email,))
+                row = cursor.fetchone()
+                if row:
+                    psychometric_results = row
                 cursor.close()
                 conn.close()
             except Exception as e:
                 print(f"MySQL fetch error: {e}")
-            try:
-                import sqlite3
-                conn = sqlite3.connect('../psychometric_test/responses.db')
-                conn.row_factory = sqlite3.Row
-                cursor = conn.cursor()
-                cursor.execute('SELECT * FROM psychometricresponse WHERE email=? ORDER BY id DESC LIMIT 1', (user_email,))
-                row = cursor.fetchone()
-                if row:
-                    psychometric_results = dict(row)
-                cursor.close()
-                conn.close()
-            except Exception as e:
-                print(f"SQLite fetch error: {e}")
 
         # personalization = f"User profile: {user_profile}\nPsychometric test: {psychometric_results}\nFuture self: {futureself_results}\nExpenditure: {expenditure_data}"
 

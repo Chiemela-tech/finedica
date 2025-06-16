@@ -27,3 +27,5 @@ langchain
 langchain-ollama
 langchain-chroma
 langchain_community
+
+sentence-transformers
