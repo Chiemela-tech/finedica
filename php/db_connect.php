@@ -3,7 +3,7 @@ $host = 'localhost';
 $dbname = 'user_reg_db';
 $username = 'root';
 $password = 'finedica';
-$port = 3307;
+$port = 3306;
 
 try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
