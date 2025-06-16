@@ -26,3 +26,4 @@ Pillow
 langchain
 langchain-ollama
 langchain-chroma
+langchain_community

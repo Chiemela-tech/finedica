@@ -71,8 +71,8 @@ $showRegenerate = (bool)$avatarPath;
             <ul>
                 <li><a href="../php/home.php">Home</a></li>
                 <li><a href="../php/questionnaire.php">Questionnaire</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="../generate_avatar/generate_avatar.php">Avatar</a></li>
+                <li><a href="../php/ethics_policy.php">AI Ethics Policy</a></li>
+                <li><a href="../generate_avatar/avatar_frontpage.php">Avatar</a></li>
                 <li><a href="../chatbot/chatbot.php">Chatbot</a></li>
                 <li><a href="../php/logout.php">Logout <?php echo htmlspecialchars($userName); ?></a></li>
             </ul>
