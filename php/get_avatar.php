@@ -30,7 +30,7 @@ $stmt->execute();
 $avatarPath = $stmt->fetchColumn();
 
 // Construct web-accessible URL for the avatar
-$baseUrl = "http://localhost/2020FC/src/";
+$baseUrl = "http://localhost/finedica/";
 if ($avatarPath) {
     $avatarPath = $baseUrl . "avatars/" . basename($avatarPath);
 }

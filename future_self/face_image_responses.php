@@ -72,7 +72,7 @@ $showRegenerate = (bool)$avatarPath;
                 <li><a href="../php/home.php">Home</a></li>
                 <li><a href="../php/questionnaire.php">Questionnaire</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="avatar.php">Avatar</a></li>
+                <li><a href="../generate_avatar/generate_avatar.php">Avatar</a></li>
                 <li><a href="../chatbot/chatbot.php">Chatbot</a></li>
                 <li><a href="../php/logout.php">Logout <?php echo htmlspecialchars($userName); ?></a></li>
             </ul>
@@ -89,7 +89,13 @@ $showRegenerate = (bool)$avatarPath;
                     <h3 style="margin-bottom: 12px;">Uploaded Face Image</h3>
                     <div class="image-preview" style="width: 320px; height: 320px; background: #f8f8f8; border-radius: 20px; box-shadow: 0 4px 24px rgba(33,150,243,0.13); border: 3px solid #2196f3; display: flex; align-items: center; justify-content: center; margin-bottom: 0; overflow: hidden;">
                         <?php if ($faceImageUrl): ?>
-                            <img src="<?php echo htmlspecialchars($faceImageUrl); ?>" alt="Uploaded Face Image" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 16px; box-shadow: none; border: none; background: transparent; display: block; margin: auto;" />
+                            <?php
+                            // If the URL does not start with http, https, or /, prepend /finedica/uploads/
+                            $imgSrc = (preg_match('/^(https?:\/\/|\/)/', $faceImageUrl))
+                                ? $faceImageUrl
+                                : '/finedica/uploads/' . ltrim($faceImageUrl, '/');
+                            ?>
+                            <img src="<?php echo htmlspecialchars($imgSrc); ?>" alt="Uploaded Face Image" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 16px; box-shadow: none; border: none; background: transparent; display: block; margin: auto;" />
                         <?php else: ?>
                             <p>No face image uploaded.</p>
                         <?php endif; ?>

@@ -12,3 +12,12 @@ getDatabaseConnection called
 DB connection established
 getDatabaseConnection called
 DB connection established
+Signup called
+POST request received
+getDatabaseConnection called
+DB connection established
+DB connection OK
+Received: John, WIje, 2010-03-31, Digital, jwije@gmail.com, Male
+User registered successfully
+getDatabaseConnection called
+DB connection established
