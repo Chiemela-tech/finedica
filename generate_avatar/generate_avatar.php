@@ -122,8 +122,18 @@ try {
     exit;
 }
 
+// Convert web path to real filesystem path
+$face_image_real_path = null;
+if ($face_image_path) {
+    if (strpos($face_image_path, '/') === 0) {
+        $face_image_real_path = $_SERVER['DOCUMENT_ROOT'] . $face_image_path;
+    } else {
+        $face_image_real_path = $face_image_path;
+    }
+}
+
 // Check that the face image file exists and is not empty
-if (!$face_image_path || !file_exists($face_image_path) || filesize($face_image_path) === 0) {
+if (!$face_image_real_path || !file_exists($face_image_real_path) || filesize($face_image_real_path) === 0) {
     file_put_contents(__DIR__ . '/avatar_debug.log', "No valid uploaded face image found for this user.\n", FILE_APPEND);
     echo json_encode(['status' => 'error', 'message' => 'No valid uploaded face image found for this user.']);
     exit;
@@ -141,7 +151,7 @@ $postData .= $prompt . "\r\n";
 $postData .= "--$delimiter\r\n";
 $postData .= "Content-Disposition: form-data; name=\"image\"; filename=\"face.png\"\r\n";
 $postData .= "Content-Type: image/png\r\n\r\n";
-$postData .= file_get_contents($face_image_path) . "\r\n";
+$postData .= file_get_contents($face_image_real_path) . "\r\n";
 $postData .= "--$delimiter\r\n";
 $postData .= "Content-Disposition: form-data; name=\"output_format\"\r\n\r\n";
 $postData .= "png\r\n";

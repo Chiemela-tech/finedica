@@ -32,6 +32,26 @@ try {
         $pdo->prepare("DELETE FROM avatars WHERE email = :email")->execute([':email' => $email]);
     }
 
+    // Delete face image record and file
+    $stmt = $pdo->prepare("SELECT face_image_url FROM face_image_responses WHERE email = :email ORDER BY id DESC LIMIT 1");
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+    $faceImageUrl = $stmt->fetchColumn();
+    if ($faceImageUrl) {
+        // Determine the file path
+        if (preg_match('/^\/finedica\//', $faceImageUrl)) {
+            $faceImageFile = realpath($_SERVER['DOCUMENT_ROOT'] . $faceImageUrl);
+        } elseif (preg_match('/^(https?:\/\/|\/)/', $faceImageUrl)) {
+            $faceImageFile = realpath($_SERVER['DOCUMENT_ROOT'] . $faceImageUrl);
+        } else {
+            $faceImageFile = realpath(__DIR__ . '/../uploads/' . ltrim($faceImageUrl, '/'));
+        }
+        if ($faceImageFile && file_exists($faceImageFile)) {
+            @unlink($faceImageFile);
+        }
+        $pdo->prepare("DELETE FROM face_image_responses WHERE email = :email")->execute([':email' => $email]);
+    }
+
     // Delete future self responses
     $pdo->prepare("DELETE FROM future_self_responses WHERE email = :email")->execute([':email' => $email]);
 

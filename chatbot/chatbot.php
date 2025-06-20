@@ -81,8 +81,16 @@ try {
         <div class="layout-container">
         <h4>Hi..<?php echo htmlspecialchars($userName); ?>, I am your Future Self </h4>
         </div>    
-            <!-- Avatar Full-Size Section -->
-            <div class="avatar-fullsize">
+        <!-- Chatbot Mode Toggle -->
+        <div style="display: flex; justify-content: flex-end; margin-bottom: 16px; align-items: center;">
+            <span style="margin-right: 16px; font-weight: 500; color: #2196f3;">Select your preferred chat mode</span>
+            <div id="chatbotModeToggle" style="display: flex; gap: 0; align-items: center;">
+                <button id="quickModeBtn" class="mode-btn">Short-Quick <span id="quickModeIcon" style="margin-left:6px;vertical-align:middle;"></span></button>
+                <button id="longModeBtn" class="mode-btn">Long-Late <span id="longModeIcon" style="margin-left:6px;vertical-align:middle;"></span></button>
+            </div>
+        </div>
+        <!-- Avatar Full-Size Section -->
+        <div class="avatar-fullsize">
          
                 <div id="avatarContainer">
                     <?php if ($avatarPath): ?>
@@ -111,10 +119,56 @@ try {
             </div>   
         </div>
     </main>
+    <style>
+        .mode-btn {
+            padding: 10px 24px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px 0 0 8px;
+            background: #e3eafc;
+            color: #2196f3;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .mode-btn:last-child {
+            border-radius: 0 8px 8px 0;
+            border-left: 1px solid #c3d3ee;
+        }
+        .mode-btn.selected {
+            background: #2196f3;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(33,150,243,0.13);
+        }
+    </style>
     <script>
         const userEmail = "<?php echo $_SESSION['user_email']; ?>";
-        // Fetch and Display Avatar on Page Load
+        const switchSvg = `<svg width='38' height='22' viewBox='0 0 38 22' fill='none' xmlns='http://www.w3.org/2000/svg' style='vertical-align:middle;'><rect x='1' y='1' width='36' height='20' rx='10' fill='#1fa038' stroke='#1fa038' stroke-width='2'/><circle cx='11' cy='11' r='8' fill='#6ee087'/><polyline points='8,12 11,15 16,8' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>`;
+        // Chatbot Mode Toggle Logic
+        function setChatbotMode(mode) {
+            sessionStorage.setItem('chatbot_mode', mode);
+            updateModeButtons();
+        }
+        function updateModeButtons() {
+            const mode = sessionStorage.getItem('chatbot_mode') || 'quick';
+            const quickBtn = document.getElementById('quickModeBtn');
+            const longBtn = document.getElementById('longModeBtn');
+            const quickIcon = document.getElementById('quickModeIcon');
+            const longIcon = document.getElementById('longModeIcon');
+            if (mode === 'quick') {
+                quickBtn.classList.add('selected');
+                longBtn.classList.remove('selected');
+                quickIcon.innerHTML = switchSvg;
+                longIcon.innerHTML = '';
+            } else {
+                quickBtn.classList.remove('selected');
+                longBtn.classList.add('selected');
+                quickIcon.innerHTML = '';
+                longIcon.innerHTML = switchSvg;
+            }
+        }
         document.addEventListener('DOMContentLoaded', function () {
+            // Fetch and Display Avatar on Page Load
             fetch('../php/get_avatar.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' }
@@ -139,9 +193,20 @@ try {
                     <p>Error loading avatar. Please try again later.</p>
                 `;
             });
+            updateModeButtons();
+            document.getElementById('quickModeBtn').onclick = function() { setChatbotMode('quick'); };
+            document.getElementById('longModeBtn').onclick = function() { setChatbotMode('long'); };
         });
 
         // Chatbot Functionality
+        function getChatbotApiUrl() {
+            const mode = sessionStorage.getItem('chatbot_mode');
+            if (mode === 'quick') {
+                return 'http://35.232.121.220:5003/chat'; // chatbotquick.py
+            } else {
+                return 'http://35.232.121.220:5002/chat'; // chatbot.py
+            }
+        }
         function sendMessage() {
             const userInput = document.getElementById('userInput').value.trim();
             if (!userInput) return;
@@ -150,8 +215,8 @@ try {
             const userMessage = `<div class="message user">${userInput}</div>`;
             chatHistory.innerHTML += userMessage;
 
-            // Send the message to the Flask API, including gender and email
-            fetch('http://35.232.121.220:5002/chat', { 
+            // Send the message to the correct Flask API, including gender and email
+            fetch(getChatbotApiUrl(), { 
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 

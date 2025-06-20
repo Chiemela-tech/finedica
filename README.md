@@ -266,7 +266,41 @@ VI. Python Services and Dependencies
 ------------------------------------
 1. Install Python 3.x if not already installed.
 2. Install dependencies: pip install -r requirements.txt (from the finedica or chatbot folder).
-3. Start Python backend services as described above.
+3. Start Python backend services as described below.
+
+
+### Running Both Chatbot Modes (Quick & Long)
+To enable both quick and long-form chatbot responses, you must run both chatbot.py and chatbotquick.py at the same time:
+
+On Windows:
+1. Open two terminal windows (or Command Prompts).
+2. In the first terminal, run:
+   ```sh
+   cd c:\xampp\htdocs\finedica\chatbot
+   python chatbot.py
+   ```
+3. In the second terminal, run:
+   ```sh
+   cd c:\xampp\htdocs\finedica\chatbot
+   python chatbotquick.py
+   ```
+
+On Linux/VM:
+1. Open two terminal sessions (or use tmux/screen).
+2. In the first session, run:
+   ```sh
+   cd /var/www/finedica/chatbot
+   python3 chatbot.py
+   ```
+3. In the second session, run:
+   ```sh
+   cd /var/www/finedica/chatbot
+   python3 chatbotquick.py
+   ```
+
+- Ensure ports 5002 (chatbot.py) and 5003 (chatbotquick.py) are open in your VM firewall and cloud provider firewall settings.
+- The frontend will automatically send requests to the correct backend based on the user’s chat mode selection (short-quick or long-late).
+- You can use a process manager (like NSSM on Windows or systemd/supervisor on Linux) to keep both services running in the background.
 
 VII. File Uploads
 -----------------
@@ -353,3 +387,32 @@ finedica/
 
 - All main features (PHP, Python, chatbot, etc.) are organized in subfolders.
 - Place your project root (finedica) in your web server directory (e.g., c:\xampp\htdocs\finedica on Windows or /var/www/finedica on Linux/VM).
+
+### Ensuring Ports 5002 and 5003 Are Open (Windows/Cloud VM)
+To allow external access to both chatbot services, you must open ports 5002 and 5003 in your firewall and (if using a cloud provider) in your VM's network settings:
+
+**On Google Cloud VM:**
+1. Go to Google Cloud Console > VPC network > Firewall.
+2. Click "Create firewall rule".
+3. Set the following:
+   - Name: allow-chatbot-ports
+   - Targets: All instances in the network (or specify your VM)
+   - Source IP ranges: 0.0.0.0/0 (or restrict as needed)
+   - Protocols and ports: Check "Specified protocols and ports", then enter `tcp:5002,5003`
+4. Click "Create" to apply the rule.
+
+**On Windows (local firewall):**
+1. Open Windows Defender Firewall > Advanced settings.
+2. Click "Inbound Rules" > "New Rule..."
+3. Select "Port", click Next.
+4. Select "TCP", enter `5002,5003` in "Specific local ports".
+5. Allow the connection, click Next.
+6. Choose when the rule applies (Domain, Private, Public), click Next.
+7. Name the rule (e.g., "Finedica Chatbot Ports") and click Finish.
+
+- After opening the ports, you can test from another machine:
+  ```sh
+  curl -X POST http://YOUR_VM_IP:5002/chat -H "Content-Type: application/json" -d "{\"message\": \"hi\"}"
+  curl -X POST http://YOUR_VM_IP:5003/chat -H "Content-Type: application/json" -d "{\"message\": \"hi\"}"
+  ```
+- You should receive a JSON response from each chatbot service.

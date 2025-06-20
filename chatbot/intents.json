@@ -19,6 +19,247 @@
 			"tag": "passive_income",
 			"patterns": ["How can I earn passive income?", "Passive income ideas", "Best passive income sources", "Ways to make money without working", "How do I generate income passively?"],
 			"responses": ["Rental properties, dividend stocks, and side businesses are great ways to generate income with minimal effort."]
+		},
+		{
+			"tag": "mortgage_types",
+			"patterns": [
+				"What types of mortgages are there?",
+				"Explain fixed-rate and variable-rate mortgages",
+				"Tell me about tracker mortgages",
+				"What is an offset mortgage?",
+				"What is a guarantor mortgage?",
+				"What is shared ownership?"
+			],
+			"responses": [
+				"There are several types of mortgages in the UK: Fixed-rate (interest stays the same for a set period), Variable-rate (interest can change), Tracker (follows the Bank of England base rate), Offset (links your savings to your mortgage), Guarantor (a family member guarantees the loan), and Shared Ownership (buy a share, pay rent on the rest)."
+			]
+		},
+		{
+			"tag": "first_time_buyer_steps",
+			"patterns": [
+				"What should first-time buyers know?",
+				"Steps for first-time home buyers",
+				"How do I start buying a house?",
+				"What do I need to buy my first home?"
+			],
+			"responses": [
+				"First-time buyers should check their credit score, start saving for a deposit (at least 5%, but 10-20% is better), work out how much they can afford, understand extra costs, research mortgage types, and explore government schemes."
+			]
+		},
+		{
+			"tag": "saving_for_deposit",
+			"patterns": [
+				"How much do I need for a mortgage deposit?",
+				"How do I save for a deposit?",
+				"Tips for saving a mortgage deposit",
+				"How can I reach my deposit goal?",
+				"Deposit advice for first-time buyers"
+			],
+			"responses": [
+				"Most lenders require at least a 5% deposit, but a 10% or 25% deposit gets you better deals. Set a savings goal, break it into monthly targets, and consider using a Lifetime ISA for a government bonus."
+			]
+		},
+		{
+			"tag": "quick_saving_tips",
+			"patterns": [
+				"Give me quick tips to save for a deposit",
+				"How can I save money fast?",
+				"Best ways to save for a house deposit",
+				"Any tips for building savings?"
+			],
+			"responses": [
+				"Pick the right savings account, create and stick to a budget, cut unnecessary spending, look for better deals on essentials, explore extra income streams, use discounts and vouchers, try 'no spend' months, and ask for help if needed."
+			]
+		},
+		{
+			"tag": "mortgage_terminology",
+			"patterns": [
+				"Explain mortgage terms",
+				"What does LTV mean?",
+				"What is an arrangement fee?",
+				"What is a tracker mortgage?",
+				"What is remortgaging?"
+			],
+			"responses": [
+				"Some key mortgage terms: LTV (Loan to Value) is the percentage of the property’s value you borrow. Arrangement fee is what the lender charges to set up your mortgage. Tracker mortgage follows the Bank of England base rate. Remortgaging means switching to a new mortgage deal."
+			]
+		},
+		{
+			"tag": "mortgage_deposit_amount",
+			"patterns": [
+				"How much deposit do I need for a house?",
+				"What is the minimum deposit for a mortgage?",
+				"How much should I save for a deposit?",
+				"Average deposit for a house in the UK"
+			],
+			"responses": [
+				"Most lenders require at least a 5% deposit, but a 10% or 25% deposit will get you better deals. For a £290,000 home, a 5% deposit is £14,500, 10% is £29,000, and 25% is £72,500."
+			]
+		},
+		{
+			"tag": "deposit_percent_advantage",
+			"patterns": [
+				"Is it better to have a bigger deposit?",
+				"Why should I save more than 5% for a deposit?",
+				"What are the benefits of a larger deposit?"
+			],
+			"responses": [
+				"The bigger your deposit, the better the mortgage deals you can get. Lenders offer lower interest rates and more flexible terms if you have a higher deposit."
+			]
+		},
+		{
+			"tag": "lifetime_isa",
+			"patterns": [
+				"What is a Lifetime ISA?",
+				"How does a LISA help with my deposit?",
+				"Can I use a LISA for my mortgage deposit?"
+			],
+			"responses": [
+				"A Lifetime ISA (LISA) is a savings account for first-time buyers under 40. You can save up to £4,000 a year and get a 25% government bonus, which can be used for a mortgage deposit on a property up to £450,000."
+			]
+		},
+		{
+			"tag": "budgeting_for_deposit",
+			"patterns": [
+				"How do I budget for a deposit?",
+				"Tips for budgeting for a house deposit",
+				"How can I plan my savings for a deposit?"
+			],
+			"responses": [
+				"Set a savings goal, break it into monthly targets, and create a realistic budget. Consider setting up standing orders so money goes into savings automatically each month."
+			]
+		},
+		{
+			"tag": "cutting_expenses",
+			"patterns": [
+				"How can I cut expenses to save for a deposit?",
+				"Ways to reduce spending for a house deposit",
+				"How do I save more each month?"
+			],
+			"responses": [
+				"Review your spending habits, cut back on non-essentials like daily coffees or unused subscriptions, and look for better deals on utilities and groceries."
+			]
+		},
+		{
+			"tag": "extra_income",
+			"patterns": [
+				"How can I make extra money for my deposit?",
+				"Ideas for extra income to save for a house",
+				"How do I boost my savings for a deposit?"
+			],
+			"responses": [
+				"Consider selling unwanted items, taking on side gigs, or monetising a skill. Even small amounts add up over time."
+			]
+		},
+		{
+			"tag": "government_help",
+			"patterns": [
+				"Are there government schemes to help with deposits?",
+				"Can the government help me buy a house?",
+				"What help is there for first-time buyers?"
+			],
+			"responses": [
+				"Check if you qualify for schemes like Shared Ownership, First Homes, or a Lifetime ISA. These can help make buying a home more affordable."
+			]
+		},
+		{
+			"tag": "mortgage_fees",
+			"patterns": [
+				"What fees do I pay when getting a mortgage?",
+				"Are there extra costs with a mortgage?",
+				"What are arrangement and valuation fees?"
+			],
+			"responses": [
+				"Expect to pay arrangement fees, valuation fees, and legal fees. These can add up to £1,000–£2,000 or more. Sometimes a mortgage with no fees is better, even if the interest rate is higher."
+			]
+		},
+		{
+			"tag": "mortgage_risks",
+			"patterns": [
+				"What are the risks of getting a mortgage?",
+				"Can I lose my home if I can't pay the mortgage?",
+				"What happens if I miss mortgage payments?"
+			],
+			"responses": [
+				"If you do not keep up repayments on your mortgage, your home may be repossessed. Always budget carefully and consider insurance to protect yourself."
+			]
+		},
+		{
+			"tag": "mortgage_insurance",
+			"patterns": [
+				"Do I need insurance for my mortgage?",
+				"What insurance should I get with a mortgage?",
+				"Is buildings insurance required?"
+			],
+			"responses": [
+				"Buildings insurance is required to protect your property. Life insurance and income protection are also worth considering to protect your home if your circumstances change."
+			]
+		},
+		{
+			"tag": "mortgage_repayment_options",
+			"patterns": [
+				"Can I pay off my mortgage early?",
+				"What are overpayment options?",
+				"How can I reduce my mortgage term?"
+			],
+			"responses": [
+				"Some mortgages allow you to overpay without penalties. Overpaying can reduce your mortgage term and the total interest you pay."
+			]
+		},
+		{
+			"tag": "mortgage_penalties",
+			"patterns": [
+				"Are there penalties for paying off my mortgage early?",
+				"What are early repayment charges?",
+				"Will I be charged for moving house before my mortgage ends?"
+			],
+			"responses": [
+				"Some fixed-rate and tracker mortgages charge a penalty if you repay early or move before the deal ends. Check these charges if you think you might move or repay early."
+			]
+		},
+		{
+			"tag": "mortgage_affordability",
+			"patterns": [
+				"How do lenders decide how much I can borrow?",
+				"What is mortgage affordability?",
+				"How much can I afford to borrow for a house?"
+			],
+			"responses": [
+				"Lenders check your income, debts, and living costs to decide how much you can borrow. Always be realistic about what monthly payments you can afford, especially if interest rates rise."
+			]
+		},
+		{
+			"tag": "mortgage_calculator",
+			"patterns": [
+				"How do I calculate my mortgage payments?",
+				"Is there a mortgage calculator?",
+				"How can I estimate my repayments?"
+			],
+			"responses": [
+				"You can use online mortgage calculators to estimate your monthly repayments based on the loan amount, interest rate, and term."
+			]
+		},
+		{
+			"tag": "mortgage_adviser",
+			"patterns": [
+				"Should I use a mortgage adviser?",
+				"Do I need a mortgage broker?",
+				"How can a mortgage adviser help me?"
+			],
+			"responses": [
+				"A mortgage adviser or broker can help you find the best deal and navigate the paperwork. Some charge a fee, others are paid by the lender."
+			]
+		},
+		{
+			"tag": "mortgage_warning",
+			"patterns": [
+				"What happens if I can't pay my mortgage?",
+				"Can I lose my house?",
+				"Is my home at risk with a mortgage?"
+			],
+			"responses": [
+				"Your home may be repossessed if you do not keep up repayments on your mortgage. Always budget carefully and seek advice if you’re struggling."
+			]
 		}
 	]
 }
