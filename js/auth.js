@@ -39,7 +39,7 @@ document.getElementById('signupForm')?.addEventListener('submit', async (e) => {
 
         if (responseData.success) {
             alert(responseData.message); // Show success message
-            e.target.reset(); // Reset the form fields
+            window.location.href = 'home.php'; // Redirect to a dashboard or home page
         } else {
             alert(responseData.error); // Show error message
         }
