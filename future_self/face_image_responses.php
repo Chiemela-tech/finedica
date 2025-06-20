@@ -39,7 +39,7 @@ try {
     $avatarPath = null;
 }
 
-// Only show generate button if no avatar exists, otherwise show re-generate button
+// #Only show generate button if no avatar exists, otherwise show re-generate button
 $showGenerate = !$avatarPath;
 $showRegenerate = (bool)$avatarPath;
 ?>
