@@ -158,15 +158,12 @@ $showRegenerate = (bool)$avatarPath;
                         .then((res) => res.json())
                         .then((data) => {
                             if (data.status === 'ok') {
-                                // Redirect to chatbot mode selection after avatar generation
-                                window.location.href = '../chatbot_mode_select.php';
-                                return;
-                                // If you want to show the avatar first, comment out the above line and uncomment below:
-                                // document.getElementById('avatar-preview').innerHTML = `<img src="${data.avatar_path}?t=${Date.now()}" alt="Generated Avatar" style="max-width:320px; max-height:320px; border-radius:16px; box-shadow:0 2px 16px rgba(33,150,243,0.16);">`;
-                                // genBtn.style.display = 'none';
-                                // nextBtn.disabled = false;
-                                // nextBtn.style.opacity = '1';
-                                // nextBtn.style.cursor = 'pointer';
+                                document.getElementById('avatar-preview').innerHTML = `<img src="${data.avatar_path}?t=${Date.now()}" alt="Generated Avatar" style="max-width:320px; max-height:320px; border-radius:16px; box-shadow:0 2px 16px rgba(33,150,243,0.16);">`;
+                                genBtn.style.display = 'none';
+                                // Enable Next button after avatar is generated
+                                nextBtn.disabled = false;
+                                nextBtn.style.opacity = '1';
+                                nextBtn.style.cursor = 'pointer';
                                 // Show re-generate button after generation
                                 let regenBtn = document.getElementById('regenerate-avatar-btn');
                                 if (!regenBtn) {

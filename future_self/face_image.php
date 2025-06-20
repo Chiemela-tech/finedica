@@ -141,17 +141,20 @@ if (isset($_POST['submit'])) {
                     <h2 style="margin-bottom: 18px; color: #2196f3; font-size: 1.3em;">Step 2: Preview Your Image</h2>
                     <div class="preview-area card" style="width: 320px; height: 320px; background: #f8f8f8; border-radius: 20px; box-shadow: 0 4px 24px rgba(33,150,243,0.13); border: 3px solid #2196f3; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; overflow: hidden;">
                         <?php 
-                        // Always use DB value for preview if available
-                        $stmt = $pdo->prepare("SELECT face_image_url FROM face_image_responses WHERE email = :email LIMIT 1");
-                        $stmt->execute([':email' => $userEmail]);
-                        $dbImage = $stmt->fetchColumn();
-                        if ($dbImage): ?>
+                        if (isset($_SESSION['uploaded_image'])): ?>
+                            <img src="<?php echo htmlspecialchars($_SESSION['uploaded_image']); ?>" alt="Uploaded Face Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; margin: auto; background: transparent;" />
+                        <?php 
+                        elseif ($dbImage): ?>
                             <img src="<?php echo htmlspecialchars($dbImage); ?>" alt="Uploaded Face Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; margin: auto; background: transparent;" />
                         <?php else: ?>
                             <p class="avatar-info-text">No image uploaded yet. Please upload your face image to preview.</p>
                         <?php endif; ?>
                     </div>
-                    <?php if ($dbImage): ?>
+                    <?php if (isset($_SESSION['uploaded_image'])): ?>
+                        <form action="face_image.php" method="POST" id="submit-form" style="width:100%;">
+                            <button type="submit" name="submit" class="futureself-btn" style="width: 100%;">Submit</button>
+                        </form>
+                    <?php elseif ($dbImage): ?>
                         <form action="face_image.php" method="POST" id="submit-form" style="width:100%;">
                             <button type="submit" name="submit" class="futureself-btn" style="width: 100%;">Submit</button>
                         </form>
