@@ -166,7 +166,7 @@ $expenditure = $stmt->fetch(PDO::FETCH_ASSOC);
                 <canvas id="expenseChart" width="340" height="340" style="max-width:340px; margin: 0 auto; display: block;"></canvas>
                 <div style="margin-top: 24px; display: flex; gap: 20px; justify-content: center;">
                     <a href="../php/questionnaire.php"><button class="expenditure-submit-btn">Go to Main Menu</button></a>
-                    <a href="../php/chatbot.php"><button class="expenditure-submit-btn">Start Advice</button></a>
+                    <a href="../chatbot/chatbot.php"><button class="expenditure-submit-btn">Start Advice</button></a>
                 </div>
             </div>
         </div>
