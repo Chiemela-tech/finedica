@@ -1,80 +1,20 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_email'])) {
     header('Location: index.php');
     exit;
 }
 
+$userEmail = $_SESSION['user_email'];
 $userName = $_SESSION['user_name'];
-require_once '../php/db_connect.php'; // Use the central db_connect.php for DB connection
+require_once '../php/db_connect.php';
 
-// Handle form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $userId = $_POST['user_id'];
-    $salary = $_POST['salary'];
-    $dividends = $_POST['dividends'];
-    $statePension = $_POST['statePension'];
-    $pension = $_POST['pension'];
-    $benefits = $_POST['benefits'];
-    $otherIncome = $_POST['otherIncome'];
-    $gas = $_POST['gas'];
-    $electric = $_POST['electric'];
-    $water = $_POST['water'];
-    $councilTax = $_POST['councilTax'];
-    $phone = $_POST['phone'];
-    $internet = $_POST['internet'];
-    $mobilePhone = $_POST['mobilePhone'];
-    $food = $_POST['food'];
-    $otherHome = $_POST['otherHome'];
-    $petrol = $_POST['petrol'];
-    $carTax = $_POST['carTax'];
-    $carInsurance = $_POST['carInsurance'];
-    $maintenance = $_POST['maintenance'];
-    $publicTransport = $_POST['publicTransport'];
-    $otherTravel = $_POST['otherTravel'];
-    $social = $_POST['social'];
-    $holidays = $_POST['holidays'];
-    $gym = $_POST['gym'];
-    $clothing = $_POST['clothing'];
-    $otherMisc = $_POST['otherMisc'];
-    $nursery = $_POST['nursery'];
-    $childcare = $_POST['childcare'];
-    $schoolFees = $_POST['schoolFees'];
-    $uniCosts = $_POST['uniCosts'];
-    $childMaintenance = $_POST['childMaintenance'];
-    $otherChildren = $_POST['otherChildren'];
-    $life = $_POST['life'];
-    $criticalIllness = $_POST['criticalIllness'];
-    $incomeProtection = $_POST['incomeProtection'];
-    $buildings = $_POST['buildings'];
-    $contents = $_POST['contents'];
-    $otherInsurance = $_POST['otherInsurance'];
-    $pensionDed = $_POST['pensionDed'];
-    $studentLoan = $_POST['studentLoan'];
-    $childcareDed = $_POST['childcareDed'];
-    $travelDed = $_POST['travelDed'];
-    $sharesave = $_POST['sharesave'];
-    $otherDeductions = $_POST['otherDeductions'];
-
-    // Insert or update expenditure data in the database
-    $stmt = $conn->prepare("REPLACE INTO expenditure (user_id, salary, dividends, state_pension, pension, benefits, other_income, gas, electric, water, council_tax, phone, internet, mobile_phone, food, other_home, petrol, car_tax, car_insurance, maintenance, public_transport, other_travel, social, holidays, gym, clothing, other_misc, nursery, childcare, school_fees, uni_costs, child_maintenance, other_children, life, critical_illness, income_protection, buildings, contents, other_insurance, pension_ded, student_loan, childcare_ded, travel_ded, sharesave, other_deductions) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("iddddddddddddddddddddddddddddddddddddddddddddddddd", $userId, $salary, $dividends, $statePension, $pension, $benefits, $otherIncome, $gas, $electric, $water, $councilTax, $phone, $internet, $mobilePhone, $food, $otherHome, $petrol, $carTax, $carInsurance, $maintenance, $publicTransport, $otherTravel, $social, $holidays, $gym, $clothing, $otherMisc, $nursery, $childcare, $schoolFees, $uniCosts, $childMaintenance, $otherChildren, $life, $criticalIllness, $incomeProtection, $buildings, $contents, $otherInsurance, $pensionDed, $studentLoan, $childcareDed, $travelDed, $sharesave, $otherDeductions);
-
-    if ($stmt->execute()) {
-        echo "Expenditure data saved successfully.";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
-}
-
-$conn->close();
+// Fetch the latest expenditure record for this user by email
+$stmt = $pdo->prepare("SELECT * FROM expenditure WHERE email = :email LIMIT 1");
+$stmt->execute([':email' => $userEmail]);
+$expenditure = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,8 +22,9 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>20:20 FC - FINEDICA</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/expenditurestyle.css">
+    <link rel="stylesheet" href="expenditure_style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 </head>
 <body>
     <header>
@@ -108,76 +49,108 @@ $conn->close();
             <p class="expenditure-subtitle">Easily track, visualize, and optimize your monthly budget. Enter your details below and get instant insights!</p>
         </section>
         <div class="expenditure-flex-container">
-            <form id="expenditureForm" class="expenditure-form card" action="../php/expenditure.php" method="post">
-                <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
+            <?php if ($expenditure): ?>
+                <div id="expenditureSummary" class="expenditure-form card">
+                    <h2>Your Last Submitted Expenditure</h2>
+                    <div id="expenditureSummaryCategories">
+                    <?php
+                    $categories = [
+                        'Income' => ['salary','dividends','state_pension','pension','benefits','other_income'],
+                        'Home Expenses' => ['gas','electric','water','council_tax','phone','internet','mobile_phone','food','other_home'],
+                        'Travel Expenses' => ['petrol','car_tax','car_insurance','maintenance','public_transport','other_travel'],
+                        'Miscellaneous' => ['social','holidays','gym','clothing','other_misc'],
+                        'Children' => ['nursery','childcare','school_fees','uni_costs','child_maintenance','other_children'],
+                        'Insurance' => ['life','critical_illness','income_protection','buildings','contents','other_insurance'],
+                        'Pay Slip Deductions' => ['pension_ded','student_loan','childcare_ded','travel_ded','sharesave','other_deductions']
+                    ];
+                    foreach ($categories as $catName => $fields): ?>
+                        <div class="summary-category-block">
+                            <h4 style="color:#2a5d84; margin-top:18px;"> <?php echo $catName; ?> </h4>
+                            <ul style="list-style:none;padding-left:0;">
+                            <?php foreach ($fields as $field):
+                                if (!isset($expenditure[$field])) continue;
+                                $label = ucwords(str_replace(['_', 'Ded'], [' ', ' Deduction'], $field));
+                                $value = $expenditure[$field];
+                            ?>
+                                <li style="margin-bottom:8px;"><b><?php echo $label; ?>:</b> <span class='review-answer'><?php echo htmlspecialchars($value); ?></span></li>
+                            <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endforeach; ?>
+                    </div>
+                    <button id="editExpenditureBtn" class="expenditure-submit-btn">Edit</button>
+                </div>
+            <?php endif; ?>
+            <form id="expenditureForm" class="expenditure-form card" method="post" style="<?php echo $expenditure ? 'display:none;' : ''; ?>">
+                <input type="hidden" name="email" value="<?php echo htmlspecialchars($userEmail); ?>">
                 <h2>Income</h2>
                 <div class="section">
-                    <label>Salary: <input type="number" name="salary" placeholder="Net Monthly Salary" /></label>
-                    <label>Dividends: <input type="number" name="dividends" /></label>
-                    <label>State Pension: <input type="number" name="statePension" /></label>
-                    <label>Pension: <input type="number" name="pension" /></label>
-                    <label>Benefits: <input type="number" name="benefits" /></label>
-                    <label>Other: <input type="number" name="otherIncome" /></label>
+                    <label>Salary: <input type="number" name="salary" value="<?php echo $expenditure['salary'] ?? ''; ?>" placeholder="Net Monthly Salary" /></label>
+                    <label>Dividends: <input type="number" name="dividends" value="<?php echo $expenditure['dividends'] ?? ''; ?>" /></label>
+                    <label>State Pension: <input type="number" name="statePension" value="<?php echo $expenditure['state_pension'] ?? ''; ?>" /></label>
+                    <label>Pension: <input type="number" name="pension" value="<?php echo $expenditure['pension'] ?? ''; ?>" /></label>
+                    <label>Benefits: <input type="number" name="benefits" value="<?php echo $expenditure['benefits'] ?? ''; ?>" /></label>
+                    <label>Other: <input type="number" name="otherIncome" value="<?php echo $expenditure['other_income'] ?? ''; ?>" /></label>
                 </div>
                 <h2>Home Expenses</h2>
                 <div class="section">
-                    <label>Gas: <input type="number" name="gas" /></label>
-                    <label>Electric: <input type="number" name="electric" /></label>
-                    <label>Water: <input type="number" name="water" /></label>
-                    <label>Council Tax: <input type="number" name="councilTax" /></label>
-                    <label>Phone: <input type="number" name="phone" /></label>
-                    <label>Internet: <input type="number" name="internet" /></label>
-                    <label>Mobile: <input type="number" name="mobilePhone" /></label>
-                    <label>Food: <input type="number" name="food" /></label>
-                    <label>Others: <input type="number" name="otherHome" /></label>
+                    <label>Gas: <input type="number" name="gas" value="<?php echo $expenditure['gas'] ?? ''; ?>" /></label>
+                    <label>Electric: <input type="number" name="electric" value="<?php echo $expenditure['electric'] ?? ''; ?>" /></label>
+                    <label>Water: <input type="number" name="water" value="<?php echo $expenditure['water'] ?? ''; ?>" /></label>
+                    <label>Council Tax: <input type="number" name="councilTax" value="<?php echo $expenditure['council_tax'] ?? ''; ?>" /></label>
+                    <label>Phone: <input type="number" name="phone" value="<?php echo $expenditure['phone'] ?? ''; ?>" /></label>
+                    <label>Internet: <input type="number" name="internet" value="<?php echo $expenditure['internet'] ?? ''; ?>" /></label>
+                    <label>Mobile: <input type="number" name="mobilePhone" value="<?php echo $expenditure['mobile_phone'] ?? ''; ?>" /></label>
+                    <label>Food: <input type="number" name="food" value="<?php echo $expenditure['food'] ?? ''; ?>" /></label>
+                    <label>Others: <input type="number" name="otherHome" value="<?php echo $expenditure['other_home'] ?? ''; ?>" /></label>
                 </div>
                 <h2>Travel Expenses</h2>
                 <div class="section">
-                    <label>Petrol: <input type="number" name="petrol" /></label>
-                    <label>Car Tax: <input type="number" name="carTax" /></label>
-                    <label>Insurance: <input type="number" name="carInsurance" /></label>
-                    <label>Maintenance: <input type="number" name="maintenance" /></label>
-                    <label>Public Transport: <input type="number" name="publicTransport" /></label>
-                    <label>Others: <input type="number" name="otherTravel" /></label>
+                    <label>Petrol: <input type="number" name="petrol" value="<?php echo $expenditure['petrol'] ?? ''; ?>" /></label>
+                    <label>Car Tax: <input type="number" name="carTax" value="<?php echo $expenditure['car_tax'] ?? ''; ?>" /></label>
+                    <label>Insurance: <input type="number" name="carInsurance" value="<?php echo $expenditure['car_insurance'] ?? ''; ?>" /></label>
+                    <label>Maintenance: <input type="number" name="maintenance" value="<?php echo $expenditure['maintenance'] ?? ''; ?>" /></label>
+                    <label>Public Transport: <input type="number" name="publicTransport" value="<?php echo $expenditure['public_transport'] ?? ''; ?>" /></label>
+                    <label>Others: <input type="number" name="otherTravel" value="<?php echo $expenditure['other_travel'] ?? ''; ?>" /></label>
                 </div>
                 <!-- Miscellaneous -->
                 <h2>Miscellaneous</h2>
                 <div class="section">
-                    <label>Social: <input type="number" name="social" /></label>
-                    <label>Holidays: <input type="number" name="holidays" /></label>
-                    <label>Gym: <input type="number" name="gym" /></label>
-                    <label>Clothing: <input type="number" name="clothing" /></label>
-                    <label>Other: <input type="number" name="otherMisc" /></label>
+                    <label>Social: <input type="number" name="social" value="<?php echo $expenditure['social'] ?? ''; ?>" /></label>
+                    <label>Holidays: <input type="number" name="holidays" value="<?php echo $expenditure['holidays'] ?? ''; ?>" /></label>
+                    <label>Gym: <input type="number" name="gym" value="<?php echo $expenditure['gym'] ?? ''; ?>" /></label>
+                    <label>Clothing: <input type="number" name="clothing" value="<?php echo $expenditure['clothing'] ?? ''; ?>" /></label>
+                    <label>Other: <input type="number" name="otherMisc" value="<?php echo $expenditure['other_misc'] ?? ''; ?>" /></label>
                 </div>
                 <!-- Children -->
                 <h2>Children</h2>
                 <div class="section">
-                    <label>Nursery: <input type="number" name="nursery" /></label>
-                    <label>Childcare: <input type="number" name="childcare" /></label>
-                    <label>School Fees: <input type="number" name="schoolFees" /></label>
-                    <label>University Costs: <input type="number" name="uniCosts" /></label>
-                    <label>Child Maintenance: <input type="number" name="childMaintenance" /></label>
-                    <label>Other: <input type="number" name="otherChildren" /></label>
+                    <label>Nursery: <input type="number" name="nursery" value="<?php echo $expenditure['nursery'] ?? ''; ?>" /></label>
+                    <label>Childcare: <input type="number" name="childcare" value="<?php echo $expenditure['childcare'] ?? ''; ?>" /></label>
+                    <label>School Fees: <input type="number" name="schoolFees" value="<?php echo $expenditure['school_fees'] ?? ''; ?>" /></label>
+                    <label>University Costs: <input type="number" name="uniCosts" value="<?php echo $expenditure['uni_costs'] ?? ''; ?>" /></label>
+                    <label>Child Maintenance: <input type="number" name="childMaintenance" value="<?php echo $expenditure['child_maintenance'] ?? ''; ?>" /></label>
+                    <label>Other: <input type="number" name="otherChildren" value="<?php echo $expenditure['other_children'] ?? ''; ?>" /></label>
                 </div>
                 <!-- Insurance -->
                 <h2>Insurance</h2>
                 <div class="section">
-                    <label>Life: <input type="number" name="life" /></label>
-                    <label>Critical Illness: <input type="number" name="criticalIllness" /></label>
-                    <label>Income Protection: <input type="number" name="incomeProtection" /></label>
-                    <label>Buildings: <input type="number" name="buildings" /></label>
-                    <label>Contents: <input type="number" name="contents" /></label>
-                    <label>Other: <input type="number" name="otherInsurance" /></label>
+                    <label>Life: <input type="number" name="life" value="<?php echo $expenditure['life'] ?? ''; ?>" /></label>
+                    <label>Critical Illness: <input type="number" name="criticalIllness" value="<?php echo $expenditure['critical_illness'] ?? ''; ?>" /></label>
+                    <label>Income Protection: <input type="number" name="incomeProtection" value="<?php echo $expenditure['income_protection'] ?? ''; ?>" /></label>
+                    <label>Buildings: <input type="number" name="buildings" value="<?php echo $expenditure['buildings'] ?? ''; ?>" /></label>
+                    <label>Contents: <input type="number" name="contents" value="<?php echo $expenditure['contents'] ?? ''; ?>" /></label>
+                    <label>Other: <input type="number" name="otherInsurance" value="<?php echo $expenditure['other_insurance'] ?? ''; ?>" /></label>
                 </div>
                 <!-- Pay Slip Deductions -->
                 <h2>Pay Slip Deductions</h2>
                 <div class="section">
-                    <label>Pension: <input type="number" name="pensionDed" /></label>
-                    <label>Student Loan: <input type="number" name="studentLoan" /></label>
-                    <label>Childcare: <input type="number" name="childcareDed" /></label>
-                    <label>Travel: <input type="number" name="travelDed" /></label>
-                    <label>Sharesave: <input type="number" name="sharesave" /></label>
-                    <label>Other: <input type="number" name="otherDeductions" /></label>
+                    <label>Pension: <input type="number" name="pensionDed" value="<?php echo $expenditure['pension_ded'] ?? ''; ?>" /></label>
+                    <label>Student Loan: <input type="number" name="studentLoan" value="<?php echo $expenditure['student_loan'] ?? ''; ?>" /></label>
+                    <label>Childcare: <input type="number" name="childcareDed" value="<?php echo $expenditure['childcare_ded'] ?? ''; ?>" /></label>
+                    <label>Travel: <input type="number" name="travelDed" value="<?php echo $expenditure['travel_ded'] ?? ''; ?>" /></label>
+                    <label>Sharesave: <input type="number" name="sharesave" value="<?php echo $expenditure['sharesave'] ?? ''; ?>" /></label>
+                    <label>Other: <input type="number" name="otherDeductions" value="<?php echo $expenditure['other_deductions'] ?? ''; ?>" /></label>
                 </div>
                 <button type="button" id="reviewBtn" class="expenditure-submit-btn">Review</button>
             </form>
@@ -185,61 +158,30 @@ $conn->close();
                 <h3>Review Your Answers</h3>
                 <div id="reviewList"></div>
                 <button id="editBtn" type="button">Edit</button>
-                <form id="finalSubmitForm" action="../php/save_expenditure.php" method="post">
-                    <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
-                    <input type="hidden" name="salary" id="finalSalary">
-                    <input type="hidden" name="dividends" id="finalDividends">
-                    <input type="hidden" name="statePension" id="finalStatePension">
-                    <input type="hidden" name="pension" id="finalPension">
-                    <input type="hidden" name="benefits" id="finalBenefits">
-                    <input type="hidden" name="otherIncome" id="finalOtherIncome">
-                    <input type="hidden" name="gas" id="finalGas">
-                    <input type="hidden" name="electric" id="finalElectric">
-                    <input type="hidden" name="water" id="finalWater">
-                    <input type="hidden" name="councilTax" id="finalCouncilTax">
-                    <input type="hidden" name="phone" id="finalPhone">
-                    <input type="hidden" name="internet" id="finalInternet">
-                    <input type="hidden" name="mobilePhone" id="finalMobilePhone">
-                    <input type="hidden" name="food" id="finalFood">
-                    <input type="hidden" name="otherHome" id="finalOtherHome">
-                    <input type="hidden" name="petrol" id="finalPetrol">
-                    <input type="hidden" name="carTax" id="finalCarTax">
-                    <input type="hidden" name="carInsurance" id="finalCarInsurance">
-                    <input type="hidden" name="maintenance" id="finalMaintenance">
-                    <input type="hidden" name="publicTransport" id="finalPublicTransport">
-                    <input type="hidden" name="otherTravel" id="finalOtherTravel">
-                    <input type="hidden" name="social" id="finalSocial">
-                    <input type="hidden" name="holidays" id="finalHolidays">
-                    <input type="hidden" name="gym" id="finalGym">
-                    <input type="hidden" name="clothing" id="finalClothing">
-                    <input type="hidden" name="otherMisc" id="finalOtherMisc">
-                    <input type="hidden" name="nursery" id="finalNursery">
-                    <input type="hidden" name="childcare" id="finalChildcare">
-                    <input type="hidden" name="schoolFees" id="finalSchoolFees">
-                    <input type="hidden" name="uniCosts" id="finalUniCosts">
-                    <input type="hidden" name="childMaintenance" id="finalChildMaintenance">
-                    <input type="hidden" name="otherChildren" id="finalOtherChildren">
-                    <input type="hidden" name="life" id="finalLife">
-                    <input type="hidden" name="criticalIllness" id="finalCriticalIllness">
-                    <input type="hidden" name="incomeProtection" id="finalIncomeProtection">
-                    <input type="hidden" name="buildings" id="finalBuildings">
-                    <input type="hidden" name="contents" id="finalContents">
-                    <input type="hidden" name="otherInsurance" id="finalOtherInsurance">
-                    <input type="hidden" name="pensionDed" id="finalPensionDed">
-                    <input type="hidden" name="studentLoan" id="finalStudentLoan">
-                    <input type="hidden" name="childcareDed" id="finalChildcareDed">
-                    <input type="hidden" name="travelDed" id="finalTravelDed">
-                    <input type="hidden" name="sharesave" id="finalSharesave">
-                    <input type="hidden" name="otherDeductions" id="finalOtherDeductions">
-                    <button type="submit" class="expenditure-submit-btn">Submit</button>
-                </form>
+                <button id="submitBtn" type="button" class="expenditure-submit-btn">Submit</button>
             </div>
             <div class="expenditure-results-panel card">
+                <div id="resultMsg"></div>
                 <div id="results"></div>
                 <canvas id="expenseChart" width="340" height="340" style="max-width:340px; margin: 0 auto; display: block;"></canvas>
+                <div style="margin-top: 24px; display: flex; gap: 20px; justify-content: center;">
+                    <a href="../php/questionnaire.php"><button class="expenditure-submit-btn">Go to Main Menu</button></a>
+                    <a href="../php/chatbot.php"><button class="expenditure-submit-btn">Start Advice</button></a>
+                </div>
             </div>
         </div>
     </main>
     <script src="expenditure_script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var editBtn = document.getElementById('editExpenditureBtn');
+        if (editBtn) {
+            editBtn.onclick = function() {
+                document.getElementById('expenditureSummary').style.display = 'none';
+                document.getElementById('expenditureForm').style.display = '';
+            };
+        }
+    });
+    </script>
 </body>
 </html>

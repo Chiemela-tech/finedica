@@ -27,8 +27,9 @@
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h2>Welcome to FINEDICA</h2>
+            <div class="hero-content" style="display: flex; flex-direction: column; align-items: center;">
+                <img src="../uploads/finedica logo.png" alt="Finedica Logo" style="max-width: 180px; height: auto; margin-bottom: 18px; box-shadow: 0 2px 12px rgba(33,150,243,0.10); border-radius: 16px; background: #fff; padding: 8px; display: block;" />
+                <h2 style="margin-top: 0;">FINEDICA</h2>
                 <p>Expert financial coaching for a clearer tomorrow</p>
             </div>
             

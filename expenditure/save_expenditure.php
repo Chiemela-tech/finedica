@@ -1,9 +1,17 @@
 <?php
 session_start();
 header('Content-Type: application/json');
-if (!isset($_SESSION['user_id'])) { echo json_encode(['success'=>false,'error'=>'Not logged in']); exit; }
+if (!isset($_SESSION['user_email'])) { echo json_encode(['success'=>false,'error'=>'Not logged in']); exit; }
 require_once '../php/db_connect.php';
-$user_id = $_SESSION['user_id'];
+$userEmail = $_SESSION['user_email'];
+// Fetch user_id for this email
+$stmt = $pdo->prepare("SELECT id FROM users WHERE email = :email LIMIT 1");
+$stmt->execute([':email' => $userEmail]);
+$user_id = $stmt->fetchColumn();
+if (!$user_id) {
+    echo json_encode(['success'=>false,'error'=>'User not found in users table']);
+    exit;
+}
 $fields = [
     'salary','dividends','statePension','pension','benefits','otherIncome',
     'gas','electric','water','councilTax','phone','internet','mobilePhone','food','otherHome',
@@ -16,70 +24,36 @@ $fields = [
 $data = [];
 foreach ($fields as $f) { $data[$f] = $_POST[$f] ?? 0; }
 try {
-    $stmt = $pdo->prepare("INSERT INTO expenditure (
-        user_id, salary, dividends, state_pension, pension, benefits, other_income,
-        gas, electric, water, council_tax, phone, internet, mobile_phone, food, other_home,
-        petrol, car_tax, car_insurance, maintenance, public_transport, other_travel,
-        social, holidays, gym, clothing, other_misc,
-        nursery, childcare, school_fees, uni_costs, child_maintenance, other_children,
-        life, critical_illness, income_protection, buildings, contents, other_insurance,
-        pension_ded, student_loan, childcare_ded, travel_ded, sharesave, other_deductions
-    ) VALUES (
-        :user_id, :salary, :dividends, :state_pension, :pension, :benefits, :other_income,
-        :gas, :electric, :water, :council_tax, :phone, :internet, :mobile_phone, :food, :other_home,
-        :petrol, :car_tax, :car_insurance, :maintenance, :public_transport, :other_travel,
-        :social, :holidays, :gym, :clothing, :other_misc,
-        :nursery, :childcare, :school_fees, :uni_costs, :child_maintenance, :other_children,
-        :life, :critical_illness, :income_protection, :buildings, :contents, :other_insurance,
-        :pension_ded, :student_loan, :childcare_ded, :travel_ded, :sharesave, :other_deductions
-    )");
-    $stmt->execute([
-        ':user_id' => $user_id,
-        ':salary' => $data['salary'],
-        ':dividends' => $data['dividends'],
-        ':state_pension' => $data['statePension'],
-        ':pension' => $data['pension'],
-        ':benefits' => $data['benefits'],
-        ':other_income' => $data['otherIncome'],
-        ':gas' => $data['gas'],
-        ':electric' => $data['electric'],
-        ':water' => $data['water'],
-        ':council_tax' => $data['councilTax'],
-        ':phone' => $data['phone'],
-        ':internet' => $data['internet'],
-        ':mobile_phone' => $data['mobilePhone'],
-        ':food' => $data['food'],
-        ':other_home' => $data['otherHome'],
-        ':petrol' => $data['petrol'],
-        ':car_tax' => $data['carTax'],
-        ':car_insurance' => $data['carInsurance'],
-        ':maintenance' => $data['maintenance'],
-        ':public_transport' => $data['publicTransport'],
-        ':other_travel' => $data['otherTravel'],
-        ':social' => $data['social'],
-        ':holidays' => $data['holidays'],
-        ':gym' => $data['gym'],
-        ':clothing' => $data['clothing'],
-        ':other_misc' => $data['otherMisc'],
-        ':nursery' => $data['nursery'],
-        ':childcare' => $data['childcare'],
-        ':school_fees' => $data['schoolFees'],
-        ':uni_costs' => $data['uniCosts'],
-        ':child_maintenance' => $data['childMaintenance'],
-        ':other_children' => $data['otherChildren'],
-        ':life' => $data['life'],
-        ':critical_illness' => $data['criticalIllness'],
-        ':income_protection' => $data['incomeProtection'],
-        ':buildings' => $data['buildings'],
-        ':contents' => $data['contents'],
-        ':other_insurance' => $data['otherInsurance'],
-        ':pension_ded' => $data['pensionDed'],
-        ':student_loan' => $data['studentLoan'],
-        ':childcare_ded' => $data['childcareDed'],
-        ':travel_ded' => $data['travelDed'],
-        ':sharesave' => $data['sharesave'],
-        ':other_deductions' => $data['otherDeductions']
-    ]);
+    // Check if record exists for this email
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM expenditure WHERE email = :email");
+    $stmt->execute([':email' => $userEmail]);
+    $exists = $stmt->fetchColumn() > 0;
+    if ($exists) {
+        // Update
+        $set = [];
+        foreach ($fields as $f) {
+            $col = preg_replace('/([A-Z])/', '_$1', $f); // camelCase to snake_case
+            $col = strtolower($col);
+            $set[] = "$col = :$f";
+        }
+        $sql = "UPDATE expenditure SET user_id = :user_id, ".implode(",", $set)." WHERE email = :email";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(":user_id", $user_id);
+        foreach ($fields as $f) $stmt->bindValue(":$f", $data[$f]);
+        $stmt->bindValue(":email", $userEmail);
+        $stmt->execute();
+    } else {
+        // Insert
+        $columns = implode(",", array_map(function($f){ return preg_replace('/([A-Z])/', '_$1', $f); }, $fields));
+        $columns = strtolower($columns);
+        $placeholders = ":".implode(",:", $fields);
+        $sql = "INSERT INTO expenditure (user_id, email, $columns) VALUES (:user_id, :email, $placeholders)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(":user_id", $user_id);
+        $stmt->bindValue(":email", $userEmail);
+        foreach ($fields as $f) $stmt->bindValue(":$f", $data[$f]);
+        $stmt->execute();
+    }
     echo json_encode(['success'=>true]);
 } catch (Exception $e) {
     echo json_encode(['success'=>false,'error'=>$e->getMessage()]);

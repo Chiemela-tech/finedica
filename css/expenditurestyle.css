@@ -20,6 +20,10 @@ body {
     display: block;
     margin-bottom: 10px;
   }
-
- 
   
+  input.highlight-missing {
+    border: 2px solid #e53935 !important;
+    background: #ffeaea !important;
+  }
+
+
