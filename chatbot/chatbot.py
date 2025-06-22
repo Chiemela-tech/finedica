@@ -19,6 +19,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_ollama import OllamaLLM
 from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
 
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
@@ -78,10 +79,19 @@ try:
 
     # Use Ollama as the LLM
     llm = OllamaLLM(model="phi3", base_url="http://localhost:11434")
+    custom_prompt = PromptTemplate(
+        input_variables=["context", "question"],
+        template=(
+            "Using only the information below, answer the user's question in 75-120 words. "
+            "Be concise, clear, and complete. If the question asks for a list, summarize and give a few key examples, not just a list. "
+            "Context:\n{context}\n\nQuestion: {question}\n\nAnswer:"
+        )
+    )
     qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
         retriever=retriever,
         return_source_documents=True,
+        chain_type_kwargs={"prompt": custom_prompt},
         chain_type="stuff"
     )
     rag_enabled = True
@@ -139,11 +149,21 @@ def chat():
                 answer = rag_result.get("result", "").strip()
                 sources = rag_result.get("source_documents", [])
                 print(f"LangChain RAG answer: {answer}")
-                if answer and len(answer.split()) > 5:
+                # No manual sentence/word trimming needed; prompt ensures summary
+                if answer:
                     return jsonify({'response': answer})
             except Exception as rag_e:
                 print(f"LangChain RAG error: {rag_e}")
        # === INTENT-BASED FALLBACK ===
+        # Special concise summary for types of mortgages
+        if any(kw in user_message for kw in ["types of mortgages", "mortgage types", "what types of mortgages", "different types of mortgages"]):
+            concise = (
+                "There are 9 main types of mortgages in the UK: "
+                "Fixed-Rate, Variable-Rate, Tracker, Discounted Variable-Rate, Offset, Guarantor, Shared Ownership, Help to Buy Equity Loan (ended 2023), and Joint Borrower Sole Proprietor. "
+                "Each has unique features and is suited to different needs. Would you like a brief explanation of each type?"
+            )
+            return jsonify({'response': concise})
+
         processed = preprocess_text(user_message)
         X = vectorizer.transform([processed]).toarray()
         with torch.no_grad():

@@ -141,7 +141,7 @@ $showRegenerate = (bool)$avatarPath;
             const nextBtn = document.getElementById('next-btn');
             nextBtn.onclick = function() {
                 if (!nextBtn.disabled) {
-                    window.location.href = '../chatbot/chatbot.php';
+                    window.location.href = '../chatbot/chatbot_mode_select.php';
                 }
             };
             // Generate Avatar button logic

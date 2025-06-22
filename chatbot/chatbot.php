@@ -81,14 +81,6 @@ try {
         <div class="layout-container">
         <h4>Hi..<?php echo htmlspecialchars($userName); ?>, I am your Future Self </h4>
         </div>    
-        <!-- Chatbot Mode Toggle -->
-        <div style="display: flex; justify-content: flex-end; margin-bottom: 16px; align-items: center;">
-            <span style="margin-right: 16px; font-weight: 500; color: #2196f3;">Select your preferred chat mode</span>
-            <div id="chatbotModeToggle" style="display: flex; gap: 0; align-items: center;">
-                <button id="quickModeBtn" class="mode-btn">Short-Quick <span id="quickModeIcon" style="margin-left:6px;vertical-align:middle;"></span></button>
-                <button id="longModeBtn" class="mode-btn">Long-Late <span id="longModeIcon" style="margin-left:6px;vertical-align:middle;"></span></button>
-            </div>
-        </div>
         <!-- Avatar Full-Size Section -->
         <div class="avatar-fullsize">
          
@@ -104,9 +96,16 @@ try {
             <!-- Chatbot Section -->
          <div class="chatbot-widget">
                 <div class="chat-messages">
-                    <div class="message bot">
-                        <h3>Hi <?php echo htmlspecialchars($userName); ?>,</h3>
-                        <h4>Let's talk! You can ask me anything you like.</h4>
+                    <div class="message bot" id="chatbotModeMsg">
+                        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+                            <span style="font-weight: 500; color: #2196f3;">Select your preferred chat mode</span>
+                            <div id="chatbotModeToggle" style="display: flex; gap: 0; align-items: center;">
+                                <button id="quickModeBtn" class="mode-btn">Short-Quick <span id="quickModeIcon" style="margin-left:6px;vertical-align:middle;"></span></button>
+                                <button id="longModeBtn" class="mode-btn">Long-Late <span id="longModeIcon" style="margin-left:6px;vertical-align:middle;"></span></button>
+                            </div>
+                        </div>
+                        <h3 style="margin-top: 18px;">Hi <?php echo htmlspecialchars($userName); ?>,</h3>
+                        <h4>Let's talk! You can ask me anything related to finance you like.</h4>
                     </div>
                     <div class="chat-history" id="chatHistory">
                         <!-- Chat history will be displayed here -->
@@ -139,6 +138,18 @@ try {
             background: #2196f3;
             color: #fff;
             box-shadow: 0 2px 8px rgba(33,150,243,0.13);
+        }
+        .clear-msg-btn {
+            background: none;
+            border: none;
+            color: #e53935;
+            font-size: 1.2em;
+            margin-left: 1px;
+            cursor: pointer;
+            vertical-align: right;
+        }
+        .clear-msg-btn:hover {
+            color: #b71c1c;
         }
     </style>
     <script>
@@ -201,18 +212,30 @@ try {
         // Chatbot Functionality
         function getChatbotApiUrl() {
             const mode = sessionStorage.getItem('chatbot_mode');
-            if (mode === 'quick') {
-                return 'http://35.232.121.220:5003/chat'; // chatbotquick.py
+            let apiUrl;
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                apiUrl = (mode === 'quick')
+                    ? 'http://localhost:5003/chat'
+                    : 'http://localhost:5002/chat';
             } else {
-                return 'http://35.232.121.220:5002/chat'; // chatbot.py
+                apiUrl = (mode === 'quick')
+                    ? 'http://35.232.121.220:5003/chat'
+                    : 'http://35.232.121.220:5002/chat';
             }
+            return apiUrl;
         }
         function sendMessage() {
             const userInput = document.getElementById('userInput').value.trim();
             if (!userInput) return;
 
             const chatHistory = document.getElementById('chatHistory');
-            const userMessage = `<div class="message user">${userInput}</div>`;
+            // Add user message with X button
+            const userMsgId = 'user-msg-' + Date.now();
+            const botMsgId = 'bot-msg-' + Date.now();
+            const userMessage = `<div class="message user" id="${userMsgId}" style="display:flex;align-items:center;justify-content:space-between;">
+                <span>${userInput}</span>
+                <span class="clear-msg-btn" title="Clear this chat" onclick="clearChatLine('${userMsgId}', '${botMsgId}')" style="font-size:1.2em;color:#e53935;cursor:pointer;margin-left:10px;">&times;</span>
+            </div>`;
             chatHistory.innerHTML += userMessage;
 
             // Send the message to the correct Flask API, including gender and email
@@ -227,7 +250,7 @@ try {
             })
             .then(res => res.json())
             .then(data => {
-                let botMessage = `<div class="message bot">${data.response}</div>`;
+                let botMessage = `<div class="message bot" id="${botMsgId}">${data.response}</div>`;
                 if (data.image) {
                     botMessage += `<div class='message bot'><img src="../chatbot/${data.image}?t=${Date.now()}" alt="Generated Avatar" style="max-width:200px;max-height:200px;border-radius:10px;margin-top:8px;"></div>`;
                 }
@@ -236,11 +259,19 @@ try {
             })
             .catch(err => {
                 console.error('Error:', err);
-                const errorMessage = `<div class="message bot">Sorry, something went wrong. Please try again later.</div>`;
+                const errorMessage = `<div class="message bot" id="${botMsgId}">Sorry, something went wrong. Please try again later.</div>`;
                 chatHistory.innerHTML += errorMessage;
             });
 
             document.getElementById('userInput').value = '';
+        }
+
+        // Clear chat line function
+        function clearChatLine(userMsgId, botMsgId) {
+            const userMsg = document.getElementById(userMsgId);
+            const botMsg = document.getElementById(botMsgId);
+            if (userMsg) userMsg.remove();
+            if (botMsg) botMsg.remove();
         }
 
         // Enable sending message with Enter key (robust, prevents double send)
