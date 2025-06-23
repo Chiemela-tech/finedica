@@ -452,3 +452,24 @@ To allow external access to both chatbot services, you must open ports 5002 and 
   curl -X POST http://YOUR_VM_IP:5003/chat -H "Content-Type: application/json" -d "{\"message\": \"hi\"}"
   ```
 - You should receive a JSON response from each chatbot service.
+
+### Troubleshooting: PHP Warnings Break JSON Responses (Login/Signup)
+If your login or signup works on localhost but fails on your VM with the error "An unexpected error occurred. Please try again." and you see PHP warnings (such as file_put_contents permission denied) in the browser or network response, the cause is:
+
+- PHP warnings or errors are being output before the JSON response, so the frontend JavaScript cannot parse the response as JSON.
+
+**How to fix:**
+1. Fix file permissions so PHP can write to the log file (e.g., debug_log.txt):
+   ```sh
+   sudo chown www-data:www-data /var/www/finedica/php/debug_log.txt
+   sudo chmod 664 /var/www/finedica/php/debug_log.txt
+   ```
+   Or, comment out or remove all file_put_contents lines in config.php and other PHP files if you do not need debug logging.
+2. In production, suppress PHP warnings from being sent to the browser by setting in your config.php:
+   ```php
+   ini_set('display_errors', 0);
+   error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+   ```
+
+**Summary:**
+- Any PHP warning or output before the JSON will break the frontend fetch/JSON parsing. Always ensure your PHP scripts return only valid JSON for API endpoints.
