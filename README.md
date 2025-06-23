@@ -1,5 +1,6 @@
 FINEDICA PROJECT STRUCTURE AND DEPLOYMENT INSTRUCTIONS
 =======================================================
+This guide provides a concise, step-by-step reference for deploying the Finedica project on Google Cloud VM or a similar environment. It covers project structure, deployment, database setup, service management, and troubleshooting.
 
 Project Structure
 -----------------
@@ -87,6 +88,7 @@ V. Database Tables Structure (MySQL)
    CREATE TABLE `expenditures` (
      `id` INT NOT NULL AUTO_INCREMENT,
      `user_id` INT NOT NULL,
+     `email` VARCHAR(255) NOT NULL UNIQUE,
      `category` VARCHAR(100) NOT NULL,
      `amount` DECIMAL(10,2) NOT NULL,
      `date` DATE NOT NULL,
@@ -252,6 +254,40 @@ sudo systemctl restart finedica_chatbot  # if using systemd
 - Use `git push origin main` to push any local changes you made on the VM back to GitHub.
 - Only use `sudo` with git if you have permission issues (ideally, fix permissions so you don’t need sudo).
 - Always update dependencies and restart services after pulling new code.
+
+### Resolving Git Pull Conflicts Due to Local Changes
+If you see an error like:
+
+```
+error: Your local changes to the following files would be overwritten by merge:
+  <file list>
+Please commit your changes or stash them before you merge.
+Aborting
+```
+
+This means you have local changes that would be overwritten by a `git pull`. To resolve:
+
+**If you want to keep your local changes:**
+```sh
+git add .
+git commit -m "Save local changes before pull"
+git pull origin main
+```
+
+**If you want to discard your local changes (danger: this cannot be undone):**
+```sh
+git reset --hard
+git pull origin main
+```
+
+**If you want to temporarily save your changes and re-apply them after pulling:**
+```sh
+git stash
+git pull origin main
+git stash pop
+```
+
+Choose the method that fits your needs. Committing or stashing is safest if you want to keep your work.
 
 ## 5. Troubleshooting
 - **Database errors:** Check config.php and MySQL port.

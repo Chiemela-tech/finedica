@@ -39,7 +39,7 @@ try {
     $avatarPath = null;
 }
 
-// #Only show generate button if no avatar exists, otherwise show re-generate button
+// Only show generate button if no avatar exists, otherwise show re-generate button
 $showGenerate = !$avatarPath;
 $showRegenerate = (bool)$avatarPath;
 ?>
@@ -90,15 +90,12 @@ $showRegenerate = (bool)$avatarPath;
                     <div class="image-preview" style="width: 320px; height: 320px; background: #f8f8f8; border-radius: 20px; box-shadow: 0 4px 24px rgba(33,150,243,0.13); border: 3px solid #2196f3; display: flex; align-items: center; justify-content: center; margin-bottom: 0; overflow: hidden;">
                         <?php if ($faceImageUrl): ?>
                             <?php
-                            if (preg_match('/^\/finedica\//', $faceImageUrl)) {
-                                $imgSrc = $faceImageUrl;
-                            } elseif (preg_match('/^(https?:\/\/|\/)/', $faceImageUrl)) {
-                                $imgSrc = $faceImageUrl;
-                            } else {
-                                $imgSrc = '/finedica/uploads/' . ltrim($faceImageUrl, '/');
-                            }
+                            // If the URL does not start with http, https, or /, prepend /finedica/uploads/
+                            $imgSrc = (preg_match('/^(https?:\/\/|\/)/', $faceImageUrl))
+                                ? $faceImageUrl
+                                : '/finedica/uploads/' . ltrim($faceImageUrl, '/');
                             ?>
-                            <img src="<?php echo htmlspecialchars($imgSrc); ?>" alt="Uploaded Face Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px; display: block; margin: auto; background: transparent;" />
+                            <img src="<?php echo htmlspecialchars($imgSrc); ?>" alt="Uploaded Face Image" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 16px; box-shadow: none; border: none; background: transparent; display: block; margin: auto;" />
                         <?php else: ?>
                             <p>No face image uploaded.</p>
                         <?php endif; ?>
@@ -111,7 +108,7 @@ $showRegenerate = (bool)$avatarPath;
                     <h3 style="margin-bottom: 12px;">Generated Avatar</h3>
                     <div id="avatar-preview" style="width: 320px; height: 320px; background: #f8f8f8; border-radius: 20px; box-shadow: 0 4px 24px rgba(33,150,243,0.13); border: 3px solid #2196f3; display: flex; align-items: center; justify-content: center; margin-bottom: 0; overflow: hidden;">
                         <?php if ($avatarPath): ?>
-                            <img src="../avatars/<?php echo htmlspecialchars($avatarPath); ?>?t=<?php echo time(); ?>" alt="Generated Avatar" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 16px; box-shadow: none; border: none; background: transparent; display: block; margin: auto;" />
+                            <img src="/finedica/avatars/<?php echo htmlspecialchars($avatarPath); ?>?t=<?php echo time(); ?>" alt="Generated Avatar" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 16px; box-shadow: none; border: none; background: transparent; display: block; margin: auto;" />
                         <?php else: ?>
                             <p>No avatar generated yet.</p>
                         <?php endif; ?>
@@ -141,7 +138,7 @@ $showRegenerate = (bool)$avatarPath;
             const nextBtn = document.getElementById('next-btn');
             nextBtn.onclick = function() {
                 if (!nextBtn.disabled) {
-                    window.location.href = '../chatbot/chatbot_mode_select.php';
+                    window.location.href = '../chatbot/chatbot.php';
                 }
             };
             // Generate Avatar button logic
@@ -200,8 +197,7 @@ $showRegenerate = (bool)$avatarPath;
                                 alert('Error: ' + data.message);
                             }
                         })
-                        .catch((err) => {
-                            console.error(err);
+                        .catch(() => {
                             alert('An unexpected error occurred. Please try again later.');
                         })
                         .finally(() => {
