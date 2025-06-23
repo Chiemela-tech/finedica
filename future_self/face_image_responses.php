@@ -90,9 +90,8 @@ $showRegenerate = (bool)$avatarPath;
                     <div class="image-preview" style="width: 320px; height: 320px; background: #f8f8f8; border-radius: 20px; box-shadow: 0 4px 24px rgba(33,150,243,0.13); border: 3px solid #2196f3; display: flex; align-items: center; justify-content: center; margin-bottom: 0; overflow: hidden;">
                         <?php if ($faceImageUrl): ?>
                             <?php
-                            // Always use web-accessible path for preview
-                            $filename = basename($faceImageUrl);
-                            $imgSrc = '/finedica/uploads/' . rawurlencode($filename);
+                            // Always use the DB path as-is for preview
+                            $imgSrc = $faceImageUrl;
                             ?>
                             <img src="<?php echo htmlspecialchars($imgSrc); ?>" alt="Uploaded Face Image" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 16px; box-shadow: none; border: none; background: transparent; display: block; margin: auto;" />
                         <?php else: ?>
