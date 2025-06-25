@@ -2,6 +2,19 @@ FINEDICA PROJECT STRUCTURE AND DEPLOYMENT INSTRUCTIONS
 =======================================================
 This guide provides a concise, step-by-step reference for deploying the Finedica project on Google Cloud VM or a similar environment. It covers project structure, deployment, database setup, service management, and troubleshooting.
 
+The Finedica App is designed to empower users on their financial journey by providing a personalized and guided experience towards achieving their monetary goals. It leverages a unique approach that combines self-reflection, behavioral analysis, and future visualization to help users make informed financial decisions.
+
+## Key Phases of the Finedica App
+
+The Finedica App's core functionality is built around four distinct and interconnected phases:
+
+1.  **Data Gathering to Build the Future Self Avatar**: This initial phase focuses on collecting essential user data, including financial habits, aspirations, and personal information. This data forms the foundation for creating a personalised "Future Self Avatar," a visual representation of the user's financial goals and the future they envision.
+2.  **Analyzing Previous Behavior**: Finedica delves into a user's past financial activities. By understanding historical spending patterns, saving habits, and investment choices, the app provides insights into current behaviours that may impact future financial success. This analysis is crucial for identifying areas for improvement and reinforcing positive habits.
+3.  **Deciding Money Philosophy**: This phase encourages users to define their core values and beliefs regarding money. Through guided exercises and psychometric tests, Finedica helps users articulate their personal "money philosophy," which serves as a guiding principle for all subsequent financial decisions and goal setting.
+4.  **Specific Goal Setting and Implementation**: With a clear understanding of their financial past and a defined money philosophy, users can then set concrete and achievable financial goals. Whether it's buying your first home, saving for retirement, or any other specific financial objective, Finedica assists in breaking down these goals into actionable steps and provides tools for tracking progress and facilitating implementation. 
+This guide provides a concise, step-by-step reference for deploying the Finedica project on Google Cloud VM or a similar environment. It covers project structure, deployment, database setup, service management, and troubleshooting.
+
+
 Project Structure
 -----------------
 1. .git/: Git version control folder (not needed for deployment).
@@ -470,6 +483,25 @@ If your login or signup works on localhost but fails on your VM with the error "
    ini_set('display_errors', 0);
    error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
    ```
+
+   ## Technologies Used
+
+* **Backend**:
+    * PHP
+    * Python (with libraries like PyTorch for the chatbot, Flask for web apps)
+* **Frontend**:
+    * HTML5
+    * CSS3
+    * JavaScript
+* **Database**:
+    * SQLite (for expenditure)
+    * Potentially MySQL/PostgreSQL for user management
+* **Cloud Services**:
+    * Google Cloud Platform (Authentication, Storage, potentially others)
+* **Dependency Management**:
+    * Composer (PHP)
+    * pip (Python)
+
 
 **Summary:**
 - Any PHP warning or output before the JSON will break the frontend fetch/JSON parsing. Always ensure your PHP scripts return only valid JSON for API endpoints.
