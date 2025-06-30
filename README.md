@@ -1,4 +1,4 @@
-# Finedica - Financial Goal Achievement Platform
+# Finedica - Financial Coaching Platform
 
 The Finedica App is designed to empower users on their financial journey by providing a personalised and guided experience towards achieving their monetary goals. It leverages a unique approach that combines self-reflection, behavioural analysis, and future visualisation to help users make informed financial decisions.
 
